@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WelcomeIpadViewController.h
 //  kabbalahquiz
 //
 //  Created by Rockstar. on 1/17/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WelcomeIpadViewController : UIViewController
 
 @end

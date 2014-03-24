@@ -30,7 +30,7 @@
     [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"lvc"]];
     [self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"cvc"]];
     //[self setRightPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"rvc"]];
-    //[self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"avc"]];
+    //[self setCenterPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"purposevc"]];
     
 }
 

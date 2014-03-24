@@ -1,5 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<dict>
+		<key>question</key>
+		<string>What is Kabbalah?</string>
+		<key>ans1</key>
+		<string>Mysticism</string>
+		<key>ans2</key>
+		<string>Religion</string>
+		<key>ans3</key>
+		<string>Science</string>
+		<key>ans4</key>
+		<string>Magic</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What does the word &quot;Kabbalah&quot; mean?</string>
+		<key>ans1</key>
+		<string>Egoism</string>
+		<key>ans2</key>
+		<string>Reception</string>
+		<key>ans3</key>
+		<string>Giving</string>
+		<key>ans4</key>
+		<string>Altruism</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a definition of the Creator according to Kabbalah?</string>
+		<key>ans1</key>
+		<string>Quality of giving and love</string>
+		<key>ans2</key>
+		<string>Desire to bestow</string>
+		<key>ans3</key>
+		<string>Altruistic force</string>
+		<key>ans4</key>
+		<string>Will to receive pleasure</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a word Kabbalists have used to describe the Creator?</string>
+		<key>ans1</key>
+		<string>Moses</string>
+		<key>ans2</key>
+		<string>Upper Light</string>
+		<key>ans3</key>
+		<string>Nature</string>
+		<key>ans4</key>
+		<string>Light</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>When do we attain the revelation of the Creator according to Kabbalah?</string>
+		<key>ans1</key>
+		<string>While living in this world</string>
+		<key>ans2</key>
+		<string>In the afterlife</string>
+		<key>ans3</key>
+		<string>In our dreams</string>
+		<key>ans4</key>
+		<string>During meditation</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a definition of &quot;this world&quot; according to Kabbalah?</string>
+		<key>ans1</key>
+		<string>Egoistic intention for self-benefit</string>
+		<key>ans2</key>
+		<string>The lowest of all worlds</string>
+		<key>ans3</key>
+		<string>Perceiving reality through five senses</string>
+		<key>ans4</key>
+		<string>Planet Earth</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is the most accurate and precise definition of &quot;the creation&quot; according to Kabbalah?</string>
+		<key>ans1</key>
+		<string>Universe</string>
+		<key>ans2</key>
+		<string>Earth</string>
+		<key>ans3</key>
+		<string>Will to receive pleasure</string>
+		<key>ans4</key>
+		<string>Solar system</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Why is humanity on a constant pursuit of happiness? Because ...</string>
+		<key>ans1</key>
+		<string>Pleasure fades away upon its reception</string>
+		<key>ans2</key>
+		<string>Humanity has lost belief in God</string>
+		<key>ans3</key>
+		<string>Humanity keeps developing new technologies</string>
+		<key>ans4</key>
+		<string>The human population keeps increasing</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the most evolved desire that appears in a person?</string>
+		<key>ans1</key>
+		<string>Family</string>
+		<key>ans2</key>
+		<string>Control</string>
+		<key>ans3</key>
+		<string>Knowledge</string>
+		<key>ans4</key>
+		<string>Spirituality</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT an indication that a person has a desire for spirituality?</string>
+		<key>ans1</key>
+		<string>Dissatisfaction from life</string>
+		<key>ans2</key>
+		<string>Questions the meaning of life</string>
+		<key>ans3</key>
+		<string>Completely fulfilled in life</string>
+		<key>ans4</key>
+		<string>Attracted to otherworldly concepts</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>When would the desire for spirituality start developing in humanity en masse, according to Kabbalists?</string>
+		<key>ans1</key>
+		<string>Since 5,000 years ago</string>
+		<key>ans2</key>
+		<string>Since the 15th Century</string>
+		<key>ans3</key>
+		<string>Since 1945</string>
+		<key>ans4</key>
+		<string>Since the end of the 20th Century</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Why did Kabbalists conceal the wisdom of Kabbalah for 1,000s of years?</string>
+		<key>ans1</key>
+		<string>People did not have a need for it</string>
+		<key>ans2</key>
+		<string>The wisdom leaked unintentionally in our era</string>
+		<key>ans3</key>
+		<string>Kabbalists wanted people to first learn Judaism</string>
+		<key>ans4</key>
+		<string>Kabbalists wanted people to suffer first before revealing it</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is another term for the desire for spirituality?</string>
+		<key>ans1</key>
+		<string>Higher self</string>
+		<key>ans2</key>
+		<string>Point in the heart</string>
+		<key>ans3</key>
+		<string>Third eye</string>
+		<key>ans4</key>
+		<string>Mystical part of the person</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+</array>
 </plist>

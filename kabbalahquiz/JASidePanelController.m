@@ -84,7 +84,7 @@ static char ja_kvoContext;
 #pragma mark - Icon
 
 + (UIImage *)defaultImage {
-	return [UIImage imageNamed:@"navigation_bar_button_icon_menu"];
+	return [UIImage imageNamed:@"mainMenuIcon"];
 }
 
 #pragma mark - NSObject
@@ -113,7 +113,7 @@ static char ja_kvoContext;
 
 - (void)_baseInit {
     self.style = JASidePanelSingleActive;
-    self.leftGapPercentage = 0.8f;
+    self.leftGapPercentage = 0.9f;
     self.rightGapPercentage = 0.8f;
     self.minimumMovePercentage = 0.15f;
     self.maximumAnimationDuration = 0.2f;
@@ -276,7 +276,7 @@ static char ja_kvoContext;
 }
 
 - (void)stylePanel:(UIView *)panel {
-    panel.layer.cornerRadius = 6.0f;
+    panel.layer.cornerRadius = 0.0f;
     panel.clipsToBounds = YES;
 }
 
@@ -934,10 +934,10 @@ static char ja_kvoContext;
 
 - (UIBarButtonItem *)leftButtonForCenterPanel {
     
-    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 88, 88)];
     
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[JASidePanelController defaultImage]];
-    UIButton *itemButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 12, 30, 30)];
+    UIButton *itemButton = [[UIButton alloc] initWithFrame:CGRectMake(-15, 22, 30, 30)];
     [itemButton addTarget:self action:@selector(toggleLeftPanel:) forControlEvents:UIControlEventTouchUpInside];
     [itemButton addSubview:imageView];
     

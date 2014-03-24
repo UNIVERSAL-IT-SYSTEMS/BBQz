@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PagedScrollViewIpad.h"
 
 @interface WelcomeIpadViewController : UIViewController
+@property IBOutlet PagedScrollViewIpad *pageScrollViewIpad;
+@property UIViewController *nextViewControllerIpad ;
+
++ (BOOL) shouldRunWelcomeFlowIpad;
++ (void) setShouldRunWelcomeFlowIpad:(BOOL)should;
 
 @end

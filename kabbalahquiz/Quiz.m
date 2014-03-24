@@ -10,10 +10,11 @@
 
 @interface Quiz()
 
-@property (nonatomic, strong) NSString *quote;
+@property (nonatomic, strong) NSString *question;
 @property (nonatomic, strong) NSString *ans1;
 @property (nonatomic, strong) NSString *ans2;
 @property (nonatomic, strong) NSString *ans3;
+@property (nonatomic, strong) NSString *ans4;
 
 @end
 
@@ -23,39 +24,44 @@
 
     if ((self = [super init])) {
         NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
-        self.movieArray = [NSMutableArray arrayWithContentsOfFile:plistCatPath];
-        self.quizCount = [self.movieArray count];
-        NSLog(@"Quiz Count - %d", self.quizCount);
+        self.quizArray = [NSMutableArray arrayWithContentsOfFile:plistCatPath];
+        self.quizCount = [self.quizArray count];
+        NSLog(@"Quiz Count - %ld", (long)self.quizCount);
         self.tipCount = 0;
+        self.total = 0;
     }
     return self;
 }
 
 -(void) nextQuestion: (NSUInteger) idx {
 
-    self.quote = [NSString stringWithFormat:@"'%@'", self.movieArray[idx][@"quote"]];
-    self.ans1 = self.movieArray[idx][@"ans1"];
-    self.ans2 = self.movieArray[idx][@"ans2"];
-    self.ans3 = self.movieArray[idx][@"ans3"];
-    self.tip = self.movieArray[idx][@"tip"];
+    self.question = [NSString stringWithFormat:@"%@", self.quizArray[idx][@"question"]];
+    self.ans1 = self.quizArray[idx][@"ans1"];
+    self.ans2 = self.quizArray[idx][@"ans2"];
+    self.ans3 = self.quizArray[idx][@"ans3"];
+    self.ans4 = self.quizArray[idx][@"ans4"];
+    self.tip = self.quizArray[idx][@"tip"];
     
     //If you are just starting the quiz
     if (idx == 0) {
         self.correctCount = 0;
         self.incorrectCount = 0;
         self.tipCount = 0;
+        self.total = 0;
     }
     
 }
 
 -(BOOL) checkQuestion: (NSUInteger) question forAnswer: (NSUInteger) answer {
 
-    NSString *correctAnswer = self.movieArray[question][@"answer"];
+    NSString *correctAnswer = self.quizArray[question][@"answer"];
     if ([correctAnswer intValue] == answer) {
-        self.correctCount++;
+        self.correctCount ++;
+        self.total = +1;
         return YES;
     } else {
         self.incorrectCount++;
+        self.total = +1;
         return NO;
     }
     

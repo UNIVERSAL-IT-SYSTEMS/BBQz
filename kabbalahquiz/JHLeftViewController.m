@@ -14,9 +14,7 @@
 #import "UIViewController+JASidePanel.h"
 
 #import "JHCenterViewController.h"
-#import "JHBlogViewController.h"
-#import "JHArticlesViewController.h"
-#import "JHMoreViewController.h"
+
 
 @interface JHLeftViewController ()
 
@@ -41,17 +39,29 @@
     [self.feedbackTableView setDataSource:self];
     
     NSArray *title = [[NSArray alloc] initWithObjects:
-                      @"Video",
-                      @"Articles",
-                      @"Blog",
-                      @"More Info",nil];
+                      @"Intro to Kabbalah",
+                      @"Purpose of Creation",
+                      @"Perception of Reality",
+                      @"The Intention",
+                      @"Kabbalistc Language",
+                      @"World Peace",
+                      @"Free Will - Part 1",
+                      @"Free Will - Part 2",
+                      @"Inner Work",
+                      @"Creation & Evolution",nil];
     
     
     [self setCellImage:[NSArray arrayWithObjects:
-                  @"menu_icon_airplay.png",
-                  @"menu_icon_activity.png",
-                  @"menu_icon_tips_news.png",
-                  @"menu_icon_settings.png", nil]];
+                        @"icon-1-70x70.png",
+                        @"icon-2-70x70.png",
+                        @"icon-3-70x70.png",
+                        @"icon-4-70x70.png",
+                        @"icon-5-70x70.png",
+                        @"icon-6-70x70.png",
+                        @"icon-7-70x70.png",
+                        @"icon-8-70x70.png",
+                        @"icon-9-70x70.png",
+                        @"icon-10-70x70.png",nil]];
     
     NSDictionary *temp = [[NSDictionary alloc]initWithObjectsAndKeys:title, @"Menu", nil];
     self.feedbackItems = temp;
@@ -78,6 +88,7 @@
     return [self.list count];
 }
 
+/*
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
     //UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 100)];
@@ -87,7 +98,7 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
         title.text = @"";
     }
-    title.textColor = [UIColor colorWithRed:171/255.0 green:171/255.0 blue:171/255.0 alpha:1.0];
+    title.textColor = [UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0];
     title.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menu_label_row_bg"]];
     title.font = [UIFont boldSystemFontOfSize:14];
     //[headerView addSubview:title];
@@ -95,15 +106,30 @@
     return title;
     
     
+}*/
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 0.1)];
+    headerView.backgroundColor = [UIColor clearColor];
+    
+    return headerView;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     
-    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 100)];
-    headerView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"menu_label_row_bg"]];
+    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 0.1)];
+    headerView.backgroundColor = [UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0];
     
     return headerView;
     
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 5;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return .5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -135,17 +161,18 @@
     
     NSUInteger row = [indexPath row];
 	cell.blogTitle.text = [listData objectAtIndex:row];
+    cell.blogTitle.textColor = [UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0];
     
     NSString *cellImagePic = [[self cellImage] objectAtIndex:[indexPath row]];
     UIImage *cellIcon = [UIImage imageNamed:cellImagePic];
     [[cell blogImageView] setImage:cellIcon];
     
     UIView *bgColor = [[UIView alloc] init];
-    bgColor.backgroundColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0];
+    bgColor.backgroundColor = [UIColor clearColor];
     [cell setBackgroundView:bgColor];
     
     UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor colorWithRed:32/255.0 green:32/255.0 blue:32/255.0 alpha:1.0];
+    bgColorView.backgroundColor = [UIColor clearColor];
     [cell setSelectedBackgroundView:bgColorView];
     
     // Configure the cell...
@@ -163,14 +190,14 @@
 	NSString *rowValue = [listData objectAtIndex:row];
 	NSString *str = rowValue;
     
-    if ([str isEqual:@"Video"]) {
+    if ([str isEqual:@"Intro to Kabbalah"]) {
         
         self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"cvc"];
         
     }
-    else if ([str isEqual:@"Articles"]){
+    else if ([str isEqual:@"Purpose of Creation"]){
         
-       self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"avc"];
+       self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"purposevc"];
         
     }
     

@@ -1,5 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<dict>
+		<key>question</key>
+		<string>Why is there suffering?</string>
+		<key>ans1</key>
+		<string>The strong survive, the weak are trampled</string>
+		<key>ans2</key>
+		<string>There are 2 Creators. 1 good, 1 bad</string>
+		<key>ans3</key>
+		<string>The Creator gave up on us</string>
+		<key>ans4</key>
+		<string>In order to discover the perfection</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the purpose of creation according to Kabbalah?</string>
+		<key>ans1</key>
+		<string>Adhesion with the Creator</string>
+		<key>ans2</key>
+		<string>Creation has no purpose</string>
+		<key>ans3</key>
+		<string>To be the foundation for the afterlife</string>
+		<key>ans4</key>
+		<string>To enjoy at everyone else&apos;s expense</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following do we NOT attain as a result of reaching the purpose of creation - adhesion with the Creator?</string>
+		<key>ans1</key>
+		<string>Infinite fulfillment</string>
+		<key>ans2</key>
+		<string>Separation from everybody &amp; everything</string>
+		<key>ans3</key>
+		<string>Complete perception &amp; sensation</string>
+		<key>ans4</key>
+		<string>A state of rest, static</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How does Kabbalah explain the process of the development of creation, from start to end, at a glance? In ...</string>
+		<key>ans1</key>
+		<string>3 states</string>
+		<key>ans2</key>
+		<string>5 states</string>
+		<key>ans3</key>
+		<string>10 states</string>
+		<key>ans4</key>
+		<string>13 states</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT define the first state of creation?</string>
+		<key>ans1</key>
+		<string>Thought of creation</string>
+		<key>ans2</key>
+		<string>Adhesion with the Creator</string>
+		<key>ans3</key>
+		<string>Big Bang</string>
+		<key>ans4</key>
+		<string>Before the Big Bang</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT define the second state of creation?</string>
+		<key>ans1</key>
+		<string>Outcome of the breaking of the vessels</string>
+		<key>ans2</key>
+		<string>Development of egoistic desire</string>
+		<key>ans3</key>
+		<string>No perception of the Creator</string>
+		<key>ans4</key>
+		<string>Complete happiness &amp; fulfillment</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT define what makes humanity (the creation) want to exit the second state?</string>
+		<key>ans1</key>
+		<string>Highly developed egoistic desire</string>
+		<key>ans2</key>
+		<string>Suffering</string>
+		<key>ans3</key>
+		<string>The question: What is the meaning of life</string>
+		<key>ans4</key>
+		<string>Everything is perfect the way it is</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT define the third state of creation?</string>
+		<key>ans1</key>
+		<string>Adhesion with the Creator</string>
+		<key>ans2</key>
+		<string>The purpose of creation</string>
+		<key>ans3</key>
+		<string>Balance and harmony with Nature</string>
+		<key>ans4</key>
+		<string>More money &amp; power</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If the 1st state &amp; 3rd state of creation are both adhesion with the Creator, what is the difference between them?</string>
+		<key>ans1</key>
+		<string>1st unconscious. 3rd conscious</string>
+		<key>ans2</key>
+		<string>There is no difference</string>
+		<key>ans3</key>
+		<string>1st conscious. 3rd unconscious</string>
+		<key>ans4</key>
+		<string>1st my mother&apos;s womb. 3rd after I die</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If the whole of humanity is destined to reach the third state of creation - adhesion with the Creator - then why study Kabbalah?</string>
+		<key>ans1</key>
+		<string>Reaching the 3rd state faster &amp; pleasurably</string>
+		<key>ans2</key>
+		<string>There&apos;s no reason</string>
+		<key>ans3</key>
+		<string>3rd state is accessible to studying Kabbalah</string>
+		<key>ans4</key>
+		<string>Be knowledgeable &amp; wealthier on your way</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+</array>
 </plist>

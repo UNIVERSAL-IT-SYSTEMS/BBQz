@@ -8,6 +8,12 @@
 
 #import "defines.h"
 
-@implementation defines
+#pragma mark - API
 
-@end
+NSString *const kCDKAPIScheme = @"https";
+NSString *const kCDKAPIHost = @"api.kbb1.com";
+NSString *const kCDKPusherAPIKey = @"";
+
+NSString *const kCDKDevelopmentAPIScheme = @"http";
+NSString *const kCDKDevelopmentAPIHost = @"localhost:5000";
+NSString *const kCDKDevelopmentPusherAPIKey = @"";

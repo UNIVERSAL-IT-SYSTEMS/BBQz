@@ -10,15 +10,17 @@
 
 @interface Quiz : NSObject
 
-@property (nonatomic, strong) NSMutableArray *movieArray;
-@property (nonatomic, readonly, strong) NSString *quote;
+@property (nonatomic, strong) NSMutableArray *quizArray;
+@property (nonatomic, readonly, strong) NSString *question;
 @property (nonatomic, readonly, strong) NSString *ans1;
 @property (nonatomic, readonly, strong) NSString *ans2;
 @property (nonatomic, readonly, strong) NSString *ans3;
+@property (nonatomic, readonly, strong) NSString *ans4;
 @property (nonatomic, assign) NSInteger correctCount;
 @property (nonatomic, assign) NSInteger incorrectCount;
 @property (nonatomic, assign) NSInteger quizCount;
 @property (nonatomic, assign) NSInteger tipCount;
+@property (nonatomic, assign) NSInteger total;
 @property (nonatomic, strong) NSString *tip;
 
 -(id) initWithQuiz:(NSString *) plistName;

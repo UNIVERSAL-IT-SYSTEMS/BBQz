@@ -7,10 +7,10 @@
 //
 
 #import "JHCenterViewController.h"
-#import "JHAppDelegate.h"
-#import "JTCollection.h"
+#import "AppDelegate.h"
+//#import "JTCollection.h"
 #import "JTCollectionViewCell.h"
-#import "JHBlogDetailViewController.h"
+//#import "JHBlogDetailViewController.h"
 
 
 @interface JHCenterViewController () 
@@ -38,9 +38,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[LocalyticsSession shared] tagScreen:@"Center"];
-    [[LocalyticsSession shared] tagEvent:@"Main"];
-    [Flurry logEvent:@"Center"];
+    //[[LocalyticsSession shared] tagScreen:@"Center"];
+    //[[LocalyticsSession shared] tagEvent:@"Main"];
+    //[Flurry logEvent:@"Center"];
         
     self.listImages = [NSMutableDictionary dictionary];
     [self getAll];
@@ -83,10 +83,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     JTCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    JTCollection *schema = [self.list objectAtIndex:indexPath.row];
+    /*JTCollection *schema = [self.list objectAtIndex:indexPath.row];
     
     [cell.title setText:schema.title];
-    cell.image.image = [UIImage imageNamed:[schema cellImage]];
+    cell.image.image = [UIImage imageNamed:[schema cellImage]];*/
     
     [cell setBackgroundColor:[UIColor colorWithRed:25.0 green:96.0 blue:148.0 alpha:1.0]];
     
@@ -97,7 +97,7 @@
 #pragma mark Receive Wall Objects
 - (void)getAll
 {
-    JTCollection* anti1 = [[JTCollection alloc]init];
+    /*JTCollection* anti1 = [[JTCollection alloc]init];
     JTCollection* anti2 = [[JTCollection alloc]init];
     JTCollection* inter = [[JTCollection alloc]init];
     JTCollection* raising = [[JTCollection alloc]init];
@@ -148,7 +148,7 @@
     tikkun.url = @"http://m.kab.tv/ios/JHolidays/videos/Purim.mp4";
 
     
-    self.list = [NSArray arrayWithObjects:anti1, anti2, inter, raising, soul, tikkun, nil];
+    self.list = [NSArray arrayWithObjects:anti1, anti2, inter, raising, soul, tikkun, nil];*/
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -163,12 +163,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    JHBlogDetailViewController *tvc = (JHBlogDetailViewController *)segue.destinationViewController;
+    /*JHBlogDetailViewController *tvc = (JHBlogDetailViewController *)segue.destinationViewController;
     NSIndexPath * indexPath = [[self.collectionView indexPathsForSelectedItems]lastObject];
     JTCollection * schema = [self.list objectAtIndex:indexPath.row];
     
     tvc.schema = schema;
-    [self.collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    [self.collectionView deselectItemAtIndexPath:indexPath animated:YES];*/
+    
+    
     //[self.navigationController presentViewController:tvc animated:YES completion:nil];
 }
 

@@ -206,9 +206,9 @@
         self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"perceptionvc"];
     }
     
-    else if ([str isEqual:@"More Info"]){
+    else if ([str isEqual:@"The Intention"]){
         
-        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"mvc"];
+        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"intentionvc"];
     }
     
     //[self.feedbackTableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -6,13 +6,13 @@
 		<key>question</key>
 		<string>Why is there suffering?</string>
 		<key>ans1</key>
-		<string>The strong survive, the weak are trampled</string>
+		<string>There is no Creator, so the strong survive and the weak are trampled upon</string>
 		<key>ans2</key>
-		<string>There are 2 Creators. 1 good, 1 bad</string>
+		<string>There are 2 Creators: 1 good, 1 evil. Our world is an outcome of their struggle</string>
 		<key>ans3</key>
 		<string>The Creator gave up on us</string>
 		<key>ans4</key>
-		<string>In order to discover the perfection</string>
+		<string>We are in a developmental process toward perfection, &amp; suffering is necessary</string>
 		<key>answer</key>
 		<string>4</string>
 	</dict>
@@ -36,7 +36,7 @@
 		<key>ans1</key>
 		<string>Infinite fulfillment</string>
 		<key>ans2</key>
-		<string>Separation from everybody &amp; everything</string>
+		<string>Complete separation from everybody &amp; everything</string>
 		<key>ans3</key>
 		<string>Complete perception &amp; sensation</string>
 		<key>ans4</key>
@@ -118,13 +118,13 @@
 		<key>question</key>
 		<string>If the 1st state &amp; 3rd state of creation are both adhesion with the Creator, what is the difference between them?</string>
 		<key>ans1</key>
-		<string>1st unconscious. 3rd conscious</string>
+		<string>1st state = unconscious adhesion. 3rd state = conscious adhesion</string>
 		<key>ans2</key>
 		<string>There is no difference</string>
 		<key>ans3</key>
-		<string>1st conscious. 3rd unconscious</string>
+		<string>1st state = conscious adhesion. 3rd state = unconscious adhesion</string>
 		<key>ans4</key>
-		<string>1st my mother&apos;s womb. 3rd after I die</string>
+		<string>1st state = when I was in my mother&apos;s womb. 3rd state = after I die</string>
 		<key>answer</key>
 		<string>3</string>
 	</dict>
@@ -132,13 +132,13 @@
 		<key>question</key>
 		<string>If the whole of humanity is destined to reach the third state of creation - adhesion with the Creator - then why study Kabbalah?</string>
 		<key>ans1</key>
-		<string>Reaching the 3rd state faster &amp; pleasurably</string>
+		<string>It lets us reach the third state faster &amp; more pleasurably</string>
 		<key>ans2</key>
 		<string>There&apos;s no reason</string>
 		<key>ans3</key>
-		<string>3rd state is accessible to studying Kabbalah</string>
+		<string>The third state really is only accessible to those studying Kabbalah</string>
 		<key>ans4</key>
-		<string>Be knowledgeable &amp; wealthier on your way</string>
+		<string>To be more knowledgeable &amp; wealthier on your way to the third state</string>
 		<key>answer</key>
 		<string>1</string>
 	</dict>

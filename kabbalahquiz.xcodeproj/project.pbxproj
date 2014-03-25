@@ -161,6 +161,8 @@
 		6DF7FEFD18E0FC26009D987C /* nav-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEFB18E0FC26009D987C /* nav-title@2x.png */; };
 		6DF7FF0118E0FD17009D987C /* PerceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */; };
 		6DF7FF0318E0FD88009D987C /* perception.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0218E0FD88009D987C /* perception.plist */; };
+		6DF7FF0B18E1150C009D987C /* IntentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0A18E1150C009D987C /* IntentionViewController.m */; };
+		6DF7FF0D18E115AA009D987C /* intention.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0C18E115AA009D987C /* intention.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,6 +384,9 @@
 		6DF7FEFF18E0FD17009D987C /* PerceptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerceptionViewController.h; sourceTree = "<group>"; };
 		6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerceptionViewController.m; sourceTree = "<group>"; };
 		6DF7FF0218E0FD88009D987C /* perception.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = perception.plist; sourceTree = "<group>"; };
+		6DF7FF0918E1150C009D987C /* IntentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntentionViewController.h; sourceTree = "<group>"; };
+		6DF7FF0A18E1150C009D987C /* IntentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntentionViewController.m; sourceTree = "<group>"; };
+		6DF7FF0C18E115AA009D987C /* intention.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = intention.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -627,6 +632,7 @@
 		6D36CFAF188A22B40016A628 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				6DF7FF0818E114FD009D987C /* intention */,
 				6DF7FEFE18E0FCFB009D987C /* perception */,
 				6DF7FEDC18E0872B009D987C /* purpose */,
 				6DF7FEDB18E08472009D987C /* model */,
@@ -841,6 +847,7 @@
 				6D54B3F718BEFCAF00990E4B /* intro.plist */,
 				6DF7FEE118E088A1009D987C /* purpose.plist */,
 				6DF7FF0218E0FD88009D987C /* perception.plist */,
+				6DF7FF0C18E115AA009D987C /* intention.plist */,
 			);
 			name = plists;
 			sourceTree = "<group>";
@@ -869,6 +876,15 @@
 				6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */,
 			);
 			name = perception;
+			sourceTree = "<group>";
+		};
+		6DF7FF0818E114FD009D987C /* intention */ = {
+			isa = PBXGroup;
+			children = (
+				6DF7FF0918E1150C009D987C /* IntentionViewController.h */,
+				6DF7FF0A18E1150C009D987C /* IntentionViewController.m */,
+			);
+			name = intention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1035,6 +1051,7 @@
 				6DF7FEF918E0FA97009D987C /* EC-Kabbalah-Quiz-footer-120x25.png in Resources */,
 				6DF7FEF018E09CBD009D987C /* icon-3-70x70.png in Resources */,
 				6DF7FEF418E09CBD009D987C /* icon-7-70x70.png in Resources */,
+				6DF7FF0D18E115AA009D987C /* intention.plist in Resources */,
 				6D822D7118C2D5A000AA9A25 /* icon~ipad.png in Resources */,
 				6D3B7FDE18BECC4800FD6BDE /* btn_standard_blue_border_default@2x~iphone.png in Resources */,
 				6D92D00B18C71BE8008227CE /* downArrow.png in Resources */,
@@ -1092,6 +1109,7 @@
 				6D36CFBE188A22D90016A628 /* PagedScrollView.m in Sources */,
 				6D36CFD8188A232E0016A628 /* Reachability.m in Sources */,
 				6D36D003188A23420016A628 /* DoctypeChunk.m in Sources */,
+				6DF7FF0B18E1150C009D987C /* IntentionViewController.m in Sources */,
 				6D36D002188A23420016A628 /* CSSSelectorPart.m in Sources */,
 				6D36D006188A23420016A628 /* ElementParser.m in Sources */,
 				6D36D027188A23C30016A628 /* AFURLConnectionOperation.m in Sources */,

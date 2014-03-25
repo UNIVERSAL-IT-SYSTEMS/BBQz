@@ -1,17 +1,15 @@
 //
-//  QuoteQuizViewController.m
-//  QuoteQuiz
+//  IntentionViewController.m
+//  kabbalahquiz
 //
-//  Created by Burak Firik on 7/14/12.
-//  Copyright (c) 2012 Burak Firik. All rights reserved.
+//  Created by Rockstar. on 3/24/14.
+//  Copyright (c) 2014 Bnei Baruch USA. All rights reserved.
 //
 
-#import "QuoteQuizViewController.h"
-#import "QuizTipViewController.h"
+#import "IntentionViewController.h"
 #import "Quiz.h"
 
-@interface QuoteQuizViewController ()
-
+@interface IntentionViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
@@ -20,7 +18,7 @@
 
 @end
 
-@implementation QuoteQuizViewController {
+@implementation IntentionViewController{
     UIButton *_resultButton;
     UIButton *_nextButton;
     UIButton *_startButton;
@@ -36,9 +34,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav-title"]];
+    
 	// Do any additional setup after loading the view, typically from a nib.
-    self.quizIndex = 13;
-    self.quiz = [[Quiz alloc] initWithQuiz:@"intro"];
+    self.quizIndex = 10;
+    self.quiz = [[Quiz alloc] initWithQuiz:@"intention"];
     //self.questionLabel.backgroundColor = [UIColor colorWithRed:51/255.0 green:133/255.0 blue:238/255.0 alpha:1.0];
     
     [self.popupView setHidden:YES];
@@ -50,7 +50,7 @@
     [scroller_ipad setContentSize:CGSizeMake(768, 1004)];
     
     
-   /*ANSWER BUTTON*/
+    /*ANSWER BUTTON*/
     UIImage *btn = [UIImage imageNamed:@"primaryButtonBackground"];
     UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
     UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
@@ -69,7 +69,7 @@
     [scroller addSubview:_background];
     [_background setHidden:YES];
     
-     /*FIRST ANSWER*/
+    /*FIRST ANSWER*/
     //[answer1Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     //[answer1Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     
@@ -140,13 +140,13 @@
     
     
     /*answer4Button = [[UIButton alloc] initWithFrame:CGRectMake(35.0f, 330.0f, 272.0f, 47.0f)];
-    [answer4Button setBackgroundColor:[UIColor whiteColor]];
-    //[answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
-    [answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
-    [answer4Button addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
-    [scroller addSubview:answer4Button];
-    self.answer4Button.layer.borderWidth = 2.0f;
-    self.answer4Button.layer.borderColor = [UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0].CGColor;*/
+     [answer4Button setBackgroundColor:[UIColor whiteColor]];
+     //[answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
+     [answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
+     [answer4Button addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
+     [scroller addSubview:answer4Button];
+     self.answer4Button.layer.borderWidth = 2.0f;
+     self.answer4Button.layer.borderColor = [UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0].CGColor;*/
     
     answer4Label = [[UILabel alloc] initWithFrame: answer4Button.frame];
     answer4Label.text = self.quiz.ans4;
@@ -158,16 +158,16 @@
     [scroller addSubview:answer4Label];
     
     /*
-    _answer4 = [UIButton buttonWithType:UIButtonTypeCustom];
-    _answer4.frame = CGRectMake(0.0f, 400.0f, 320.0f, 42.0f);
-    [_answer4 setBackgroundColor:[UIColor whiteColor]];
-    [_answer4 setTitle:self.quiz.ans4 forState:UIControlStateNormal];
-    [_answer4 setTitleColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0] forState:UIControlStateNormal];
-    [_answer4 addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
-    _answer4.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
-    [self.view addSubview:_answer4];
-    _answer4.layer.borderWidth = 2.0f;
-    _answer4.layer.borderColor = [UIColor colorWithRed:85/255.0 green:172/255.0 blue:238/255.0 alpha:1.0].CGColor;*/
+     _answer4 = [UIButton buttonWithType:UIButtonTypeCustom];
+     _answer4.frame = CGRectMake(0.0f, 400.0f, 320.0f, 42.0f);
+     [_answer4 setBackgroundColor:[UIColor whiteColor]];
+     [_answer4 setTitle:self.quiz.ans4 forState:UIControlStateNormal];
+     [_answer4 setTitleColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0] forState:UIControlStateNormal];
+     [_answer4 addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
+     _answer4.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+     [self.view addSubview:_answer4];
+     _answer4.layer.borderWidth = 2.0f;
+     _answer4.layer.borderColor = [UIColor colorWithRed:85/255.0 green:172/255.0 blue:238/255.0 alpha:1.0].CGColor;*/
     
     
     /*RESULT BUTTON*/
@@ -255,10 +255,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) quizDone {    
+- (void) quizDone {
     if (self.quiz.correctCount) {
         //self.statusLabel.text = [NSString stringWithFormat:@"Quiz Done - Score %d%%", self.quiz.quizCount/self.quiz.correctCount];
-         //[self.startButton setTitle:@"Try Again" forState:UIControlStateNormal];
+        //[self.startButton setTitle:@"Try Again" forState:UIControlStateNormal];
         [_nextButton setHidden:YES];
         [_startButton setHidden:NO];
         [_resultButton setHidden:NO];
@@ -271,14 +271,14 @@
         //QuizTipViewController *results = [self.storyboard instantiateViewControllerWithIdentifier:@"results"];
         //[self.navigationController pushViewController:results animated:YES];
         
-        } else {
+    } else {
         self.statusLabel.text = @"Quiz Done - Score 0%";
     }
-   self.quizIndex = 13;
+    self.quizIndex = 10;
 }
 
 - (void) nextQuizQuestion {
-    if (self.quizIndex == 13) {
+    if (self.quizIndex == 10) {
         self.quizIndex = 0;
         self.statusLabel.text = [NSString stringWithFormat:@"Remaining questions: %ld", (long)self.quiz.quizCount];
         NSLog(@"Initial Questions");
@@ -320,15 +320,15 @@
         //[self hideAll];
         NSLog(@"2");
         
-
+        
     }
     //[self showQuestionButtons];
     
-
+    
 }
 
 -(void)checkAnswer {
-
+    
     if([self.quiz checkQuestion:self.quizIndex forAnswer:self.answer])
     {
         self.quiz.total += 1;
@@ -345,7 +345,7 @@
         [[LocalyticsSession shared] tagEvent:@"Incorrect"];
     }
     
-    self.statusLabel.text = [NSString stringWithFormat:@"Correct : %ld Incorrect : %ld", self.quiz.correctCount, (long)self.quiz.incorrectCount];
+    self.statusLabel.text = [NSString stringWithFormat:@"Correct : %ld Incorrect : %ld", (long)self.quiz.correctCount, (long)self.quiz.incorrectCount];
     [self hideQuestionButtons];
     //self.startButton.hidden = NO;
     
@@ -375,7 +375,7 @@
 -(IBAction)startAgain:(id)sender {
     
     if ((self.quizIndex) < self.quiz.quizCount) {
-    [self nextQuizQuestion];
+        [self nextQuizQuestion];
         NSLog(@"Next");
     }
     else {
@@ -393,23 +393,25 @@
 }
 
 -(IBAction)reset:(id)sender {
-    self.quizIndex = 13;
+    self.quizIndex = 10;
     [self nextQuizQuestion];
     [_nextButton setEnabled:YES];
 }
-- (void)quizTipDidFinish:(QuizTipViewController *)controller {
-    [self dismissViewControllerAnimated:YES completion:^{}];
-    
-}
 
 /*
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"TipModal"]) {
-        QuizTipViewController *detailViewController = (QuizTipViewController *)segue.destinationViewController;
-        detailViewController.delegate = self;
-        detailViewController.tipText = self.quiz.tip;
-    }
-}*/
+ - (void)quizTipDidFinish:(QuizTipViewController *)controller {
+ [self dismissViewControllerAnimated:YES completion:^{}];
+ 
+ }*/
+
+/*
+ -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ if ([segue.identifier isEqualToString:@"TipModal"]) {
+ QuizTipViewController *detailViewController = (QuizTipViewController *)segue.destinationViewController;
+ detailViewController.delegate = self;
+ detailViewController.tipText = self.quiz.tip;
+ }
+ }*/
 
 -(void)showResult{
     
@@ -460,7 +462,7 @@
     [self sendMail:nil
         andSubject:stringSubject
            andBody:self.grade];
-
+    
 }
 
 - (IBAction)closeButtonTouched:(UIButton *)sender {
@@ -492,7 +494,7 @@
         
         // show the default mail of iPhone on present view
         [self presentViewController:mailView animated:YES completion:nil];
-//        [[self navigationController] presentViewController:mailView animated:YES completion:nil];
+        //        [[self navigationController] presentViewController:mailView animated:YES completion:nil];
         
     }
 }
@@ -574,4 +576,5 @@
     
     [self.popupView.layer addAnimation:animation forKey:@"popup"];
 }
+
 @end

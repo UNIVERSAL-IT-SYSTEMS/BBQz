@@ -6,13 +6,13 @@
 		<key>question</key>
 		<string>What best defines the reality outside a person&apos;s perception, according to Kabbalah?</string>
 		<key>ans1</key>
-		<string>There before you were born &amp; there after you die</string>
+		<string>Reality was there before you were born &amp; will be there after you die</string>
 		<key>ans2</key>
-		<string>It changes according to your influence</string>
+		<string>Reality changes according to your influence upon it</string>
 		<key>ans3</key>
-		<string>Your perception is subjective</string>
+		<string>Reality is objective; your perception is subjective</string>
 		<key>ans4</key>
-		<string>No reality outside a person&apos;s perception</string>
+		<string>There is no reality outside a person&apos;s perception</string>
 		<key>answer</key>
 		<string>4</string>
 	</dict>
@@ -50,7 +50,7 @@
 		<key>ans1</key>
 		<string>The cause is unknown</string>
 		<key>ans2</key>
-		<string>Will to receive pleasure for one&apos;s self-benefit</string>
+		<string>Human nature is a will to receive pleasure for one&apos;s self-benefit</string>
 		<key>ans3</key>
 		<string>Nature is self-serving &amp; the person is a part of nature</string>
 		<key>ans4</key>
@@ -62,9 +62,9 @@
 		<key>question</key>
 		<string>Where is the person with regard to reality?</string>
 		<key>ans1</key>
-		<string>The person is a tiny speck in reality</string>
+		<string>The person is a tiny, irrelevant speck in reality</string>
 		<key>ans2</key>
-		<string>The stronger the person, more place in reality</string>
+		<string>The stronger the person is, the more place s/he takes up in reality</string>
 		<key>ans3</key>
 		<string>The person is at the center of reality</string>
 		<key>ans4</key>
@@ -90,11 +90,11 @@
 		<key>question</key>
 		<string>Which of the following is NOT an implication of a person being at the center of reality?</string>
 		<key>ans1</key>
-		<string>Has nothing to change other than own self</string>
+		<string>That a person has nothing to change in reality other than his/her own self</string>
 		<key>ans2</key>
-		<string>Has a great responsibility &amp; role in reality</string>
+		<string>The person has a great responsibility &amp; role in reality</string>
 		<key>ans3</key>
-		<string>Insignificant in relation to reality surrounding</string>
+		<string>The person is insignificant in relation to the reality surrounding him/her</string>
 		<key>ans4</key>
 		<string>The whole of reality is inside the person</string>
 		<key>answer</key>
@@ -104,11 +104,11 @@
 		<key>question</key>
 		<string>Which of the following is NOT a reason why we perceive reality as being outside ourselves?</string>
 		<key>ans1</key>
-		<string>Change ourselves, until we perceive reality</string>
+		<string>In order for us to work to change ourselves, until we perceive reality entirely within</string>
 		<key>ans2</key>
 		<string>Because of the breaking of the vessels</string>
 		<key>ans3</key>
-		<string>Experience oppositeness from Nature</string>
+		<string>In order to experience oppositeness from Nature &amp; the need to re-unite with Nature</string>
 		<key>ans4</key>
 		<string>Because it was an error in the creation</string>
 		<key>answer</key>
@@ -118,13 +118,13 @@
 		<key>question</key>
 		<string>Which of the following does NOT designate the shift from perceiving reality outside ourselves to perceiving reality within?</string>
 		<key>ans1</key>
-		<string>The quality of giving doesn&apos;t exist in us. </string>
+		<string>The quality of giving doesn&apos;t exist in us. The more we attain it, the more we perceive through it</string>
 		<key>ans2</key>
-		<string>Shifting to perceiving nothingness</string>
+		<string>Shifting from perceiving people &amp; things to perceiving nothingness</string>
 		<key>ans3</key>
-		<string>Shifting to a spiritual perception</string>
+		<string>Shifting from a corporeal perception to a spiritual one</string>
 		<key>ans4</key>
-		<string>Shifting to being connected to others and Nature</string>
+		<string>Shifting from perceiving oneself as an individual/detached from others, to being completely connected to others and Nature</string>
 		<key>answer</key>
 		<string>4</string>
 	</dict>

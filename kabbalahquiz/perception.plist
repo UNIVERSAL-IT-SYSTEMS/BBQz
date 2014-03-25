@@ -1,5 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<dict>
+		<key>question</key>
+		<string>What best defines the reality outside a person&apos;s perception, according to Kabbalah?</string>
+		<key>ans1</key>
+		<string>There before you were born &amp; there after you die</string>
+		<key>ans2</key>
+		<string>It changes according to your influence</string>
+		<key>ans3</key>
+		<string>Your perception is subjective</string>
+		<key>ans4</key>
+		<string>No reality outside a person&apos;s perception</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>After a person receives information through his/her senses, where does that information get processed to create a picture of reality?</string>
+		<key>ans1</key>
+		<string>In the mind</string>
+		<key>ans2</key>
+		<string>In the heart</string>
+		<key>ans3</key>
+		<string>In the glandular system</string>
+		<key>ans4</key>
+		<string>In the nervous system</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What defines the picture of reality a person perceives at any given moment?</string>
+		<key>ans1</key>
+		<string>Self-serving</string>
+		<key>ans2</key>
+		<string>Altruistic</string>
+		<key>ans3</key>
+		<string>Objective</string>
+		<key>ans4</key>
+		<string>Integral</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the cause of a person&apos;s picture of reality?</string>
+		<key>ans1</key>
+		<string>The cause is unknown</string>
+		<key>ans2</key>
+		<string>Will to receive pleasure for one&apos;s self-benefit</string>
+		<key>ans3</key>
+		<string>Nature is self-serving &amp; the person is a part of nature</string>
+		<key>ans4</key>
+		<string>The Creator is self-serving &amp; created man in His image</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Where is the person with regard to reality?</string>
+		<key>ans1</key>
+		<string>The person is a tiny speck in reality</string>
+		<key>ans2</key>
+		<string>The stronger the person, more place in reality</string>
+		<key>ans3</key>
+		<string>The person is at the center of reality</string>
+		<key>ans4</key>
+		<string>The person doesn&apos;t exist in reality</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What can a person change in reality?</string>
+		<key>ans1</key>
+		<string>Only oneself, i.e. one&apos;s perception of reality</string>
+		<key>ans2</key>
+		<string>Only reality itself</string>
+		<key>ans3</key>
+		<string>The person can change other people</string>
+		<key>ans4</key>
+		<string>The person can change him/herself &amp; reality</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT an implication of a person being at the center of reality?</string>
+		<key>ans1</key>
+		<string>Has nothing to change other than own self</string>
+		<key>ans2</key>
+		<string>Has a great responsibility &amp; role in reality</string>
+		<key>ans3</key>
+		<string>Insignificant in relation to reality surrounding</string>
+		<key>ans4</key>
+		<string>The whole of reality is inside the person</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a reason why we perceive reality as being outside ourselves?</string>
+		<key>ans1</key>
+		<string>Change ourselves, until we perceive reality</string>
+		<key>ans2</key>
+		<string>Because of the breaking of the vessels</string>
+		<key>ans3</key>
+		<string>Experience oppositeness from Nature</string>
+		<key>ans4</key>
+		<string>Because it was an error in the creation</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT designate the shift from perceiving reality outside ourselves to perceiving reality within?</string>
+		<key>ans1</key>
+		<string>The quality of giving doesn&apos;t exist in us. </string>
+		<key>ans2</key>
+		<string>Shifting to perceiving nothingness</string>
+		<key>ans3</key>
+		<string>Shifting to a spiritual perception</string>
+		<key>ans4</key>
+		<string>Shifting to being connected to others and Nature</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the name of the law that operates to bring us from perceiving reality outside ourselves, to perceiving reality within?</string>
+		<key>ans1</key>
+		<string>The law of conservation of mass</string>
+		<key>ans2</key>
+		<string>The law of equivalence of form</string>
+		<key>ans3</key>
+		<string>The law of conservation of energy</string>
+		<key>ans4</key>
+		<string>The law of attraction</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+</array>
 </plist>

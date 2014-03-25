@@ -276,7 +276,7 @@
 - (void) nextQuizQuestion {
     if (self.quizIndex == 13) {
         self.quizIndex = 0;
-        self.statusLabel.text = [NSString stringWithFormat:@"Remaining questions: %d", self.quiz.quizCount];
+        self.statusLabel.text = [NSString stringWithFormat:@"Remaining questions: %ld", (long)self.quiz.quizCount];
         NSLog(@"Initial Questions");
         NSLog(@"count: %ld", (long)self.quizIndex);
         NSLog(@"count: %ld", (long)self.quiz.quizCount);
@@ -341,7 +341,7 @@
         [[LocalyticsSession shared] tagEvent:@"Incorrect"];
     }
     
-    self.statusLabel.text = [NSString stringWithFormat:@"Correct : %d Incorrect : %d", self.quiz.correctCount, self.quiz.incorrectCount];
+    self.statusLabel.text = [NSString stringWithFormat:@"Correct : %ld Incorrect : %ld", self.quiz.correctCount, (long)self.quiz.incorrectCount];
     [self hideQuestionButtons];
     //self.startButton.hidden = NO;
     

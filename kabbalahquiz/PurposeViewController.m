@@ -36,6 +36,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav-title"]];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.quizIndex = 13;
     self.quiz = [[Quiz alloc] initWithQuiz:@"purpose"];
@@ -76,7 +78,7 @@
     //_background = [[UIImageView alloc] initWithFrame:CGRectMake(20.0f, 180.0f, <#CGFloat width#>, <#CGFloat height#>)]
     
     
-    answer1Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 180.0f, 272.0f, 47.0f)];
+    answer1Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 160.0f, 272.0f, 47.0f)];
     [answer1Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer1Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer1Button addTarget:self action:@selector(ans1Action:) forControlEvents:UIControlEventTouchUpInside];
@@ -94,7 +96,7 @@
     //[answer2Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     //[answer2Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     
-    answer2Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 230.0f, 272.0f, 47.0f)];
+    answer2Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 210.0f, 272.0f, 47.0f)];
     [answer2Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer2Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer2Button addTarget:self action:@selector(ans2Action:) forControlEvents:UIControlEventTouchUpInside];
@@ -112,7 +114,7 @@
     //[answer3Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     //[answer3Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     
-    answer3Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 280.0f, 272.0f, 47.0f)];
+    answer3Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 260.0f, 272.0f, 47.0f)];
     [answer3Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer3Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer3Button addTarget:self action:@selector(ans3Action:) forControlEvents:UIControlEventTouchUpInside];
@@ -129,7 +131,7 @@
     /*FOURTH ANSWER*/
     //[answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     //[answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
-    answer4Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 330.0f, 272.0f, 47.0f)];
+    answer4Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 310.0f, 272.0f, 47.0f)];
     [answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer4Button addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
@@ -276,7 +278,7 @@
 - (void) nextQuizQuestion {
     if (self.quizIndex == 13) {
         self.quizIndex = 0;
-        self.statusLabel.text = [NSString stringWithFormat:@"Remaining questions: %d", self.quiz.quizCount];
+        self.statusLabel.text = [NSString stringWithFormat:@"Remaining questions: %ld", (long)self.quiz.quizCount];
         NSLog(@"Initial Questions");
         NSLog(@"count: %ld", (long)self.quizIndex);
         NSLog(@"count: %ld", (long)self.quiz.quizCount);
@@ -341,7 +343,7 @@
         [[LocalyticsSession shared] tagEvent:@"Incorrect"];
     }
     
-    self.statusLabel.text = [NSString stringWithFormat:@"Correct : %d Incorrect : %d", self.quiz.correctCount, self.quiz.incorrectCount];
+    self.statusLabel.text = [NSString stringWithFormat:@"Correct : %ld Incorrect : %ld", (long)self.quiz.correctCount, (long)self.quiz.incorrectCount];
     [self hideQuestionButtons];
     //self.startButton.hidden = NO;
     

@@ -11,7 +11,6 @@
 		6D28428A1893701200462C20 /* popPupBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2842861893701200462C20 /* popPupBg@2x.png */; };
 		6D28428B1893701200462C20 /* closeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2842871893701200462C20 /* closeBtn.png */; };
 		6D28428C1893701200462C20 /* closeBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D2842881893701200462C20 /* closeBtn@2x.png */; };
-		6D28428E18937A6000462C20 /* EC-Kabbalah-Quiz-header-320x90.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D28428D18937A6000462C20 /* EC-Kabbalah-Quiz-header-320x90.png */; };
 		6D28429518937B6E00462C20 /* QuizTipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D28429018937B6E00462C20 /* QuizTipViewController.m */; };
 		6D28429618937B6E00462C20 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D28429218937B6E00462C20 /* Quiz.m */; };
 		6D28429718937B6E00462C20 /* QuoteQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D28429418937B6E00462C20 /* QuoteQuizViewController.m */; };
@@ -157,6 +156,11 @@
 		6DF7FEF518E09CBD009D987C /* icon-8-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEEB18E09CBD009D987C /* icon-8-70x70.png */; };
 		6DF7FEF618E09CBD009D987C /* icon-9-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEEC18E09CBD009D987C /* icon-9-70x70.png */; };
 		6DF7FEF718E09CBD009D987C /* icon-10-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEED18E09CBD009D987C /* icon-10-70x70.png */; };
+		6DF7FEF918E0FA97009D987C /* EC-Kabbalah-Quiz-footer-120x25.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEF818E0FA97009D987C /* EC-Kabbalah-Quiz-footer-120x25.png */; };
+		6DF7FEFC18E0FC26009D987C /* nav-title.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEFA18E0FC26009D987C /* nav-title.png */; };
+		6DF7FEFD18E0FC26009D987C /* nav-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEFB18E0FC26009D987C /* nav-title@2x.png */; };
+		6DF7FF0118E0FD17009D987C /* PerceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */; };
+		6DF7FF0318E0FD88009D987C /* perception.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0218E0FD88009D987C /* perception.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,7 +178,6 @@
 		6D2842861893701200462C20 /* popPupBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popPupBg@2x.png"; sourceTree = "<group>"; };
 		6D2842871893701200462C20 /* closeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeBtn.png; sourceTree = "<group>"; };
 		6D2842881893701200462C20 /* closeBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "closeBtn@2x.png"; sourceTree = "<group>"; };
-		6D28428D18937A6000462C20 /* EC-Kabbalah-Quiz-header-320x90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EC-Kabbalah-Quiz-header-320x90.png"; sourceTree = "<group>"; };
 		6D28428F18937B6E00462C20 /* QuizTipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizTipViewController.h; sourceTree = "<group>"; };
 		6D28429018937B6E00462C20 /* QuizTipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizTipViewController.m; sourceTree = "<group>"; };
 		6D28429118937B6E00462C20 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
@@ -373,6 +376,12 @@
 		6DF7FEEB18E09CBD009D987C /* icon-8-70x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-8-70x70.png"; sourceTree = "<group>"; };
 		6DF7FEEC18E09CBD009D987C /* icon-9-70x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-9-70x70.png"; sourceTree = "<group>"; };
 		6DF7FEED18E09CBD009D987C /* icon-10-70x70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-10-70x70.png"; sourceTree = "<group>"; };
+		6DF7FEF818E0FA97009D987C /* EC-Kabbalah-Quiz-footer-120x25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EC-Kabbalah-Quiz-footer-120x25.png"; sourceTree = "<group>"; };
+		6DF7FEFA18E0FC26009D987C /* nav-title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-title.png"; sourceTree = "<group>"; };
+		6DF7FEFB18E0FC26009D987C /* nav-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-title@2x.png"; sourceTree = "<group>"; };
+		6DF7FEFF18E0FD17009D987C /* PerceptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerceptionViewController.h; sourceTree = "<group>"; };
+		6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerceptionViewController.m; sourceTree = "<group>"; };
+		6DF7FF0218E0FD88009D987C /* perception.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = perception.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +427,7 @@
 		6D2842841893700A00462C20 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6DF7FEF818E0FA97009D987C /* EC-Kabbalah-Quiz-footer-120x25.png */,
 				6D92CFF418C71BE8008227CE /* postWorkoutButtonBackground@2x.png */,
 				6D92CFF518C71BE8008227CE /* downArrow@2x.png */,
 				6D92CFF618C71BE8008227CE /* postWorkoutButtonBackground.png */,
@@ -455,7 +465,8 @@
 				6D5E3F2818C2ED34004D0CFA /* mainMenuIcon@2x.png */,
 				6D3B7FD418BECABE00FD6BDE /* navigation_bar_button_icon_menu.png */,
 				6D3B7FD518BECABE00FD6BDE /* navigation_bar_button_icon_menu@2x.png */,
-				6D28428D18937A6000462C20 /* EC-Kabbalah-Quiz-header-320x90.png */,
+				6DF7FEFA18E0FC26009D987C /* nav-title.png */,
+				6DF7FEFB18E0FC26009D987C /* nav-title@2x.png */,
 				6D2842851893701200462C20 /* popPupBg.png */,
 				6D2842861893701200462C20 /* popPupBg@2x.png */,
 				6D2842871893701200462C20 /* closeBtn.png */,
@@ -616,6 +627,7 @@
 		6D36CFAF188A22B40016A628 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				6DF7FEFE18E0FCFB009D987C /* perception */,
 				6DF7FEDC18E0872B009D987C /* purpose */,
 				6DF7FEDB18E08472009D987C /* model */,
 				6DF7FEDA18E0845B009D987C /* intro */,
@@ -828,6 +840,7 @@
 			children = (
 				6D54B3F718BEFCAF00990E4B /* intro.plist */,
 				6DF7FEE118E088A1009D987C /* purpose.plist */,
+				6DF7FF0218E0FD88009D987C /* perception.plist */,
 			);
 			name = plists;
 			sourceTree = "<group>";
@@ -847,6 +860,15 @@
 				6DF7FEED18E09CBD009D987C /* icon-10-70x70.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		6DF7FEFE18E0FCFB009D987C /* perception */ = {
+			isa = PBXGroup;
+			children = (
+				6DF7FEFF18E0FD17009D987C /* PerceptionViewController.h */,
+				6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */,
+			);
+			name = perception;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -960,6 +982,7 @@
 				6D5E3F2A18C2ED34004D0CFA /* mainMenuIcon@2x.png in Resources */,
 				6D36D098188A2D510016A628 /* OnboardStep2.png in Resources */,
 				6D92D01618C71BE8008227CE /* primaryButtonBackground.png in Resources */,
+				6DF7FF0318E0FD88009D987C /* perception.plist in Resources */,
 				6DF7FEF318E09CBD009D987C /* icon-6-70x70.png in Resources */,
 				6D36D09B188A2D510016A628 /* OnboardStep3@2x.png in Resources */,
 				6D36D0A2188A2D510016A628 /* WelcomeThatPhoto.png in Resources */,
@@ -973,7 +996,6 @@
 				6D36CFBC188A22D90016A628 /* 2@2x.png in Resources */,
 				6DF7FEF618E09CBD009D987C /* icon-9-70x70.png in Resources */,
 				6D36D099188A2D510016A628 /* OnboardStep2@2x.png in Resources */,
-				6D28428E18937A6000462C20 /* EC-Kabbalah-Quiz-header-320x90.png in Resources */,
 				6D92D01218C71BE8008227CE /* helpButtonBackground.png in Resources */,
 				6D822D7618C2D5A000AA9A25 /* icon80@2x~iphone.png in Resources */,
 				6DF7FEF118E09CBD009D987C /* icon-4-70x70.png in Resources */,
@@ -992,6 +1014,7 @@
 				6D92D00918C71BE8008227CE /* game_feedbackIncorrect.png in Resources */,
 				6D36D09C188A2D510016A628 /* WelcomeThatCloud.png in Resources */,
 				6D92D01118C71BE8008227CE /* game_feedbackCorrect.png in Resources */,
+				6DF7FEFC18E0FC26009D987C /* nav-title.png in Resources */,
 				6D36D0A0188A2D510016A628 /* WelcomeThatPDF.png in Resources */,
 				6D36CFBD188A22D90016A628 /* 1@2x.png in Resources */,
 				6D92D00F18C71BE8008227CE /* game_feedbackIncorrect@2x.png in Resources */,
@@ -1002,12 +1025,14 @@
 				6D92D01018C71BE8008227CE /* primaryButtonBackground@2x.png in Resources */,
 				6D92D00C18C71BE8008227CE /* shorterButtonBackground@2x.png in Resources */,
 				6D92D00D18C71BE8008227CE /* helpButtonBackground@2x.png in Resources */,
+				6DF7FEFD18E0FC26009D987C /* nav-title@2x.png in Resources */,
 				6D36CF7E188A22780016A628 /* InfoPlist.strings in Resources */,
 				6DF7FEE218E088A1009D987C /* purpose.plist in Resources */,
 				6D92D00818C71BE8008227CE /* postWorkoutButtonBackground.png in Resources */,
 				6D822D6F18C2D5A000AA9A25 /* icon@2x~ipad.png in Resources */,
 				6D5E3F2918C2ED34004D0CFA /* mainMenuIcon.png in Resources */,
 				6D92D00A18C71BE8008227CE /* secondaryButtonBackground.png in Resources */,
+				6DF7FEF918E0FA97009D987C /* EC-Kabbalah-Quiz-footer-120x25.png in Resources */,
 				6DF7FEF018E09CBD009D987C /* icon-3-70x70.png in Resources */,
 				6DF7FEF418E09CBD009D987C /* icon-7-70x70.png in Resources */,
 				6D822D7118C2D5A000AA9A25 /* icon~ipad.png in Resources */,
@@ -1049,6 +1074,7 @@
 				6D36CFFD188A23420016A628 /* Chunk.m in Sources */,
 				6D36D03B188A25B40016A628 /* JTCollectionViewCell.m in Sources */,
 				6D36D000188A23420016A628 /* CSSSelector.m in Sources */,
+				6DF7FF0118E0FD17009D987C /* PerceptionViewController.m in Sources */,
 				6D36D086188A2AD70016A628 /* WelcomeIpadViewController.m in Sources */,
 				6D36D024188A23C30016A628 /* AFJSONRequestOperation.m in Sources */,
 				6D36CFC5188A22E10016A628 /* SidePanelController.m in Sources */,

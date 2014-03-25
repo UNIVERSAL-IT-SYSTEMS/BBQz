@@ -201,9 +201,9 @@
         
     }
     
-    else if ([str isEqual:@"Blog"]){
+    else if ([str isEqual:@"Perception of Reality"]){
         
-        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"bvc"];
+        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"perceptionvc"];
     }
     
     else if ([str isEqual:@"More Info"]){

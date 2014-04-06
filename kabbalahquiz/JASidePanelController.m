@@ -937,7 +937,7 @@ static char ja_kvoContext;
     UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 88, 88)];
     
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[JASidePanelController defaultImage]];
-    UIButton *itemButton = [[UIButton alloc] initWithFrame:CGRectMake(-15, 22, 30, 30)];
+    UIButton *itemButton = [[UIButton alloc] initWithFrame:CGRectMake(-15, 22, 44, 44)];
     [itemButton addTarget:self action:@selector(toggleLeftPanel:) forControlEvents:UIControlEventTouchUpInside];
     [itemButton addSubview:imageView];
     

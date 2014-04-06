@@ -10,13 +10,10 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <MessageUI/MessageUI.h>
 #import <QuartzCore/QuartzCore.h>
+#import "QuoteQuizViewController.h"
 
 @class Quiz;
-@interface PurposeViewController : UIViewController<MFMailComposeViewControllerDelegate>{
-    
-    IBOutlet UIScrollView *scroller;
-    IBOutlet UIScrollView *scroller_ipad;
-}
+@interface PurposeViewController : QuoteQuizViewController<MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, assign) NSInteger quizIndex;
 @property (nonatomic, strong) NSString *grade;

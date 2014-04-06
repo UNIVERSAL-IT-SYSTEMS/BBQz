@@ -13,7 +13,6 @@
 
 #import "UIViewController+JASidePanel.h"
 
-#import "JHCenterViewController.h"
 
 
 @interface JHLeftViewController ()

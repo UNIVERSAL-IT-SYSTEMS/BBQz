@@ -10,7 +10,7 @@
 
 @class JASidePanelController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, UITabBarDelegate, UIActionSheetDelegate>{
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIActionSheetDelegate>{
     
     UIBackgroundTaskIdentifier bgTask;
 }
@@ -19,4 +19,6 @@
 @property (retain, nonatomic) UIWindow *background;
 
 @property (strong, nonatomic) JASidePanelController *viewController;
+
+@property (nonatomic) UISplitViewController *splitViewController;
 @end

@@ -16,6 +16,8 @@
 
 #import "QuoteQuizViewController.h"
 
+#import "kqTheme.h"
+
 
 @implementation AppDelegate
 @synthesize window = _window;
@@ -49,20 +51,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
     [[LocalyticsSession shared] resume];
     [[LocalyticsSession shared] upload];
     //[Flurry setCrashReportingEnabled:NO];
     //[Flurry startSession:@"H97X7J9VPTBFKHRR5YKB"];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        /*
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;*/
         
-        //MyFirstViewController* firstVC = [[MyFirstViewController alloc] init];
-        //MySecondViewController* secondVC = [[MySecondViewController alloc] init];
         
         UISplitViewController* splitVC = [[UISplitViewController alloc] init];
         //splitVC.viewControllers = [NSArray arrayWithObjects:firstVC, secondVC, nil];

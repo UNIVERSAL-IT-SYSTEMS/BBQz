@@ -36,6 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIColor* mainColor = [UIColor colorWithRed:50.0/255 green:102.0/255 blue:147.0/255 alpha:1.0f];
 	// Do any additional setup after loading the view, typically from a nib.
     self.quizIndex = 13;
     self.quiz = [[Quiz alloc] initWithQuiz:@"intro"];
@@ -413,7 +414,7 @@
 
 -(void)showResult{
     
-    NSLog(@"status : %d,%d",self.quiz.correctCount,self.quiz.incorrectCount);
+    //NSLog(@"status : %d,%d",self.quiz.correctCount,self.quiz.incorrectCount);
     self.grade= @"";
     int sum = self.quiz.incorrectCount+self.quiz.correctCount;
     

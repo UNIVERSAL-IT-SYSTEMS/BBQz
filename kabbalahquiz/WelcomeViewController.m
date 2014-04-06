@@ -72,13 +72,13 @@ NSString *nsuserdefaultsHasRunFlowKeyName = @"com.bneibaruch.hasRunWelcomeFlow";
     UIImage *btn = [UIImage imageNamed:@"btn_standard_default~iphone.png"];
     UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
     UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
-    btnImageView.frame = CGRectMake(20, 488, 280.0, stretchBtn.size.height);
+    btnImageView.frame = CGRectMake(20, 468, 280.0, stretchBtn.size.height);
     [viewButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     
     UIImage *btnPressed = [UIImage imageNamed:@"btn_standard_pressed~iphone.png"];
     UIImage *stretchBtnPressed = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
     UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:stretchBtnPressed];
-    btnPressedImageView.frame = CGRectMake(20, 488, 280.0, stretchBtnPressed.size.height);
+    btnPressedImageView.frame = CGRectMake(20, 468, 280.0, stretchBtnPressed.size.height);
     [viewButton setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     
     // Do any additional setup after loading the view from its nib.
@@ -99,6 +99,7 @@ NSString *nsuserdefaultsHasRunFlowKeyName = @"com.bneibaruch.hasRunWelcomeFlow";
 - (IBAction)skipWelcomeFlow:(id)sender {
     [WelcomeViewController setShouldRunWelcomeFlow:NO];
     [[[UIApplication sharedApplication] keyWindow] setRootViewController:self.nextViewController];
+    NSLog(@"Button Tapped");
 }
 
 @end

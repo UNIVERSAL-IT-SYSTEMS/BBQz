@@ -9,7 +9,7 @@
 #import "PurposeViewController.h"
 #import "Quiz.h"
 
-@interface PurposeViewController ()
+@interface QuoteQuizViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
@@ -417,7 +417,7 @@
 
 -(void)showResult{
     
-    NSLog(@"status : %d,%d",self.quiz.correctCount,self.quiz.incorrectCount);
+    //NSLog(@"status %ld%d,%d(long)",self.quiz.correctCount,self.quiz.incorrectCount);
     self.grade= @"";
     int sum = self.quiz.incorrectCount+self.quiz.correctCount;
     

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QuizTipViewController.h"
 // EMail SMS lib
 #import <MessageUI/MFMailComposeViewController.h>
 #import <MessageUI/MessageUI.h>
@@ -49,5 +48,10 @@
 @property (strong, nonatomic)IBOutlet UILabel *answer2Label;
 @property (strong, nonatomic)IBOutlet UILabel *answer3Label;
 @property (strong, nonatomic)IBOutlet UILabel *answer4Label;
+
+@end
+
+@protocol QuizTipViewControllerDelegate <NSObject>
+
 
 @end

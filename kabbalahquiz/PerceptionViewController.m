@@ -416,7 +416,7 @@
 
 -(void)showResult{
     
-    NSLog(@"status : %d,%d",self.quiz.correctCount,self.quiz.incorrectCount);
+    //NSLog(@"status : %d,%d",self.quiz.correctCount,self.quiz.incorrectCount);
     self.grade= @"";
     int sum = self.quiz.incorrectCount+self.quiz.correctCount;
     

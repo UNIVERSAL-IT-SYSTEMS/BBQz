@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Which of the four factors (i.e. the four factors that determine every emergence in the world) can we NOT influence?</string>
+		<key>ans1</key>
+		<string>First factor: Source</string>
+		<key>ans2</key>
+		<string>Second factor: Source&apos;s development</string>
+		<key>ans3</key>
+		<string>Third factor: External factors directly related to the source</string>
+		<key>ans4</key>
+		<string>Fourth factor: External factors not directly related to the source</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>If we cannot influence the first factor, the source, how can we influence the other three factors, by which the source changes in its individual parts, and sometimes in its general part as well?</string>
+		<key>ans1</key>
+		<string>We cannot influence the other three factors either</string>
+		<key>ans2</key>
+		<string>Through fate</string>
+		<key>ans3</key>
+		<string>Through our choice of environment</string>
+		<key>ans4</key>
+		<string>Through meditation</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What constitutes an environment that can help a person advance spiritually?</string>
+		<key>ans1</key>
+		<string>Friends, books, teachers</string>
+		<key>ans2</key>
+		<string>Trees, birds, fresh air</string>
+		<key>ans3</key>
+		<string>Any place of complete solitude</string>
+		<key>ans4</key>
+		<string>Any high places, such as mountain tops</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a definition of &quot;friends&quot; as one of the means to advance spiritually?</string>
+		<key>ans1</key>
+		<string>People who share a common desire for spirituality</string>
+		<key>ans2</key>
+		<string>People who share a natural closeness to each other</string>
+		<key>ans3</key>
+		<string>People who aim themselves at attaining adhesion with the Creator</string>
+		<key>ans4</key>
+		<string>People with a point in the heart who try to connect those points together</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a definition of &quot;books&quot; as one of the means to advance spiritually?</string>
+		<key>ans1</key>
+		<string>Books written by people with spiritual attainment</string>
+		<key>ans2</key>
+		<string>Books on philosophy, religion, psychology, new age, spirituality</string>
+		<key>ans3</key>
+		<string>Text written in the language of roots &amp; branches</string>
+		<key>ans4</key>
+		<string>Books written at a higher spiritual level</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a definition of &quot;teacher&quot; as one of the means to advance spiritually?</string>
+		<key>ans1</key>
+		<string>A higher spiritual degree</string>
+		<key>ans2</key>
+		<string>A person at a higher spiritual degree permitted to guide students to spirituality</string>
+		<key>ans3</key>
+		<string>Guidance from a higher spiritual degree</string>
+		<key>ans4</key>
+		<string>A person who has been granted certification as a spiritual teacher</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Where does a person have free will?</string>
+		<key>ans1</key>
+		<string>A person has no free will</string>
+		<key>ans2</key>
+		<string>In the choice of an environment of friends, books &amp; teachers that impart spiritual concepts &amp; advice</string>
+		<key>ans3</key>
+		<string>In the choice to enter any environment that appears to the person &amp; read any book that s/he comes by</string>
+		<key>ans4</key>
+		<string>In the choice of pain over pleasure</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the precondition for free will?</string>
+		<key>ans1</key>
+		<string>Birth into this world</string>
+		<key>ans2</key>
+		<string>Being a homo sapien</string>
+		<key>ans3</key>
+		<string>Having a point in the heart (i.e. desire for spirituality)</string>
+		<key>ans4</key>
+		<string>Being raised in an environment that provides all of person&apos;s needs</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a reason why there is no free will in achieving any corporeal goals (i.e. on the levels of food, sex, family, money, honor, control, knowledge)?</string>
+		<key>ans1</key>
+		<string>Corporeal goals are depicted in one&apos;s desire to receive pleasure for one&apos;s own personal benefit, without one&apos;s choice</string>
+		<key>ans2</key>
+		<string>Corporeal goals involuntarily appear in a person according to one&apos;s innate characteristics (1st &amp; 2nd factors) &amp; one&apos;s environmental conditioning (3rd &amp; 4th factors)</string>
+		<key>ans3</key>
+		<string>With corporeal goals, a person cannot choose anything but what appears as best for that person according to what the society that person is in appreciates</string>
+		<key>ans4</key>
+		<string>With corporeal goals, a person cannot choose pain in the present for pleasure in the future</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT a reason why there is free will in attaining the spiritual goal (i.e. adhesion with the Creator, balance with Nature, equivalence of form with the quality of bestowal)?</string>
+		<key>ans1</key>
+		<string>The spiritual goal cannot be depicted in one&apos;s nature, i.e. the desire to receive pleasure for one&apos;s own personal benefit, thus a person cannot be involuntarily led to it</string>
+		<key>ans2</key>
+		<string>A characteristic of the spiritual goal is constant bestowal, which requires constant efforts to choose the friends, books &amp; teachers (i.e. the spiritual environment) outside one&apos;s inborn desire to receive pleasure</string>
+		<key>ans3</key>
+		<string>The spiritual goal requires that a person be able to choose pain over pleasure</string>
+		<key>ans4</key>
+		<string>The spiritual goal is in the intention to bestow pleasure above the desire to receive pleasure, not in the desire to receive pleasure itself, which appears in one involuntarily</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+</array>
+</plist>

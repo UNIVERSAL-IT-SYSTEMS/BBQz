@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>What is nature&apos;s fundamental algorithm?</string>
+		<key>ans1</key>
+		<string>Move towards pain, move away from pleasure</string>
+		<key>ans2</key>
+		<string>Move towards pleasure, move away from pain</string>
+		<key>ans3</key>
+		<string>Move towards pleasure 80%, move towards pain 20%</string>
+		<key>ans4</key>
+		<string>Move towards pleasure 50%, move towards pain 50%</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is an example of a person choosing pain over pleasure?</string>
+		<key>ans1</key>
+		<string>Masochism</string>
+		<key>ans2</key>
+		<string>Working on Friday night instead of partying, in order to save money for a holiday</string>
+		<key>ans3</key>
+		<string>Studying on Friday night instead of going out with friends, in order to get good grades</string>
+		<key>ans4</key>
+		<string>There is no such example: we can only ever choose pleasure over pain</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the difference between humans and animals when it comes to choosing pleasure over pain?</string>
+		<key>ans1</key>
+		<string>Humans can aim at a pleasure they envision in the future; animals cannot</string>
+		<key>ans2</key>
+		<string>Animals can aim at a pleasure they envision in the future; humans cannot</string>
+		<key>ans3</key>
+		<string>There is absolutely no difference</string>
+		<key>ans4</key>
+		<string>Humans can choose pain over pleasure; animals cannot</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Although humans can aim at a remote pleasure, whereas animals cannot, is there fundamentally still a difference between humans and animals in relation to chasing pleasures?</string>
+		<key>ans1</key>
+		<string>No. Fundamentally, both humans &amp; animals are pulled toward whatever appears most pleasurable to them</string>
+		<key>ans2</key>
+		<string>No. Fundamentally, both humans &amp; animals are nothing but mammals</string>
+		<key>ans3</key>
+		<string>Yes. The fact that humans can aim at a remote pleasure &amp; animals cannot is the fundamental difference</string>
+		<key>ans4</key>
+		<string>Yes. In addition, humans can choose pain over pleasure, whereas animals cannot</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What role does society play in the type of pleasure a person wants?</string>
+		<key>ans1</key>
+		<string>Society plays no role whatsoever in determining the type of pleasure a person wants</string>
+		<key>ans2</key>
+		<string>Society determines the type of pleasure a person wants</string>
+		<key>ans3</key>
+		<string>Society plays a minimal role in determining the type of pleasure a person wants</string>
+		<key>ans4</key>
+		<string>Society determines certain types of pleasure a person wants, but the person individually determines most of them</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How many factors determine every organism&apos;s emergence and development?</string>
+		<key>ans1</key>
+		<string>1 factor</string>
+		<key>ans2</key>
+		<string>2 factors</string>
+		<key>ans3</key>
+		<string>3 factors</string>
+		<key>ans4</key>
+		<string>4 factors</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is the correct order of the 4 factors by which organisms emerge and develop?</string>
+		<key>ans1</key>
+		<string>Source » Source&apos;s Development » External Factors Directly Related to the Source » External Factors Not Related Directly to the Source</string>
+		<key>ans2</key>
+		<string>Source » External Factors Directly Related to the Source » External Factors Not Related Directly to the Source » Source&apos;s Development</string>
+		<key>ans3</key>
+		<string>External Factors Directly Related to the Source » Source » Source&apos;s Development » External Factors Not Related Directly to the Source</string>
+		<key>ans4</key>
+		<string>External Factors Not Related Directly to the Source » Source » Source&apos;s Development » External Factors Directly Related to the Source</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Take, for example, a stalk of wheat that has rotted in the ground and arrived at a state of sowing many stalks of wheat. Which of the following is an example of its first factor, the wheat&apos;s source?</string>
+		<key>ans1</key>
+		<string>The cause &amp; effect growth of the wheat stalk</string>
+		<key>ans2</key>
+		<string>The minerals and the materials in the ground, the rain and the sun</string>
+		<key>ans3</key>
+		<string>The many stalks of wheat that have been sown</string>
+		<key>ans4</key>
+		<string>The wheat that has rotted in the ground</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Using the same example of a stalk of wheat that has rotted in the ground and arrived at a state of sowing many stalks of wheat. Which of the following is an example of its second factor, the source&apos;s development?</string>
+		<key>ans1</key>
+		<string>The cause &amp; effect growth of the wheat stalk</string>
+		<key>ans2</key>
+		<string>The minerals and the materials in the ground, the rain and the sun</string>
+		<key>ans3</key>
+		<string>The many stalks of wheat that have been sown</string>
+		<key>ans4</key>
+		<string>The wheat that has rotted in the ground</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Again, using the same example. Which of the following is an example of its third factor, external factors directly related to the source?</string>
+		<key>ans1</key>
+		<string>The cause &amp; effect growth of the wheat stalk</string>
+		<key>ans2</key>
+		<string>The minerals and the materials in the ground, the rain and the sun</string>
+		<key>ans3</key>
+		<string>The many stalks of wheat that have been sown</string>
+		<key>ans4</key>
+		<string>Hail or wind</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>For the last time, using the same example. Which of the following is an example of its fourth factor, external factors not related directly to the source?</string>
+		<key>ans1</key>
+		<string>The cause &amp; effect growth of the wheat stalk</string>
+		<key>ans2</key>
+		<string>The minerals and the materials in the ground, the rain and the sun</string>
+		<key>ans3</key>
+		<string>The many stalks of wheat that have been sown</string>
+		<key>ans4</key>
+		<string>Hail or wind</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+</array>
+</plist>

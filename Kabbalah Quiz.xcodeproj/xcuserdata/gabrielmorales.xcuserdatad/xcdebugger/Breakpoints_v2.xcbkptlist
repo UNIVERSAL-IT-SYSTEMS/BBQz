@@ -10,27 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kabbalahquiz/QuoteQuizViewController.m"
-            timestampString = "418452709.639278"
+            timestampString = "418702048.15161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kabbalahquiz/QuoteQuizViewController.m"
-            timestampString = "418452709.639278"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
+            startingLineNumber = "460"
+            endingLineNumber = "460"
             landmarkName = "-checkAnswer"
             landmarkType = "5">
          </BreakpointContent>
@@ -56,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kabbalahquiz/QuoteQuizViewController.m"
-            timestampString = "418452709.639278"
+            timestampString = "418702048.15161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
+            startingLineNumber = "405"
+            endingLineNumber = "405"
             landmarkName = "-nextQuizQuestion"
             landmarkType = "5">
          </BreakpointContent>
@@ -72,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kabbalahquiz/PerceptionViewController.m"
-            timestampString = "418456580.803394"
+            timestampString = "418705252.610488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "419"
-            endingLineNumber = "419"
+            startingLineNumber = "527"
+            endingLineNumber = "527"
             landmarkName = "-showResult"
             landmarkType = "5">
          </BreakpointContent>

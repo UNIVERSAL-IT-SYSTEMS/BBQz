@@ -20,18 +20,20 @@
                     <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="548" id="sGC-J2-awu"/>
+                        <constraint firstAttribute="width" constant="320" id="yqW-me-hTJ"/>
+                    </constraints>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5">
                     <rect key="frame" x="19" y="506" width="282" height="42"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.58431375029999999" green="0.47843140360000003" blue="0.74509805439999999" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="42" id="144"/>
                     </constraints>
-                    <state key="normal" title="Get Started">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                    <state key="normal" title="Get Started"/>
                     <connections>
                         <action selector="skipWelcomeFlow:" destination="-1" eventType="touchUpInside" id="28"/>
                     </connections>
@@ -43,7 +45,11 @@
                 <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="13"/>
                 <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="156"/>
                 <constraint firstItem="4" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" id="157"/>
+                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="BCc-AZ-a8q"/>
+                <constraint firstAttribute="trailing" secondItem="4" secondAttribute="trailing" id="KLp-nX-7ZT"/>
                 <constraint firstItem="5" firstAttribute="centerX" secondItem="4" secondAttribute="centerX" id="NhX-b0-0pA"/>
+                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="UkF-qY-XmZ"/>
+                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" id="hXv-ZI-IzR"/>
                 <constraint firstItem="5" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="19" id="o7T-EG-epF"/>
                 <constraint firstAttribute="bottom" secondItem="5" secondAttribute="bottom" constant="20" symbolic="YES" id="ywk-Ma-1Pd"/>
             </constraints>

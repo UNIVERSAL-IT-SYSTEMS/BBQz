@@ -92,6 +92,8 @@
     }
     
     else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [self applyStylesheet];
+        
         [application setStatusBarHidden:NO];
         [application setStatusBarStyle:UIStatusBarStyleLightContent];
         
@@ -197,8 +199,8 @@
         });
     });
     NSLog(@"backgroundTimeRemaining: %f", [[UIApplication sharedApplication] backgroundTimeRemaining]);
-    //[[LocalyticsSession sharedLocalyticsSession] close];
-    //[[LocalyticsSession sharedLocalyticsSession] upload];
+    [[LocalyticsSession sharedLocalyticsSession] close];
+    [[LocalyticsSession sharedLocalyticsSession] upload];
 
 }
 
@@ -252,6 +254,24 @@
 {
     // just pass this on to the remote notification handling routine... they serve the same purpose
     [self application:application didReceiveRemoteNotification:notification.userInfo];
+}
+
+#pragma mark - Stylesheet
+
+- (void)applyStylesheet {
+	// Navigation bar
+	UINavigationBar *navigationBar = [UINavigationBar appearance];
+    NSShadow *shadow = [NSShadow.alloc init];
+    shadow.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.2f];
+    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
+	[navigationBar setBackgroundColor:[UIColor colorWithRed:0.031f green:0.506f blue:0.702f alpha:1.0f]];
+	[navigationBar setTitleVerticalPositionAdjustment:-1.0f forBarMetrics:UIBarMetricsDefault];
+    [navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:20.0f],
+                                                                                         NSShadowAttributeName : shadow,
+                                                                                         NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+	
+
 }
 
 @end

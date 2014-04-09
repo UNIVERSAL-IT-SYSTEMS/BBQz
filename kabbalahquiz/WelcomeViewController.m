@@ -46,8 +46,8 @@ NSString *nsuserdefaultsHasRunFlowKeyName = @"com.bneibaruch.hasRunWelcomeFlow";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //UIColor* bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"general_bg_tile"]];
-    //[self.view setBackgroundColor:bgColor];
+    UIColor* bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"arches"]];
+    [self.view setBackgroundColor:bgColor];
     
     CGFloat scrollViewWidth = self.view.bounds.size.width;
     CGRect pageFrame = CGRectMake((self.view.bounds.size.width - scrollViewWidth), (self.view.bounds.size.height - scrollViewHeight), scrollViewWidth, scrollViewHeight);
@@ -55,7 +55,7 @@ NSString *nsuserdefaultsHasRunFlowKeyName = @"com.bneibaruch.hasRunWelcomeFlow";
     pageScrollView = [pageScrollView initWithFrame:pageFrame];
         
     NSMutableArray *views = [NSMutableArray arrayWithCapacity:4];
-    NSMutableArray *images = [NSMutableArray arrayWithObjects:@"4",@"1",@"2",@"3", nil];
+    NSMutableArray *images = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4", nil];
     
     for (NSString *imageName in images) {
         UIView *welcomeScreen = [[UIView alloc] init];
@@ -69,16 +69,16 @@ NSString *nsuserdefaultsHasRunFlowKeyName = @"com.bneibaruch.hasRunWelcomeFlow";
     
     [pageScrollView setScrollViewContents:views];
     
-    UIImage *btn = [UIImage imageNamed:@"btn_standard_default~iphone.png"];
+    UIImage *btn = [UIImage imageNamed:@"button-alerts-orange-up"];
     UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
     UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
-    btnImageView.frame = CGRectMake(20, 468, 280.0, stretchBtn.size.height);
+    btnImageView.frame = CGRectMake(20, 488, 280.0, stretchBtn.size.height);
     [viewButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     
-    UIImage *btnPressed = [UIImage imageNamed:@"btn_standard_pressed~iphone.png"];
+    UIImage *btnPressed = [UIImage imageNamed:@"button-alerts-blue-up"];
     UIImage *stretchBtnPressed = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
     UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:stretchBtnPressed];
-    btnPressedImageView.frame = CGRectMake(20, 468, 280.0, stretchBtnPressed.size.height);
+    btnPressedImageView.frame = CGRectMake(20, 488, 280.0, stretchBtnPressed.size.height);
     [viewButton setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     
     // Do any additional setup after loading the view from its nib.

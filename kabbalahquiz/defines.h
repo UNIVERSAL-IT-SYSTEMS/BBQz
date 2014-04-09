@@ -27,7 +27,18 @@ extern NSString *const kQZListDidUpdateNotificationName;
 extern NSString *const kQZPlusDidChangeNotificationName;
 extern NSString *const kQZUserUpdatedNotificationName;
 
+#pragma mark - Fonts
 
+extern NSString *const kCDIRegularFontName;
+extern NSString *const kCDIBoldFontName;
+extern NSString *const kCDIBoldItalicFontName;
+extern NSString *const kCDIItalicFontName;
+extern NSString *const kCDIExtraBoldFontName;
+extern NSString *const kCDIExtraBoldItalicFontName;
+extern NSString *const kCDILightFontName;
+extern NSString *const kCDILightItalicFontName;
+extern NSString *const kCDISemiboldFontName;
+extern NSString *const kCDISemiboldItalicFontName;
 
 
 #endif

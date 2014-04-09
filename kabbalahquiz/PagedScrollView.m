@@ -20,7 +20,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIColor* bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"general_bg_tile"]];
+        UIColor* bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"arches"]];
         //self.scrollView.backgroundColor = bgColor;
         
         self.scrollView = [[UIScrollView alloc] initWithFrame:frame];

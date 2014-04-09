@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>What is the language of Kabbalah?</string>
+		<key>ans1</key>
+		<string>A means of expressing spiritual attainment through words &amp; letters</string>
+		<key>ans2</key>
+		<string>Hebrew</string>
+		<key>ans3</key>
+		<string>Aramaic</string>
+		<key>ans4</key>
+		<string>Spanish</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT define an abstract name?</string>
+		<key>ans1</key>
+		<string>A name given to some phenomenon not by attainment of that phenomenon</string>
+		<key>ans2</key>
+		<string>A name given out of theorizing or philosophizing, not out of attainment</string>
+		<key>ans3</key>
+		<string>A name given out of imagination, not out of attainment</string>
+		<key>ans4</key>
+		<string>A name given to a phenomenon that has been attained</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following statements about abstract names and Kabbalah is incorrect?</string>
+		<key>ans1</key>
+		<string>There are no abstract names in the language of Kabbalah</string>
+		<key>ans2</key>
+		<string>Kabbalists sometimes wrote using abstract names when they weren&apos;t sure of something</string>
+		<key>ans3</key>
+		<string>People created abstract names by forming an understanding of Kabbalah without attaining it</string>
+		<key>ans4</key>
+		<string>Kabbalists have never written using abstract names, but only out of their attainment</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT clarify the meaning of &quot;Anything we do not attain, we do not define by a name and a word&quot;?</string>
+		<key>ans1</key>
+		<string>Kabbalists only define what they attain &amp; do not define anything else</string>
+		<key>ans2</key>
+		<string>Kabbalah is a belief system that has to be believed in order to be felt</string>
+		<key>ans3</key>
+		<string>Kabbalah is a precise wisdom that needs to be attained in order to be perceived &amp; felt</string>
+		<key>ans4</key>
+		<string>Kabbalah is attained scientifically as revelation through research</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>While a Kabbalah student hasn&apos;t yet attained spirituality, what should his/her relationship to Kabbalistic terms be?</string>
+		<key>ans1</key>
+		<string>To study &amp; seek their Kabbalistic definition from Kabbalists, until they become attained</string>
+		<key>ans2</key>
+		<string>To make up his/her own definitions of the terms</string>
+		<key>ans3</key>
+		<string>To put Kabbalistic texts aside until one has entered spirituality</string>
+		<key>ans4</key>
+		<string>To stop studying Kabbalah altogether</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Why is it of utmost importance that a Kabbalist writing in the language of Kabbalah doesn&apos;t make a single mistake in any word written?</string>
+		<key>ans1</key>
+		<string>The Kabbalist would then confuse readers in understanding everything connected to that word</string>
+		<key>ans2</key>
+		<string>The Kabbalist would suffer as a result</string>
+		<key>ans3</key>
+		<string>It isn&apos;t that important, it&apos;s ok for a Kabbalist to make a mistake here and there</string>
+		<key>ans4</key>
+		<string>The Kabbalist would be punished as a result</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How can spirituality, which is beyond time, space &amp; motion, be expressed in words &amp; letters, which are within time, space &amp; motion?</string>
+		<key>ans1</key>
+		<string>It can&apos;t</string>
+		<key>ans2</key>
+		<string>Because our imagination can expand a lot through words to grasp spirituality</string>
+		<key>ans3</key>
+		<string>Because the words are the key to transpiring time, space &amp; motion</string>
+		<key>ans4</key>
+		<string>Because of the law of root &amp; branch</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT an attribute of the law of root &amp; branch?</string>
+		<key>ans1</key>
+		<string>Everything in spirituality exists also in corporeality, like a seal &amp; its imprint</string>
+		<key>ans2</key>
+		<string>The only difference between spirituality &amp; corporeality is in the substance</string>
+		<key>ans3</key>
+		<string>Spirituality and corporeality are exactly the same</string>
+		<key>ans4</key>
+		<string>Spirituality is the root (cause) of corporeality, which is the branch (consequence)</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the correct order of worlds from above downward?</string>
+		<key>ans1</key>
+		<string>Ein Sof » Atzilut » Beria » Yetzira » Assiya » This World</string>
+		<key>ans2</key>
+		<string>Ein Sof » Beria » Yetzira » Atzilut » Assiya » This World</string>
+		<key>ans3</key>
+		<string>Ein Sof » Atzilut » Yetzira » Beria » Assiya » This World</string>
+		<key>ans4</key>
+		<string>Ein Sof » Assiya » Beria » Yetzira » Atzilut » This World</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following does NOT describe the difference between spirituality » corporeality?</string>
+		<key>ans1</key>
+		<string>Purer » Coarser</string>
+		<key>ans2</key>
+		<string>More Bestowing » More Receiving</string>
+		<key>ans3</key>
+		<string>Lighter » Darker</string>
+		<key>ans4</key>
+		<string>After Death » During Life</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+</array>
+</plist>

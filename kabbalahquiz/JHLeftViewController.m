@@ -47,7 +47,8 @@
                       @"Free Will - Part 1",
                       @"Free Will - Part 2",
                       @"Inner Work",
-                      @"Creation & Evolution",nil];
+                      @"Creation & Evolution",
+                      @"More Info",nil];
     
     
     [self setCellImage:[NSArray arrayWithObjects:
@@ -60,7 +61,8 @@
                         @"icon-7-70x70.png",
                         @"icon-8-70x70.png",
                         @"icon-9-70x70.png",
-                        @"icon-10-70x70.png",nil]];
+                        @"icon-10-70x70.png",
+                        @"",nil]];
     
     NSDictionary *temp = [[NSDictionary alloc]initWithObjectsAndKeys:title, @"Menu", nil];
     self.feedbackItems = temp;
@@ -209,6 +211,31 @@
         
         self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"intentionvc"];
     }
+    
+    else if ([str isEqual:@"Kabbalistc Language"]) {
+        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"languagevc"];
+    }
+    
+    else if ([str isEqual:@"World Peace"]) {
+        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"worldvc"];
+    }
+    
+    else if ([str isEqual:@"Free Will - Part 1"]) {
+        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"fw1vc"];
+    }
+    
+    else if ([str isEqual:@"Free Will - Part 2"]) {
+        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"fw2vc"];
+    }
+    
+    else if ([str isEqual:@"Inner Work"]) {
+        self.sidePanelController.centerPanel = [self.storyboard instantiateViewControllerWithIdentifier:@"innervc"];
+    }
+    
+    else if ([str isEqual:@"Creation & Evolution"]) {
+        self.sidePanelController.centerPanel = [self. storyboard instantiateViewControllerWithIdentifier:@"creationvc"];
+    }
+    
     
     //[self.feedbackTableView deselectRowAtIndexPath:indexPath animated:YES];
 }

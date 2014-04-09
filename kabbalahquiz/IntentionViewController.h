@@ -22,6 +22,7 @@
 @property (nonatomic, strong) NSString *grade;
 @property (nonatomic, strong) Quiz *quiz;
 @property (nonatomic , strong) IBOutlet UIView *popupView;
+@property (nonatomic) IBOutlet UIImageView *questionBg;
 
 -(void)ans1Action:(id)sender;
 -(void)ans2Action:(id)sender;
@@ -46,5 +47,9 @@
 @property (strong, nonatomic)IBOutlet UILabel *answer2Label;
 @property (strong, nonatomic)IBOutlet UILabel *answer3Label;
 @property (strong, nonatomic)IBOutlet UILabel *answer4Label;
+
+@property (nonatomic) IBOutlet UILabel *questionLabel;
+@property (nonatomic) IBOutlet UILabel *statusLabel;
+@property (nonatomic) IBOutlet UIButton *email;
 
 @end

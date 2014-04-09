@@ -8,11 +8,11 @@
 
 #import "PerceptionViewController.h"
 #import "Quiz.h"
+#import "UIFont+QuiziOSAdditions.h"
 
 @interface PerceptionViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 
 @property (assign, nonatomic) NSInteger answer;
@@ -28,16 +28,22 @@
     UIButton *_answer3;
     UIButton *_answer4;
     UIImageView *_background;
+    UIButton *_email;
 }
 @synthesize answer1Button, answer2Button, answer3Button, answer4Button;
-@synthesize answer1Label, answer2Label, answer3Label, answer4Label;
+@synthesize answer1Label, answer2Label, answer3Label, answer4Label, questionLabel, statusLabel;
+@synthesize questionBg = _questionBg;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav-title"]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"arches"]]];
+    //self.questionLabel.backgroundColor = [UIColor redColor];
     
-	// Do any additional setup after loading the view, typically from a nib.
+    UIImageView *title = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav-title"]];
+    self.navigationItem.titleView = title;
+    
+    
     self.quizIndex = 10;
     self.quiz = [[Quiz alloc] initWithQuiz:@"perception"];
     //self.questionLabel.backgroundColor = [UIColor colorWithRed:51/255.0 green:133/255.0 blue:238/255.0 alpha:1.0];
@@ -51,167 +57,263 @@
     [scroller_ipad setContentSize:CGSizeMake(768, 1004)];
     
     
-    /*ANSWER BUTTON*/
-    UIImage *btn = [UIImage imageNamed:@"primaryButtonBackground"];
-    UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
-    UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
-    btnImageView.frame = CGRectMake(0, 200, stretchBtn.size.width, stretchBtn.size.height);
+    //Question View
+    [self questionView];
     
-    UIImage *btnPressed = [UIImage imageNamed:@"secondaryButtonBackground"];
-    UIImage *stretchBtnPressed = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
-    UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:stretchBtnPressed];
-    btnPressedImageView.frame = CGRectMake(0, 250.0, stretchBtnPressed.size.width, stretchBtnPressed.size.height);
+    //Button Settings
+    UIImage *stretchBtn;
+    UIImage *stretchBtnPressed;
+    [self buttonSettings:&stretchBtn stretchBtnPressed_p:&stretchBtnPressed];
     
+    //Arrow view
+    [self downArrow];
+    
+    //Answer Buttons & Labels
+    [self answerButtons:stretchBtn stretchBtnPressed:stretchBtnPressed];
+    [self answerLabels];
+    
+    //Result Buttons
+    [self resultButtons];
+    [self nextButton];
+    [self tryAgainButton];
+    
+    
+}
+
+- (void)questionView {
+    UIImage *bg = [UIImage imageNamed:@"bg-map-embed"];
+    _questionBg = [[UIImageView alloc] initWithImage:bg];
+    _questionBg.frame = CGRectMake(0.0f, 0.0f, 320.0f, 200.0f);
+    [scroller addSubview:_questionBg];
+    
+    questionLabel = [[UILabel alloc] initWithFrame: CGRectMake(5, 45, 310.0f, 140.0f)];
+    questionLabel.text = self.quiz.question;
+    questionLabel.backgroundColor = [UIColor clearColor];
+    questionLabel.textColor = [UIColor colorWithRed:0.031f green:0.506f blue:0.702f alpha:1.0f];
+    questionLabel.font = [UIFont boldQuizInterfaceFontOfSize:16.0f];
+    questionLabel.textAlignment = NSTextAlignmentCenter;
+    questionLabel.numberOfLines = 0;
+    [scroller addSubview:questionLabel];
+    
+    statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(12.0f, 12.0f, 248.0f, 21.0f)];
+    statusLabel.text = [NSString stringWithFormat:@"Remaining questions: %ld", (long)self.quiz.quizCount];
+    statusLabel.backgroundColor = [UIColor clearColor];
+    statusLabel.textColor = [UIColor colorWithRed:0.031f green:0.506f blue:0.702f alpha:1.0f];
+    statusLabel.font = [UIFont boldQuizInterfaceFontOfSize:13.0f];
+    statusLabel.textAlignment = NSTextAlignmentLeft;
+    statusLabel.numberOfLines = 1;
+    [scroller addSubview:statusLabel];
+    
+}
+
+- (void)downArrow
+{
     UIImage *bgImage = [UIImage imageNamed:@"downArrow"];
     UIImageView *bg = [[UIImageView alloc] initWithImage:bgImage];
     bg.frame = CGRectMake(160.0f, 230.0f, 35.0f, 86.0f);
-    _background = [[UIImageView alloc] initWithFrame:CGRectMake(140.0f, 300.0f, 35.0f, 86.0f)];
+    _background = [[UIImageView alloc] initWithFrame:CGRectMake(140.0f, 350.0f, 35.0f, 86.0f)];
     [_background setImage:bgImage];
     [scroller addSubview:_background];
     [_background setHidden:YES];
+}
+
+- (void)buttonSettings:(UIImage **)stretchBtn_p stretchBtnPressed_p:(UIImage **)stretchBtnPressed_p
+{
+    /*ANSWER BUTTON*/
+    UIImage *btn = [UIImage imageNamed:@"button-classic-green-up"];
+    *stretchBtn_p = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnImageView = [[UIImageView alloc]initWithImage:*stretchBtn_p];
+    btnImageView.frame = CGRectMake(0, 200, (*stretchBtn_p).size.width, (*stretchBtn_p).size.height);
     
-    /*FIRST ANSWER*/
-    //[answer1Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
-    //[answer1Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
+    UIImage *btnPressed = [UIImage imageNamed:@"button-classic-green-down"];
+    *stretchBtnPressed_p = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:*stretchBtnPressed_p];
+    btnPressedImageView.frame = CGRectMake(0, 250.0, (*stretchBtnPressed_p).size.width, (*stretchBtnPressed_p).size.height);
+}
+
+- (void)answerButtons:(UIImage *)stretchBtn stretchBtnPressed:(UIImage *)stretchBtnPressed
+{
+    //Answer Buttons
     
-    //_background = [[UIImageView alloc] initWithFrame:CGRectMake(20.0f, 180.0f, <#CGFloat width#>, <#CGFloat height#>)]
-    
-    
-    answer1Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 165.0f, 272.0f, 60.0f)];
+    answer1Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 225.0f, 272.0f, 60.0f)];
     [answer1Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer1Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer1Button addTarget:self action:@selector(ans1Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer1Button];
     
-    answer1Label = [[UILabel alloc] initWithFrame: answer1Button.frame];
-    answer1Label.text = self.quiz.ans1;
-    answer1Label.backgroundColor = [UIColor clearColor];
-    answer1Label.textColor = [UIColor whiteColor];
-    answer1Label.font = [UIFont systemFontOfSize:15.0f];
-    answer1Label.textAlignment = NSTextAlignmentCenter;
-    answer1Label.numberOfLines = 3;
-    [scroller addSubview:answer1Label];
-    
-    /*SECOND ANSWER*/
-    //[answer2Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
-    //[answer2Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
-    
-    answer2Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 230.0f, 272.0f, 60.0f)];
+    answer2Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 290.0f, 272.0f, 60.0f)];
     [answer2Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer2Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer2Button addTarget:self action:@selector(ans2Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer2Button];
     
-    answer2Label = [[UILabel alloc] initWithFrame: answer2Button.frame];
-    answer2Label.text = self.quiz.ans2;
-    answer2Label.backgroundColor = [UIColor clearColor];
-    answer2Label.textColor = [UIColor whiteColor];//colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0];
-    answer2Label.font = [UIFont systemFontOfSize:15.0f];
-    answer2Label.textAlignment = NSTextAlignmentCenter;
-    answer2Label.numberOfLines = 3;
-    [scroller addSubview:answer2Label];
-    
-    /*THIRD ANSWER*/
-    //[answer3Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
-    //[answer3Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
-    
-    answer3Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 295.0f, 272.0f, 60.0f)];
+    answer3Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 355.0f, 272.0f, 60.0f)];
     [answer3Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer3Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer3Button addTarget:self action:@selector(ans3Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer3Button];
     
-    answer3Label = [[UILabel alloc] initWithFrame: answer3Button.frame];
-    answer3Label.text = self.quiz.ans3;
-    answer3Label.backgroundColor = [UIColor clearColor];
-    answer3Label.textColor = [UIColor whiteColor];
-    answer3Label.font = [UIFont systemFontOfSize:15.0f];
-    answer3Label.textAlignment = NSTextAlignmentCenter;
-    answer3Label.numberOfLines = 3;
-    [scroller addSubview:answer3Label];
-    
-    /*FOURTH ANSWER*/
-    //[answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
-    //[answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
-    answer4Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 360.0f, 272.0f, 60.0f)];
+    answer4Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 420.0f, 272.0f, 60.0f)];
     [answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer4Button addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer4Button];
+}
+
+- (void)answerLabels
+{
+    //Answer Labels
+    answer1Label = [[UILabel alloc] initWithFrame: answer1Button.frame];
+    answer1Label.text = self.quiz.ans1;
+    answer1Label.backgroundColor = [UIColor clearColor];
+    answer1Label.textColor = [UIColor whiteColor];
+    answer1Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
+    answer1Label.textAlignment = NSTextAlignmentCenter;
+    answer1Label.numberOfLines = 3;
+    [scroller addSubview:answer1Label];
     
+    answer2Label = [[UILabel alloc] initWithFrame: answer2Button.frame];
+    answer2Label.text = self.quiz.ans2;
+    answer2Label.backgroundColor = [UIColor clearColor];
+    answer2Label.textColor = [UIColor whiteColor];//colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0];
+    answer2Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
+    answer2Label.textAlignment = NSTextAlignmentCenter;
+    answer2Label.numberOfLines = 3;
+    [scroller addSubview:answer2Label];
     
-    /*answer4Button = [[UIButton alloc] initWithFrame:CGRectMake(35.0f, 330.0f, 272.0f, 47.0f)];
-     [answer4Button setBackgroundColor:[UIColor whiteColor]];
-     //[answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
-     [answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
-     [answer4Button addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
-     [scroller addSubview:answer4Button];
-     self.answer4Button.layer.borderWidth = 2.0f;
-     self.answer4Button.layer.borderColor = [UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0].CGColor;*/
+    answer3Label = [[UILabel alloc] initWithFrame: answer3Button.frame];
+    answer3Label.text = self.quiz.ans3;
+    answer3Label.backgroundColor = [UIColor clearColor];
+    answer3Label.textColor = [UIColor whiteColor];
+    answer3Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
+    answer3Label.textAlignment = NSTextAlignmentCenter;
+    answer3Label.numberOfLines = 3;
+    [scroller addSubview:answer3Label];
     
     answer4Label = [[UILabel alloc] initWithFrame: answer4Button.frame];
     answer4Label.text = self.quiz.ans4;
     answer4Label.backgroundColor = [UIColor clearColor];
     answer4Label.textColor = [UIColor whiteColor];
-    answer4Label.font = [UIFont systemFontOfSize:15.0f];
+    answer4Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
     answer4Label.textAlignment = NSTextAlignmentCenter;
     answer4Label.numberOfLines = 3;
     [scroller addSubview:answer4Label];
+}
+
+-(void)nextButton {
     
-    /*
-     _answer4 = [UIButton buttonWithType:UIButtonTypeCustom];
-     _answer4.frame = CGRectMake(0.0f, 400.0f, 320.0f, 42.0f);
-     [_answer4 setBackgroundColor:[UIColor whiteColor]];
-     [_answer4 setTitle:self.quiz.ans4 forState:UIControlStateNormal];
-     [_answer4 setTitleColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0] forState:UIControlStateNormal];
-     [_answer4 addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
-     _answer4.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
-     [self.view addSubview:_answer4];
-     _answer4.layer.borderWidth = 2.0f;
-     _answer4.layer.borderColor = [UIColor colorWithRed:85/255.0 green:172/255.0 blue:238/255.0 alpha:1.0].CGColor;*/
+    UIImage *btn = [UIImage imageNamed:@"button-classic-gray-up"];
+    UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
+    btnImageView.frame = CGRectMake(0, 250, stretchBtn.size.width, stretchBtn.size.height);
     
-    
-    /*RESULT BUTTON*/
-    _resultButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _resultButton.frame = CGRectMake(0.0f, 454.0f, 320.0f, 50.0f);
-    [_resultButton setBackgroundColor:[UIColor colorWithRed:51/255.0 green:130/255.0 blue:190/255.0 alpha:1.0]];
-    [_resultButton setTitle:@"Result" forState:UIControlStateNormal];
-    [_resultButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_resultButton setTitle:@"Result" forState:UIControlStateSelected];
-    [_resultButton setTitleColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0] forState:UIControlStateHighlighted];
-    [_resultButton addTarget:self action:@selector(finishButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
-    _resultButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
-    [scroller addSubview:_resultButton];
-    [_resultButton setHidden:YES];
+    UIImage *btnPressed = [UIImage imageNamed:@"button-classic-gray-down"];
+    UIImage *stretchBtnPressed = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:stretchBtnPressed];
+    btnPressedImageView.frame = CGRectMake(0, 250.0, stretchBtnPressed.size.width, stretchBtnPressed.size.height);
     
     /*NEXT BUTTON*/
-    _nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _nextButton.frame = CGRectMake(0.0f, 454.0f, 320.0f, 50.0f);
-    [_nextButton setBackgroundColor:[UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0]];
+    _nextButton = [[UIButton alloc] initWithFrame:CGRectMake(1.0f, 509.0f, 159.0f, 60.0f)];
+    [_nextButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [_nextButton setTitle:@"Next" forState:UIControlStateNormal];
     [_nextButton setTitleColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0] forState:UIControlStateNormal];
     [_nextButton setTitle:@"Next" forState:UIControlStateSelected];
+    [_nextButton setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [_nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-    [_nextButton setTitle:@"" forState:UIControlStateDisabled];
-    [_nextButton setTitleColor:[UIColor clearColor] forState:UIControlStateDisabled];
+    [_nextButton setTitle:@"Quiz Done" forState:UIControlStateDisabled];
+    [_nextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateDisabled];
     [_nextButton addTarget:self action:@selector(startAgain:) forControlEvents:UIControlEventTouchUpInside];
-    _nextButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0f];
+    _nextButton.titleLabel.font = [UIFont boldQuizInterfaceFontOfSize:16.0f];
     [scroller addSubview:_nextButton];
     
+    
+}
+
+- (void)tryAgainButton {
+    
+    UIImage *btn = [UIImage imageNamed:@"button-classic-red-up"];
+    UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
+    btnImageView.frame = CGRectMake(0, 250, stretchBtn.size.width, stretchBtn.size.height);
+    
+    UIImage *btnPressed = [UIImage imageNamed:@"button-classic-red-down"];
+    UIImage *stretchBtnPressed = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:stretchBtnPressed];
+    btnPressedImageView.frame = CGRectMake(0, 250.0, stretchBtnPressed.size.width, stretchBtnPressed.size.height);
+    
+    
     /*START AGAIN BUTTON*/
-    _startButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _startButton.frame = CGRectMake(0.0f, 404.0f, 320.0f, 50.0f);
-    [_startButton setBackgroundColor:[UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:1.0]];
+    _startButton = [[UIButton alloc] initWithFrame:CGRectMake(5.0f, 444.0f, 310.0f, 60.0f)];
+    [_startButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [_startButton setTitle:@"Try Again" forState:UIControlStateNormal];
-    [_startButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [_startButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_startButton setTitle:@"Try Again" forState:UIControlStateSelected];
+    [_startButton setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [_startButton setTitleColor:[UIColor colorWithRed:51/255.0 green:130/255.0 blue:190/255.0 alpha:1.0] forState:UIControlStateHighlighted];
     [_startButton setTitle:@"" forState:UIControlStateDisabled];
     [_startButton setTitleColor:[UIColor clearColor] forState:UIControlStateDisabled];
     [_startButton addTarget:self action:@selector(reset:) forControlEvents:UIControlEventTouchUpInside];
-    _startButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0f];
+    _startButton.titleLabel.font = [UIFont boldQuizInterfaceFontOfSize:16.0f];
     [scroller addSubview:_startButton];
     [_startButton setHidden:YES];
+    
+    
+}
+
+
+- (void)resultButtons
+{
+    
+    UIImage *btn = [UIImage imageNamed:@"button-classic-blue-up"];
+    UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
+    btnImageView.frame = CGRectMake(0, 250, stretchBtn.size.width, stretchBtn.size.height);
+    
+    UIImage *btnPressed = [UIImage imageNamed:@"button-classic-blue-down"];
+    UIImage *stretchBtnPressed = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:stretchBtnPressed];
+    btnPressedImageView.frame = CGRectMake(0, 250.0, stretchBtnPressed.size.width, stretchBtnPressed.size.height);
+    
+    /*RESULT BUTTON*/
+    _resultButton = [[UIButton alloc] initWithFrame:CGRectMake(163.0f, 509.0f, 159.0f, 60.0f)];
+    [_resultButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
+    [_resultButton setTitle:@"Result" forState:UIControlStateNormal];
+    [_resultButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_resultButton setTitle:@"Result" forState:UIControlStateSelected];
+    [_resultButton setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
+    [_resultButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [_resultButton addTarget:self action:@selector(finishButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    _resultButton.titleLabel.font = [UIFont boldQuizInterfaceFontOfSize:16.0f];
+    [scroller addSubview:_resultButton];
+    [_resultButton setHidden:NO];
+    [_resultButton setEnabled:NO];
+    
+    
+}
+
+- (void)emailButton {
+    
+    UIImage *btn = [UIImage imageNamed:@"button-alerts-orange-up"];
+    UIImage *stretchBtn = [btn stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnImageView = [[UIImageView alloc]initWithImage:stretchBtn];
+    btnImageView.frame = CGRectMake(0, 250, stretchBtn.size.width, stretchBtn.size.height);
+    
+    UIImage *btnPressed = [UIImage imageNamed:@"button-alerts-blue-up"];
+    UIImage *stretchBtnPressed = [btnPressed stretchableImageWithLeftCapWidth:5.0 topCapHeight:0.0];
+    UIImageView *btnPressedImageView = [[UIImageView alloc]initWithImage:stretchBtnPressed];
+    btnPressedImageView.frame = CGRectMake(0, 250.0, stretchBtnPressed.size.width, stretchBtnPressed.size.height);
+    
+    _email = [[UIButton alloc] initWithFrame:CGRectMake(81.0f, 316.0f, 174.0f, 40.0f)];
+    [_email setBackgroundImage:stretchBtn forState:UIControlStateNormal];
+    [_email setTitle:@"Email the Result" forState:UIControlStateNormal];
+    [_email setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_email setTitle:@"Email the Result" forState:UIControlStateSelected];
+    [_email setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
+    [_email setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [_email addTarget:self action:@selector(emailResult:) forControlEvents:UIControlEventTouchUpInside];
+    _email.titleLabel.font = [UIFont boldQuizInterfaceFontOfSize:15.0f];
+    [self.popupView addSubview:_email];
+    
     
 }
 
@@ -260,9 +362,12 @@
     if (self.quiz.correctCount) {
         //self.statusLabel.text = [NSString stringWithFormat:@"Quiz Done - Score %d%%", self.quiz.quizCount/self.quiz.correctCount];
         //[self.startButton setTitle:@"Try Again" forState:UIControlStateNormal];
-        [_nextButton setHidden:YES];
+        [_nextButton setHidden:NO];
+        [_nextButton setEnabled:NO];
         [_startButton setHidden:NO];
         [_resultButton setHidden:NO];
+        [_resultButton setEnabled:YES];
+        [self.questionLabel setHidden:YES];
         
         [self hideQuestionButtons];
         [_background setHidden:NO];
@@ -287,7 +392,8 @@
         NSLog(@"count: %ld", (long)self.quiz.quizCount);
         [self showQuestionButtons];
         [_startButton setHidden:YES];
-        [_resultButton setHidden:YES];
+        [_resultButton setHidden:NO];
+        [_resultButton setEnabled:NO];
         [_nextButton setHidden:NO];
         //[self showAll];
     }  else if (self.quizIndex < (self.quiz.quizCount - 1)){
@@ -385,9 +491,11 @@
         [self showResult];
         [_nextButton setEnabled:NO];
         _nextButton.enabled = NO;
-        [_nextButton setHidden:YES];
+        [_nextButton setHidden:NO];
         [self hideQuestionButtons];
+        [self.questionLabel setHidden:YES];
         [_resultButton setHidden:NO];
+        [_resultButton setEnabled:YES];
         [_startButton setHidden:NO];
         NSLog(@"End");
     }
@@ -445,6 +553,7 @@
     [(UILabel *)[self.popupView viewWithTag:-1] setText:self.grade];
     [self hideQuestionButtons];
     [self attachPopUpAnimation];
+    [self emailButton];
     [[LocalyticsSession shared] tagEvent:self.grade];
     
 }
@@ -455,9 +564,10 @@
     [self showResult];
 }
 
+
 - (IBAction)emailResult:(UIButton *)sender {
     
-    NSString *stringSubject = @"This is my subject";
+    NSString *stringSubject = @"Kabbalah Quiz Score";
     //NSString *stringMessage = @"";
     
     [self sendMail:nil

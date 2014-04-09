@@ -2,8 +2,8 @@
 //  QuoteQuizViewController.h
 //  QuoteQuiz
 //
-//  Created by Burak Firik on 7/14/12.
-//  Copyright (c) 2012 Burak Firik. All rights reserved.
+//  Created by Rockstar. on 3/24/14.
+//  Copyright (c) 2014 Bnei Baruch USA. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSString *grade;
 @property (nonatomic, strong) Quiz *quiz;
 @property (nonatomic , strong) IBOutlet UIView *popupView;
+@property (nonatomic) IBOutlet UIImageView *questionBg;
 
 -(void)ans1Action:(id)sender;
 -(void)ans2Action:(id)sender;
@@ -48,6 +49,10 @@
 @property (strong, nonatomic)IBOutlet UILabel *answer2Label;
 @property (strong, nonatomic)IBOutlet UILabel *answer3Label;
 @property (strong, nonatomic)IBOutlet UILabel *answer4Label;
+
+@property (nonatomic) IBOutlet UILabel *questionLabel;
+@property (nonatomic) IBOutlet UILabel *statusLabel;
+@property (nonatomic) IBOutlet UIButton *email;
 
 @end
 

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT another way of saying &quot;There is none else besides Him&quot;?</string>
+		<key>ans1</key>
+		<string>There is only one force in reality</string>
+		<key>ans2</key>
+		<string>There exists only one force of reception in reality</string>
+		<key>ans3</key>
+		<string>There exists only a single quality of bestowal</string>
+		<key>ans4</key>
+		<string>The Creator, or Nature, is all that exists</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Why does a person perceive that there are things in the world that deny the Creator&apos;s existence? Because ...</string>
+		<key>ans1</key>
+		<string>This is the mistake the Creator made when creating the person</string>
+		<key>ans2</key>
+		<string>There really is no Creator</string>
+		<key>ans3</key>
+		<string>It is the Creator&apos;s will that the person attain Him through free choice</string>
+		<key>ans4</key>
+		<string>The Creator wanted humanity to suffer</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How many lines does a person advance spiritually through?</string>
+		<key>ans1</key>
+		<string>1</string>
+		<key>ans2</key>
+		<string>2</string>
+		<key>ans3</key>
+		<string>3</string>
+		<key>ans4</key>
+		<string>4</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT an attribute of the right line?</string>
+		<key>ans1</key>
+		<string>Greatness of the goal of creation</string>
+		<key>ans2</key>
+		<string>Importance of bestowal</string>
+		<key>ans3</key>
+		<string>Valuing the society that aims to reach adhesion with the Creator</string>
+		<key>ans4</key>
+		<string>Recognition of one&apos;s ego as evil</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is an attribute of the left line?</string>
+		<key>ans1</key>
+		<string>Greatness of the goal of creation</string>
+		<key>ans2</key>
+		<string>Importance of bestowal</string>
+		<key>ans3</key>
+		<string>Valuing the society that aims to reach adhesion with the Creator</string>
+		<key>ans4</key>
+		<string>Recognition of one&apos;s ego as evil</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following is NOT an attribute of the middle line?</string>
+		<key>ans1</key>
+		<string>Prayer</string>
+		<key>ans2</key>
+		<string>Overcoming my ego with my own powers</string>
+		<key>ans3</key>
+		<string>Raising MAN</string>
+		<key>ans4</key>
+		<string>Demand for the Creator&apos;s help</string>
+		<key>answer</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What is the benefit of a person being rejected from attaining the Creator?</string>
+		<key>ans1</key>
+		<string>The person thus develops a need for the Creator&apos;s help</string>
+		<key>ans2</key>
+		<string>There is no benefit</string>
+		<key>ans3</key>
+		<string>The person thus gets more fuel to advance with his own powers</string>
+		<key>ans4</key>
+		<string>The person thus gets to remain longer in this world</string>
+		<key>answer</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>How much time should a person advancing spiritually spend on the right line and left line?</string>
+		<key>ans1</key>
+		<string>50% of one&apos;s time on the right line &amp; 50% of one&apos;s time on the left line</string>
+		<key>ans2</key>
+		<string>Always cling to the left line, since the right line is revealed from above</string>
+		<key>ans3</key>
+		<string>Always cling to the right line, since the left line is revealed from above</string>
+		<key>ans4</key>
+		<string>80% of one&apos;s time on the right line &amp; 20% of one&apos;s time on the left line</string>
+		<key>answer</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What means does a person have to cling onto the right line?</string>
+		<key>ans1</key>
+		<string>Kabbalistic books</string>
+		<key>ans2</key>
+		<string>A Kabbalistic group</string>
+		<key>ans3</key>
+		<string>A Rav</string>
+		<key>ans4</key>
+		<string>All of the above are equally important</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which of the following statements about when the middle line revealed to the person is incorrect?</string>
+		<key>ans1</key>
+		<string>After 100% of the person&apos;s efforts to try bestow &amp; his/her realization that s/he cannot bestow</string>
+		<key>ans2</key>
+		<string>After the person makes all the efforts s/he can to come close to the Creator &amp; realizes that s/he is at the furthest point away from the Creator</string>
+		<key>ans3</key>
+		<string>After the person did everything s/he could to cling to the importance of bestowal in the spiritually supportive environment &amp; realizes that s/he cannot do it anymore</string>
+		<key>ans4</key>
+		<string>After the person made a great effort to bestow and overcame his/her ego with his/her own powers</string>
+		<key>answer</key>
+		<string>4</string>
+	</dict>
+</array>
+</plist>

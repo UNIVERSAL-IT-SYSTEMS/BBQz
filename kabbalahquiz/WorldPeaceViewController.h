@@ -12,10 +12,12 @@
 #import <QuartzCore/QuartzCore.h>
 
 @class Quiz;
-@interface WorldPeaceViewController : UIViewController<MFMailComposeViewControllerDelegate>{
+@class Reachability;
+@interface WorldPeaceViewController : UIViewController<MFMailComposeViewControllerDelegate, UIActionSheetDelegate>{
     
     IBOutlet UIScrollView *scroller;
     IBOutlet UIScrollView *scroller_ipad;
+    Reachability *internetReach;
 }
 
 @property (nonatomic, assign) NSInteger quizIndex;

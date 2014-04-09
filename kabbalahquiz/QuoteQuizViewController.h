@@ -11,13 +11,16 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <MessageUI/MessageUI.h>
 #import <QuartzCore/QuartzCore.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @class Quiz;
+@class Reachability;
 
-@interface QuoteQuizViewController : UIViewController <MFMailComposeViewControllerDelegate>{
+@interface QuoteQuizViewController : UIViewController <MFMailComposeViewControllerDelegate, UIActionSheetDelegate>{
     
     IBOutlet UIScrollView *scroller;
     IBOutlet UIScrollView *scroller_ipad;
+    Reachability *internetReach;
 }
 
 @property (nonatomic, assign) NSInteger quizIndex;
@@ -30,6 +33,7 @@
 -(void)ans2Action:(id)sender;
 -(void)ans3Action:(id)sender;
 -(void)ans4Action:(id)sender;
+- (void)openActionSheet:(id)sender;
 
 
 -(IBAction)startAgain:(id)sender;
@@ -37,6 +41,8 @@
 -(IBAction)finishButtonTouched:(UIButton *)sender;
 - (IBAction)emailResult:(UIButton *)sender;
 - (IBAction)closeButtonTouched:(UIButton *)sender;
+
+
 
 
 
@@ -54,9 +60,9 @@
 @property (nonatomic) IBOutlet UILabel *statusLabel;
 @property (nonatomic) IBOutlet UIButton *email;
 
-@end
-
-@protocol QuizTipViewControllerDelegate <NSObject>
 
 
 @end
+
+
+

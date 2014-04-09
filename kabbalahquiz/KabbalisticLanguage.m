@@ -76,6 +76,18 @@
     [self nextButton];
     [self tryAgainButton];
     
+    //Tracking
+    [[LocalyticsSession shared] tagEvent:@"Language"];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(openActionSheet:)];
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        NSLog(@"service available");
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    } else {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }
+    
     
 }
 
@@ -669,6 +681,139 @@
     animation.duration = .5;
     
     [self.popupView.layer addAnimation:animation forKey:@"popup"];
+}
+
+#pragma mark - Share
+- (void)openActionSheet:(id)sender{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@""
+                                  delegate:self
+                                  cancelButtonTitle:@"Cancel"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:
+                                  @"Twitter",
+                                  @"Email",
+                                  @"Facebook",
+                                  @"Open in Safari",
+                                  
+                                  nil];
+    
+    [actionSheet showFromBarButtonItem:self.navigationItem.rightBarButtonItem animated:YES];
+}
+
+- (void)actionSheet: (UIActionSheet *) actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0) {
+        
+        ACAccountStore *account = [[ACAccountStore alloc] init];
+        ACAccountType *accountType = [account accountTypeWithAccountTypeIdentifier:
+                                      ACAccountTypeIdentifierTwitter];
+        
+        [account requestAccessToAccountsWithType:accountType
+                                         options:nil
+                                      completion:^(BOOL granted, NSError *error)
+         {
+             if (granted == YES)
+             {
+                 
+                 NSString *message = [NSString stringWithFormat:kCDMessageT];
+                 NSString *urlString = [NSString stringWithFormat:kCDUrlT];
+                 
+                 if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+                 {
+                     SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                            composeViewControllerForServiceType:SLServiceTypeTwitter];
+                     [tweetSheet setInitialText:message];
+                     [tweetSheet addURL:[NSURL URLWithString:urlString]];
+                     
+                     [tweetSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+                         
+                         switch (result) {
+                             case SLComposeViewControllerResultCancelled:
+                                 NSLog(@"Post Canceled");
+                                 break;
+                             case SLComposeViewControllerResultDone:
+                                 NSLog(@"Post Sucessful");
+                                 break;
+                                 
+                             default:
+                                 break;
+                         }
+                     }];
+                     
+                     
+                     [self presentViewController:tweetSheet animated:YES completion:nil];
+                 }
+             }
+         }];
+    }
+    
+    if (buttonIndex == 1) {
+        MFMailComposeViewController * composer = [[MFMailComposeViewController alloc]init];
+        [composer setMailComposeDelegate:self];
+        
+        if ([MFMailComposeViewController canSendMail]) {
+            [composer setToRecipients:[NSArray arrayWithObjects:@"", nil]];
+            [composer setSubject:@"Found this and thought of sharing it with you! @kabbalahinfo"];
+            [composer setMessageBody:@"Check out this app! Kabbalah Quiz." isHTML:YES];
+            NSMutableString *body = [NSMutableString string];
+            [composer setMessageBody:body isHTML:YES];
+            [body appendString:@"<h2>Kabbalah Quiz</h2>"];
+            [body appendString:@"<h3>Bnei Baruch Kabbalah Education & Research Institute</h3>"];
+            [body appendString:@"<p>WThe Kabbalah Quiz app is based on the first 10 lessons of the Free Kabbalah Course given at the Bnei Baruch Kabbalah Education Center. Each one of these quizzes are based on their individual lesson topic. To learn more about these topics, it is recommended to take the course.</p>"];
+            [body appendString:@"<a href =\"http://edu.kabbalah.info/lp/free?utm_source=kabbalah-quiz-app&utm_medium=link&utm_campaign=ec-general\"> Sign Up for the Free Kabbalah Course Here</a>"];
+            [body appendString:@"<p>"];
+            [body appendString:@"Follow us on <a href =\"http://www.twitter.com/kabbalahinfo\">Twitter</a>"];
+            [body appendString:@"</p>"];
+            [body appendString:@"<p>Via <a href =\"http://itunes.apple.com/us/app/kabbalah-app/id847571952\">Kabbalah Quiz</a></p>\n"];
+            [composer setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
+            [self presentViewController:composer animated:YES completion:nil];
+        }
+        //[TestFlight passCheckpoint:@"Email Kab.TV"];
+        
+    }
+    
+    if (buttonIndex == 2) {
+        
+        //[FBSession activeSession];
+        
+        
+        NSString *message = [NSString stringWithFormat:kCDMessageF];
+        NSURL *url = [NSURL URLWithString:kCDUrlF];
+        
+        if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            
+            SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            [controller setInitialText:message];
+            [controller addURL:url];
+            
+            [controller setCompletionHandler:^(SLComposeViewControllerResult result) {
+                
+                switch (result) {
+                    case SLComposeViewControllerResultCancelled:
+                        NSLog(@"Post Canceled");
+                        break;
+                    case SLComposeViewControllerResultDone:
+                        NSLog(@"Post Sucessful");
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }];
+            
+            [self presentViewController:controller animated:YES completion:Nil];
+            
+        }
+    }
+    
+    if (buttonIndex == 3) {
+        NSURL *currenturl = [NSURL URLWithString:@"http://www.kabbalah.info/quiz"];
+        [[UIApplication sharedApplication] openURL:currenturl];
+        
+        //[TestFlight passCheckpoint:@"Open in Safari. Kab.TV"];
+    }
+    
 }
 
 @end

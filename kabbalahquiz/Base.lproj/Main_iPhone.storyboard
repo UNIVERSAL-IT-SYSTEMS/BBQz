@@ -107,7 +107,11 @@
                             <constraint firstItem="5Z1-1g-70S" firstAttribute="top" secondItem="fve-vj-7Gk" secondAttribute="top" constant="25" id="gFc-GQ-Vfk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kabbalah Quiz" id="JZZ-2x-xbp"/>
+                    <navigationItem key="navigationItem" title="Kabbalah Quiz" id="JZZ-2x-xbp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="xAh-0k-fpy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="popupView" destination="5Z1-1g-70S" id="tOG-VB-ukB"/>
                         <outlet property="scroller" destination="Dqe-K4-bqH" id="OM9-nM-Nks"/>

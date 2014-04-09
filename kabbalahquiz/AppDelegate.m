@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 //#import "JHCenterViewController.h"
 #import "JASidePanelController.h"
 #import "JHLeftViewController.h"
@@ -51,8 +52,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [NSThread sleepForTimeInterval:1.5];
+    
     [[LocalyticsSession shared] resume];
     [[LocalyticsSession shared] upload];
+    
+    [Crashlytics startWithAPIKey:@"62ce332ae1de018bdee39900e29eab6ab5d39419"];
     //[Flurry setCrashReportingEnabled:NO];
     //[Flurry startSession:@"H97X7J9VPTBFKHRR5YKB"];
     

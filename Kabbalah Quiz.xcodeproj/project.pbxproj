@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D26830B18F4E0F800269E8B /* InnerWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26830A18F4E0F800269E8B /* InnerWorkViewController.m */; };
+		6D26830B18F4E0F800269E8B /* InnerWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26830A18F4E0F800269E8B /* InnerWorkViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6D26830D18F4E41F00269E8B /* inner.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D26830C18F4E41F00269E8B /* inner.plist */; };
-		6D26831018F4E92D00269E8B /* CreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26830F18F4E92D00269E8B /* CreationViewController.m */; };
+		6D26831018F4E92D00269E8B /* CreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26830F18F4E92D00269E8B /* CreationViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6D26831218F4EA0A00269E8B /* creation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D26831118F4EA0A00269E8B /* creation.plist */; };
+		6D26831518F4F32600269E8B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D26831418F4F32600269E8B /* FacebookSDK.framework */; };
+		6D26832518F4F42E00269E8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D26832418F4F42E00269E8B /* InfoPlist.strings */; };
+		6D26832C18F4F8F000269E8B /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D26832718F4F8F000269E8B /* Appirater.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		6D26832D18F4F8F000269E8B /* AppiraterLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D26832A18F4F8F000269E8B /* AppiraterLocalizable.strings */; };
+		6D26833018F4FE3A00269E8B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D26832F18F4FE3A00269E8B /* Crashlytics.framework */; };
 		6D28429518937B6E00462C20 /* QuizTipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D28429018937B6E00462C20 /* QuizTipViewController.m */; };
 		6D28429618937B6E00462C20 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D28429218937B6E00462C20 /* Quiz.m */; };
-		6D28429718937B6E00462C20 /* QuoteQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D28429418937B6E00462C20 /* QuoteQuizViewController.m */; };
+		6D28429718937B6E00462C20 /* QuoteQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D28429418937B6E00462C20 /* QuoteQuizViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6D36CF74188A22780016A628 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36CF73188A22780016A628 /* Foundation.framework */; };
 		6D36CF76188A22780016A628 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36CF75188A22780016A628 /* CoreGraphics.framework */; };
 		6D36CF78188A22780016A628 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36CF77188A22780016A628 /* UIKit.framework */; };
-		6D36CF7E188A22780016A628 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D36CF7C188A22780016A628 /* InfoPlist.strings */; };
 		6D36CF80188A22780016A628 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D36CF7F188A22780016A628 /* main.m */; };
 		6D36CF84188A22780016A628 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D36CF83188A22780016A628 /* AppDelegate.m */; };
 		6D36CF8F188A22780016A628 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D36CF8E188A22780016A628 /* Images.xcassets */; };
@@ -93,11 +97,11 @@
 		6D36D0A2188A2D510016A628 /* WelcomeThatPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D36D096188A2D510016A628 /* WelcomeThatPhoto.png */; };
 		6D36D0A3188A2D510016A628 /* WelcomeThatPhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D36D097188A2D510016A628 /* WelcomeThatPhoto@2x.png */; };
 		6D54B3F818BEFCAF00990E4B /* intro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D54B3F718BEFCAF00990E4B /* intro.plist */; };
-		6D735D5018F36BB600C065B5 /* WorldPeaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D735D4F18F36BB600C065B5 /* WorldPeaceViewController.m */; };
+		6D735D5018F36BB600C065B5 /* WorldPeaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D735D4F18F36BB600C065B5 /* WorldPeaceViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6D735D5418F36F9C00C065B5 /* world.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D735D5318F36F9C00C065B5 /* world.plist */; };
-		6D735D5718F37CC600C065B5 /* FreeWillOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D735D5618F37CC600C065B5 /* FreeWillOneViewController.m */; };
+		6D735D5718F37CC600C065B5 /* FreeWillOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D735D5618F37CC600C065B5 /* FreeWillOneViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6D735D5918F3802800C065B5 /* fw1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D735D5818F3802800C065B5 /* fw1.plist */; };
-		6D735D5C18F3914F00C065B5 /* FreeWillTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D735D5B18F3914F00C065B5 /* FreeWillTwoViewController.m */; };
+		6D735D5C18F3914F00C065B5 /* FreeWillTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D735D5B18F3914F00C065B5 /* FreeWillTwoViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6D735D5E18F3921D00C065B5 /* fw2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D735D5D18F3921D00C065B5 /* fw2.plist */; };
 		6D735D6E18F3971500C065B5 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D735D6418F3971500C065B5 /* OpenSans-Bold.ttf */; };
 		6D735D6F18F3971500C065B5 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D735D6518F3971500C065B5 /* OpenSans-BoldItalic.ttf */; };
@@ -110,10 +114,9 @@
 		6D735D7618F3971500C065B5 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D735D6C18F3971500C065B5 /* OpenSans-Semibold.ttf */; };
 		6D735D7718F3971500C065B5 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D735D6D18F3971500C065B5 /* OpenSans-SemiboldItalic.ttf */; };
 		6D735D7A18F398F200C065B5 /* UIFont+QuiziOSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D735D7918F398F200C065B5 /* UIFont+QuiziOSAdditions.m */; };
-		6D822D7A18C2D78000AA9A25 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D822D7918C2D78000AA9A25 /* Default-568h@2x.png */; };
 		6D8F772518F103BB0072E058 /* kqTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F772418F103BB0072E058 /* kqTheme.m */; };
 		6D8F772818F106630072E058 /* UIImageAverageColorAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F772718F106630072E058 /* UIImageAverageColorAddition.m */; };
-		6D8F772B18F126470072E058 /* KabbalisticLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F772A18F126470072E058 /* KabbalisticLanguage.m */; };
+		6D8F772B18F126470072E058 /* KabbalisticLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F772A18F126470072E058 /* KabbalisticLanguage.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6D8F772D18F129450072E058 /* language.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D8F772C18F129450072E058 /* language.plist */; };
 		6DDBE79A18CED2A700C0594D /* iOSa_2.22.0.version in Resources */ = {isa = PBXBuildFile; fileRef = 6DDBE79418CED2A700C0594D /* iOSa_2.22.0.version */; };
 		6DDBE79B18CED2A700C0594D /* libLocalyticsAMP_x64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DDBE79518CED2A700C0594D /* libLocalyticsAMP_x64.a */; };
@@ -123,7 +126,7 @@
 		6DDBE7A518CED5DB00C0594D /* defines.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDBE7A418CED5DB00C0594D /* defines.m */; };
 		6DDEF661188A354200826416 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D36CF85188A22780016A628 /* Main_iPhone.storyboard */; };
 		6DDEF662188A354200826416 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D36CF88188A22780016A628 /* Main_iPad.storyboard */; };
-		6DF7FEDF18E087A4009D987C /* PurposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FEDE18E087A4009D987C /* PurposeViewController.m */; };
+		6DF7FEDF18E087A4009D987C /* PurposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FEDE18E087A4009D987C /* PurposeViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6DF7FEE218E088A1009D987C /* purpose.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEE118E088A1009D987C /* purpose.plist */; };
 		6DF7FEEE18E09CBD009D987C /* icon-1-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEE418E09CBD009D987C /* icon-1-70x70.png */; };
 		6DF7FEEF18E09CBD009D987C /* icon-2-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEE518E09CBD009D987C /* icon-2-70x70.png */; };
@@ -135,9 +138,9 @@
 		6DF7FEF518E09CBD009D987C /* icon-8-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEEB18E09CBD009D987C /* icon-8-70x70.png */; };
 		6DF7FEF618E09CBD009D987C /* icon-9-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEEC18E09CBD009D987C /* icon-9-70x70.png */; };
 		6DF7FEF718E09CBD009D987C /* icon-10-70x70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FEED18E09CBD009D987C /* icon-10-70x70.png */; };
-		6DF7FF0118E0FD17009D987C /* PerceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */; };
+		6DF7FF0118E0FD17009D987C /* PerceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0018E0FD17009D987C /* PerceptionViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6DF7FF0318E0FD88009D987C /* perception.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0218E0FD88009D987C /* perception.plist */; };
-		6DF7FF0B18E1150C009D987C /* IntentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0A18E1150C009D987C /* IntentionViewController.m */; };
+		6DF7FF0B18E1150C009D987C /* IntentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0A18E1150C009D987C /* IntentionViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		6DF7FF0D18E115AA009D987C /* intention.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0C18E115AA009D987C /* intention.plist */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +161,13 @@
 		6D26830E18F4E92D00269E8B /* CreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreationViewController.h; sourceTree = "<group>"; };
 		6D26830F18F4E92D00269E8B /* CreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreationViewController.m; sourceTree = "<group>"; };
 		6D26831118F4EA0A00269E8B /* creation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = creation.plist; sourceTree = "<group>"; };
+		6D26831418F4F32600269E8B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		6D26832418F4F42E00269E8B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		6D26832618F4F8F000269E8B /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		6D26832718F4F8F000269E8B /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
+		6D26832818F4F8F000269E8B /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppiraterDelegate.h; sourceTree = "<group>"; };
+		6D26832B18F4F8F000269E8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = AppiraterLocalizable.strings; sourceTree = "<group>"; };
+		6D26832F18F4FE3A00269E8B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		6D28428F18937B6E00462C20 /* QuizTipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizTipViewController.h; sourceTree = "<group>"; };
 		6D28429018937B6E00462C20 /* QuizTipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizTipViewController.m; sourceTree = "<group>"; };
 		6D28429118937B6E00462C20 /* Quiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
@@ -169,7 +179,6 @@
 		6D36CF75188A22780016A628 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6D36CF77188A22780016A628 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6D36CF7B188A22780016A628 /* Kabbalah Quiz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kabbalah Quiz-Info.plist"; sourceTree = "<group>"; };
-		6D36CF7D188A22780016A628 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6D36CF7F188A22780016A628 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D36CF81188A22780016A628 /* Kabbalah Quiz-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kabbalah Quiz-Prefix.pch"; sourceTree = "<group>"; };
 		6D36CF82188A22780016A628 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -310,7 +319,6 @@
 		6D735D6D18F3971500C065B5 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		6D735D7818F398F200C065B5 /* UIFont+QuiziOSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+QuiziOSAdditions.h"; sourceTree = "<group>"; };
 		6D735D7918F398F200C065B5 /* UIFont+QuiziOSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+QuiziOSAdditions.m"; sourceTree = "<group>"; };
-		6D822D7918C2D78000AA9A25 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6D8F772318F103BB0072E058 /* kqTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kqTheme.h; sourceTree = "<group>"; };
 		6D8F772418F103BB0072E058 /* kqTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kqTheme.m; sourceTree = "<group>"; };
 		6D8F772618F106630072E058 /* UIImageAverageColorAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAverageColorAddition.h; sourceTree = "<group>"; };
@@ -355,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DDBE7A118CED2FF00C0594D /* libsqlite3.dylib in Frameworks */,
+				6D26831518F4F32600269E8B /* FacebookSDK.framework in Frameworks */,
 				6DDBE79F18CED2EE00C0594D /* AdSupport.framework in Frameworks */,
 				6D36D081188A28A30016A628 /* QuartzCore.framework in Frameworks */,
 				6D36D07F188A289A0016A628 /* MessageUI.framework in Frameworks */,
@@ -366,6 +375,7 @@
 				6D36D073188A28700016A628 /* libz.1.1.3.dylib in Frameworks */,
 				6D36D071188A28690016A628 /* libz.dylib in Frameworks */,
 				6D36D06F188A28610016A628 /* libsqlite3.0.dylib in Frameworks */,
+				6D26833018F4FE3A00269E8B /* Crashlytics.framework in Frameworks */,
 				6D36D06D188A285A0016A628 /* libxml2.dylib in Frameworks */,
 				6D36D06B188A284F0016A628 /* SystemConfiguration.framework in Frameworks */,
 				6D36D069188A28420016A628 /* CoreData.framework in Frameworks */,
@@ -389,6 +399,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D26831318F4F22600269E8B /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				6D26832618F4F8F000269E8B /* Appirater.h */,
+				6D26832718F4F8F000269E8B /* Appirater.m */,
+				6D26832818F4F8F000269E8B /* AppiraterDelegate.h */,
+				6D26832918F4F8F000269E8B /* en.lproj */,
+			);
+			name = Appirater;
+			sourceTree = "<group>";
+		};
+		6D26832918F4F8F000269E8B /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				6D26832A18F4F8F000269E8B /* AppiraterLocalizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		6D2842841893700A00462C20 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,7 +428,6 @@
 		6D36CF67188A22780016A628 = {
 			isa = PBXGroup;
 			children = (
-				6D822D7918C2D78000AA9A25 /* Default-568h@2x.png */,
 				6D36CF79188A22780016A628 /* kabbalahquiz */,
 				6D36CF9B188A22780016A628 /* kabbalahquizTests */,
 				6D36CFAC188A229A0016A628 /* Resources */,
@@ -420,6 +448,8 @@
 		6D36CF72188A22780016A628 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D26832F18F4FE3A00269E8B /* Crashlytics.framework */,
+				6D26831418F4F32600269E8B /* FacebookSDK.framework */,
 				6DDBE7A018CED2FF00C0594D /* libsqlite3.dylib */,
 				6DDBE79E18CED2EE00C0594D /* AdSupport.framework */,
 				6D36D080188A28A30016A628 /* QuartzCore.framework */,
@@ -463,7 +493,7 @@
 				6D735D6318F396FC00C065B5 /* Fonts */,
 				6D2842841893700A00462C20 /* Images */,
 				6D36CF7B188A22780016A628 /* Kabbalah Quiz-Info.plist */,
-				6D36CF7C188A22780016A628 /* InfoPlist.strings */,
+				6D26832418F4F42E00269E8B /* InfoPlist.strings */,
 				6D36CF7F188A22780016A628 /* main.m */,
 				6D36CF81188A22780016A628 /* Kabbalah Quiz-Prefix.pch */,
 			);
@@ -507,6 +537,7 @@
 		6D36CFAC188A229A0016A628 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6D26831318F4F22600269E8B /* Appirater */,
 				6DDBE7A218CED59300C0594D /* Defines */,
 				6D36D02A188A23CB0016A628 /* SidePanel */,
 				6D36D00D188A23BA0016A628 /* AFN */,
@@ -825,6 +856,7 @@
 				6D36CF6C188A22780016A628 /* Sources */,
 				6D36CF6D188A22780016A628 /* Frameworks */,
 				6D36CF6E188A22780016A628 /* Resources */,
+				6D26832E18F4FE1800269E8B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -925,6 +957,7 @@
 				6D36D0A2188A2D510016A628 /* WelcomeThatPhoto.png in Resources */,
 				6D735D5418F36F9C00C065B5 /* world.plist in Resources */,
 				6DDBE79A18CED2A700C0594D /* iOSa_2.22.0.version in Resources */,
+				6D26832D18F4F8F000269E8B /* AppiraterLocalizable.strings in Resources */,
 				6D36CFC0188A22D90016A628 /* WelcomeViewController.xib in Resources */,
 				6D54B3F818BEFCAF00990E4B /* intro.plist in Resources */,
 				6D735D6E18F3971500C065B5 /* OpenSans-Bold.ttf in Resources */,
@@ -933,6 +966,7 @@
 				6D36D0A3188A2D510016A628 /* WelcomeThatPhoto@2x.png in Resources */,
 				6DF7FEF618E09CBD009D987C /* icon-9-70x70.png in Resources */,
 				6D735D7418F3971500C065B5 /* OpenSans-LightItalic.ttf in Resources */,
+				6D26832518F4F42E00269E8B /* InfoPlist.strings in Resources */,
 				6D735D7018F3971500C065B5 /* OpenSans-ExtraBold.ttf in Resources */,
 				6D36D099188A2D510016A628 /* OnboardStep2@2x.png in Resources */,
 				6DF7FEF118E09CBD009D987C /* icon-4-70x70.png in Resources */,
@@ -944,12 +978,10 @@
 				6DDBE79D18CED2A700C0594D /* LICENSE in Resources */,
 				6D735D7318F3971500C065B5 /* OpenSans-Light.ttf in Resources */,
 				6D735D7618F3971500C065B5 /* OpenSans-Semibold.ttf in Resources */,
-				6D822D7A18C2D78000AA9A25 /* Default-568h@2x.png in Resources */,
 				6D36D0A1188A2D510016A628 /* WelcomeThatPDF@2x.png in Resources */,
 				6D36D09C188A2D510016A628 /* WelcomeThatCloud.png in Resources */,
 				6D36D0A0188A2D510016A628 /* WelcomeThatPDF.png in Resources */,
 				6D36D087188A2AD70016A628 /* WelcomeIpadViewController.xib in Resources */,
-				6D36CF7E188A22780016A628 /* InfoPlist.strings in Resources */,
 				6DF7FEE218E088A1009D987C /* purpose.plist in Resources */,
 				6D26830D18F4E41F00269E8B /* inner.plist in Resources */,
 				6DF7FEF018E09CBD009D987C /* icon-3-70x70.png in Resources */,
@@ -969,6 +1001,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D26832E18F4FE1800269E8B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 62ce332ae1de018bdee39900e29eab6ab5d39419 e3925ee66366f5ce0c11bd4797ea5d473b301206bff8d7d3f3790e7f892ad528";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D36CF6C188A22780016A628 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -982,6 +1030,7 @@
 				6D36CFFE188A23420016A628 /* CommentChunk.m in Sources */,
 				6D36CFFC188A23420016A628 /* CDataChunk.m in Sources */,
 				6D28429518937B6E00462C20 /* QuizTipViewController.m in Sources */,
+				6D26832C18F4F8F000269E8B /* Appirater.m in Sources */,
 				6D8F772518F103BB0072E058 /* kqTheme.m in Sources */,
 				6DDBE7A518CED5DB00C0594D /* defines.m in Sources */,
 				6D36D03C188A25B40016A628 /* JHBlogCell.m in Sources */,
@@ -1053,12 +1102,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D36CF7C188A22780016A628 /* InfoPlist.strings */ = {
+		6D26832A18F4F8F000269E8B /* AppiraterLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6D36CF7D188A22780016A628 /* en */,
+				6D26832B18F4F8F000269E8B /* en */,
 			);
-			name = InfoPlist.strings;
+			name = AppiraterLocalizable.strings;
 			sourceTree = "<group>";
 		};
 		6D36CF85188A22780016A628 /* Main_iPhone.storyboard */ = {
@@ -1167,6 +1216,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kabbalahquiz/Kabbalah Quiz-Prefix.pch";
 				INFOPLIST_FILE = "kabbalahquiz/Kabbalah Quiz-Info.plist";
@@ -1174,6 +1227,11 @@
 					"$(inherited)",
 					/Users/gabrielmorales/BBProjects/kabbalahquiz/kabbalahquiz,
 					"$(PROJECT_DIR)/kabbalahquiz",
+				);
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "Kabbalah Quiz";
 				PROVISIONING_PROFILE = "";
@@ -1188,6 +1246,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "kabbalahquiz/Kabbalah Quiz-Prefix.pch";
 				INFOPLIST_FILE = "kabbalahquiz/Kabbalah Quiz-Info.plist";
@@ -1195,6 +1257,11 @@
 					"$(inherited)",
 					/Users/gabrielmorales/BBProjects/kabbalahquiz/kabbalahquiz,
 					"$(PROJECT_DIR)/kabbalahquiz",
+				);
+				OTHER_LDFLAGS = (
+					"-lsqlite3.0",
+					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "Kabbalah Quiz";
 				PROVISIONING_PROFILE = "";

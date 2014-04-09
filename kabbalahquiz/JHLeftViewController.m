@@ -47,8 +47,7 @@
                       @"Free Will - Part 1",
                       @"Free Will - Part 2",
                       @"Inner Work",
-                      @"Creation & Evolution",
-                      @"More Info",nil];
+                      @"Creation & Evolution",nil];
     
     
     [self setCellImage:[NSArray arrayWithObjects:
@@ -61,8 +60,7 @@
                         @"icon-7-70x70.png",
                         @"icon-8-70x70.png",
                         @"icon-9-70x70.png",
-                        @"icon-10-70x70.png",
-                        @"",nil]];
+                        @"icon-10-70x70.png",nil]];
     
     NSDictionary *temp = [[NSDictionary alloc]initWithObjectsAndKeys:title, @"Menu", nil];
     self.feedbackItems = temp;

@@ -20,6 +20,8 @@
 #define kCDUrlT @"https://itunes.apple.com/us/app/kabbalah-quiz/id847571952?ls=1&mt=8"
 #define kCDMessageF @"I just tried Kabbalah Quiz!"
 #define kCDUrlF @"https://itunes.apple.com/us/app/kabbalah-quiz/id847571952?ls=1&mt=8"
+#define kCDCorrect @"That's Right!"
+#define kCDIncorrect @"Bummer! Incorrect Answer"
 
 #pragma mark - API
 

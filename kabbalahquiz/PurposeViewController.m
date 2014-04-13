@@ -451,14 +451,14 @@
     if([self.quiz checkQuestion:self.quizIndex forAnswer:self.answer])
     {
         self.quiz.total += 1;
-        UIAlertView *rightAlertView  = [[UIAlertView alloc]initWithTitle:@"CORRECT!" message: nil delegate:self cancelButtonTitle:@"Next" otherButtonTitles: nil];
+        UIAlertView *rightAlertView  = [[UIAlertView alloc]initWithTitle:kCDCorrect message: nil delegate:self cancelButtonTitle:@"Next" otherButtonTitles: nil];
         NSLog(@"Alert created");
         [rightAlertView show];
         [[LocalyticsSession shared] tagEvent:@"Correct"];
     }
     else
     {
-        UIAlertView *wrongAlertView = [[UIAlertView alloc]initWithTitle:@"TRY AGAIN!" message:nil delegate:self cancelButtonTitle:@"Next" otherButtonTitles: nil];
+        UIAlertView *wrongAlertView = [[UIAlertView alloc]initWithTitle:kCDIncorrect message:nil delegate:self cancelButtonTitle:@"Next" otherButtonTitles: nil];
         NSLog(@"Alert created");
         [wrongAlertView show];
         [[LocalyticsSession shared] tagEvent:@"Incorrect"];

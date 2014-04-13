@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kabbalahquiz/QuoteQuizViewController.m"
-            timestampString = "418711682.746374"
+            timestampString = "418713270.58049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "472"
-            endingLineNumber = "472"
+            startingLineNumber = "468"
+            endingLineNumber = "468"
             landmarkName = "-checkAnswer"
             landmarkType = "5">
          </BreakpointContent>
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kabbalahquiz/QuoteQuizViewController.m"
-            timestampString = "418711682.746374"
+            timestampString = "418713270.58049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "417"
-            endingLineNumber = "417"
+            startingLineNumber = "413"
+            endingLineNumber = "413"
             landmarkName = "-quizDone"
             landmarkType = "5">
          </BreakpointContent>
@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kabbalahquiz/PerceptionViewController.m"
-            timestampString = "418711070.979868"
+            timestampString = "418713270.58049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "530"
-            endingLineNumber = "530"
+            startingLineNumber = "539"
+            endingLineNumber = "539"
             landmarkName = "-showResult"
             landmarkType = "5">
          </BreakpointContent>

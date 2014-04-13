@@ -52,7 +52,7 @@ NSString *nsuserdefaultsHasRunFlowKeyNameIpad = @"com.bneibaruch.hasRunWelcomeFl
     pageScrollViewIpad = [pageScrollViewIpad initWithFrame:pageFrameIpad];
     
     NSMutableArray *views = [NSMutableArray arrayWithCapacity:4];
-    NSMutableArray *images = [NSMutableArray arrayWithObjects:@"WelcomeThatInbox",@"WelcomeThatPDF",@"WelcomeThatPhoto",@"WelcomeThatCloud", nil];
+    NSMutableArray *images = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4", nil];
     
     for (NSString *imageName in images) {
         UIView *welcomeScreenIpad = [[UIView alloc] init];

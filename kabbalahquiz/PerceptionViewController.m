@@ -52,7 +52,7 @@
     [self nextQuizQuestion];
     
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320, 480)];
+    [scroller setContentSize:CGSizeMake((self.view.bounds.size.width), 480)];
     [scroller_ipad setScrollEnabled:YES];
     [scroller_ipad setContentSize:CGSizeMake(768, 1004)];
     
@@ -96,9 +96,11 @@
     UIImage *bg = [UIImage imageNamed:@"bg-map-embed"];
     _questionBg = [[UIImageView alloc] initWithImage:bg];
     _questionBg.frame = CGRectMake(0.0f, 0.0f, 320.0f, 200.0f);
+    _questionBg.translatesAutoresizingMaskIntoConstraints = NO;
     [scroller addSubview:_questionBg];
     
     questionLabel = [[UILabel alloc] initWithFrame: CGRectMake(5, 45, 310.0f, 140.0f)];
+    questionLabel.translatesAutoresizingMaskIntoConstraints = NO;
     questionLabel.text = self.quiz.question;
     questionLabel.backgroundColor = [UIColor clearColor];
     questionLabel.textColor = [UIColor colorWithRed:0.031f green:0.506f blue:0.702f alpha:1.0f];
@@ -108,6 +110,7 @@
     [scroller addSubview:questionLabel];
     
     statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(12.0f, 12.0f, 248.0f, 21.0f)];
+    statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
     statusLabel.text = [NSString stringWithFormat:@"Remaining questions: %ld", (long)self.quiz.quizCount];
     statusLabel.backgroundColor = [UIColor clearColor];
     statusLabel.textColor = [UIColor colorWithRed:0.031f green:0.506f blue:0.702f alpha:1.0f];
@@ -115,6 +118,49 @@
     statusLabel.textAlignment = NSTextAlignmentLeft;
     statusLabel.numberOfLines = 1;
     [scroller addSubview:statusLabel];
+    
+    //Auto Layout
+    NSDictionary *viewsDictionary = @{@"questionBG": _questionBg,
+                                      @"questionLabel": questionLabel,
+                                      @"statusLabel": statusLabel};
+    
+    NSArray *constraint_H_questionBG = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[questionBG]|"
+                                                                               options:0
+                                                                               metrics:nil
+                                                                                 views:viewsDictionary];
+    
+    NSArray *constraints_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[questionBG(200)]"
+                                                                     options:0 metrics:nil views:viewsDictionary];
+    
+    NSArray *constraint_H_questionLabel = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[questionLabel]-|"
+                                                                                  options:0
+                                                                                  metrics:nil
+                                                                                    views:viewsDictionary];
+    
+    NSArray *constraint_V_questionLabel = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-45-[questionLabel(140)]"
+                                                                                  options:0
+                                                                                  metrics:nil
+                                                                                    views:viewsDictionary];
+    
+    NSArray *constraint_H_statusLabel = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[statusLabel]"
+                                                                                options:0
+                                                                                metrics:nil
+                                                                                  views:viewsDictionary];
+    
+    NSArray *constraint_V_statusLabel = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-12-[statusLabel]"
+                                                                                options:0
+                                                                                metrics:nil
+                                                                                  views:viewsDictionary];
+    
+    
+    [scroller addConstraints:constraint_H_questionBG];
+    [scroller addConstraints:constraints_V];
+    
+    [scroller addConstraints:constraint_H_questionLabel];
+    [scroller addConstraints:constraint_V_questionLabel];
+    
+    [scroller addConstraints:constraint_H_statusLabel];
+    [scroller addConstraints:constraint_V_statusLabel];
     
 }
 
@@ -124,9 +170,17 @@
     UIImageView *bg = [[UIImageView alloc] initWithImage:bgImage];
     bg.frame = CGRectMake(160.0f, 230.0f, 35.0f, 86.0f);
     _background = [[UIImageView alloc] initWithFrame:CGRectMake(140.0f, 350.0f, 35.0f, 86.0f)];
+    _background.translatesAutoresizingMaskIntoConstraints = NO;
     [_background setImage:bgImage];
     [scroller addSubview:_background];
     [_background setHidden:YES];
+    
+    NSDictionary *viewDictionary = @{@"arrow":_background};
+    NSArray *constraint_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-140-[arrow(35)]" options:0 metrics:nil views:viewDictionary];
+    NSArray *constraint_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-350-[arrow(86)]" options:0 metrics:nil views:viewDictionary];
+    
+    [scroller addConstraints:constraint_H];
+    [scroller addConstraints:constraint_V];
 }
 
 - (void)buttonSettings:(UIImage **)stretchBtn_p stretchBtnPressed_p:(UIImage **)stretchBtnPressed_p
@@ -148,68 +202,148 @@
     //Answer Buttons
     
     answer1Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 225.0f, 272.0f, 60.0f)];
+    answer1Button.translatesAutoresizingMaskIntoConstraints = NO;
     [answer1Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer1Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer1Button addTarget:self action:@selector(ans1Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer1Button];
     
     answer2Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 290.0f, 272.0f, 60.0f)];
+    answer2Button.translatesAutoresizingMaskIntoConstraints = NO;
     [answer2Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer2Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer2Button addTarget:self action:@selector(ans2Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer2Button];
     
     answer3Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 355.0f, 272.0f, 60.0f)];
+    answer3Button.translatesAutoresizingMaskIntoConstraints = NO;
     [answer3Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer3Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer3Button addTarget:self action:@selector(ans3Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer3Button];
     
     answer4Button = [[UIButton alloc] initWithFrame:CGRectMake(24.0f, 420.0f, 272.0f, 60.0f)];
+    answer4Button.translatesAutoresizingMaskIntoConstraints = NO;
     [answer4Button setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [answer4Button setBackgroundImage:stretchBtnPressed forState:UIControlStateHighlighted];
     [answer4Button addTarget:self action:@selector(ans4Action:) forControlEvents:UIControlEventTouchUpInside];
     [scroller addSubview:answer4Button];
+    
+    //Auto Layout
+    NSDictionary *viewDictionary = @{@"answer1": answer1Button,
+                                     @"answer2": answer2Button,
+                                     @"answer3": answer3Button,
+                                     @"answer4": answer4Button};
+    
+    NSArray *constraint_H_1 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer1]-|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewDictionary];
+    
+    NSArray *constraint_H_2 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer2]-|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewDictionary];
+    NSArray *constraint_H_3 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer3]-|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewDictionary];
+    NSArray *constraint_H_4 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer4]-|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewDictionary];
+    
+    NSArray *constraint_V_1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-225-[answer1]-5-[answer2]-5-[answer3]-5-[answer4]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewDictionary];
+    
+    [scroller addConstraints:constraint_H_1];
+    [scroller addConstraints:constraint_H_2];
+    [scroller addConstraints:constraint_H_3];
+    [scroller addConstraints:constraint_H_4];
+    
+    [scroller addConstraints:constraint_V_1];
 }
 
 - (void)answerLabels
 {
     //Answer Labels
     answer1Label = [[UILabel alloc] initWithFrame: answer1Button.frame];
+    answer1Label.translatesAutoresizingMaskIntoConstraints = NO;
     answer1Label.text = self.quiz.ans1;
     answer1Label.backgroundColor = [UIColor clearColor];
     answer1Label.textColor = [UIColor whiteColor];
     answer1Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
     answer1Label.textAlignment = NSTextAlignmentCenter;
-    answer1Label.numberOfLines = 3;
+    answer1Label.numberOfLines = 0;
     [scroller addSubview:answer1Label];
     
     answer2Label = [[UILabel alloc] initWithFrame: answer2Button.frame];
+    answer2Label.translatesAutoresizingMaskIntoConstraints = NO;
     answer2Label.text = self.quiz.ans2;
     answer2Label.backgroundColor = [UIColor clearColor];
     answer2Label.textColor = [UIColor whiteColor];//colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0];
     answer2Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
     answer2Label.textAlignment = NSTextAlignmentCenter;
-    answer2Label.numberOfLines = 3;
+    answer2Label.numberOfLines = 0;
     [scroller addSubview:answer2Label];
     
     answer3Label = [[UILabel alloc] initWithFrame: answer3Button.frame];
+    answer3Label.translatesAutoresizingMaskIntoConstraints = NO;
     answer3Label.text = self.quiz.ans3;
     answer3Label.backgroundColor = [UIColor clearColor];
     answer3Label.textColor = [UIColor whiteColor];
     answer3Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
     answer3Label.textAlignment = NSTextAlignmentCenter;
-    answer3Label.numberOfLines = 3;
+    answer3Label.numberOfLines = 0;
     [scroller addSubview:answer3Label];
     
     answer4Label = [[UILabel alloc] initWithFrame: answer4Button.frame];
+    answer4Label.translatesAutoresizingMaskIntoConstraints = NO;
     answer4Label.text = self.quiz.ans4;
     answer4Label.backgroundColor = [UIColor clearColor];
     answer4Label.textColor = [UIColor whiteColor];
     answer4Label.font = [UIFont lightQuizInterfaceFontOfSize:14.0f];
     answer4Label.textAlignment = NSTextAlignmentCenter;
-    answer4Label.numberOfLines = 3;
+    answer4Label.numberOfLines = 0;
     [scroller addSubview:answer4Label];
+    
+    //Auto Layout
+    NSDictionary *viewDictionary = @{@"answer1": answer1Label,
+                                     @"answer2": answer2Label,
+                                     @"answer3": answer3Label,
+                                     @"answer4": answer4Label};
+    
+    NSArray *constraint_H_l1 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer1]-|"
+                                                                       options:0
+                                                                       metrics:nil
+                                                                         views:viewDictionary];
+    
+    NSArray *constraint_H_l2 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer2]-|"
+                                                                       options:0
+                                                                       metrics:nil
+                                                                         views:viewDictionary];
+    NSArray *constraint_H_l3 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer3]-|"
+                                                                       options:0
+                                                                       metrics:nil
+                                                                         views:viewDictionary];
+    NSArray *constraint_H_l4 = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[answer4]-|"
+                                                                       options:0
+                                                                       metrics:nil
+                                                                         views:viewDictionary];
+    
+    NSArray *constraint_V_l1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-217-[answer1(50)]-5-[answer2(50)]-3-[answer3(50)]-1-[answer4(50)]"
+                                                                       options:0
+                                                                       metrics:nil
+                                                                         views:viewDictionary];
+    
+    [scroller addConstraints:constraint_H_l1];
+    [scroller addConstraints:constraint_H_l2];
+    [scroller addConstraints:constraint_H_l3];
+    [scroller addConstraints:constraint_H_l4];
+    
+    [scroller addConstraints:constraint_V_l1];
 }
 
 -(void)nextButton {
@@ -226,6 +360,7 @@
     
     /*NEXT BUTTON*/
     _nextButton = [[UIButton alloc] initWithFrame:CGRectMake(1.0f, 509.0f, 159.0f, 60.0f)];
+    _nextButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_nextButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [_nextButton setTitle:@"Next" forState:UIControlStateNormal];
     [_nextButton setTitleColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0] forState:UIControlStateNormal];
@@ -237,6 +372,15 @@
     [_nextButton addTarget:self action:@selector(startAgain:) forControlEvents:UIControlEventTouchUpInside];
     _nextButton.titleLabel.font = [UIFont boldQuizInterfaceFontOfSize:16.0f];
     [scroller addSubview:_nextButton];
+    
+    NSDictionary *viewDictionary = @{@"nextButton": _nextButton};
+    
+    NSArray *constraint_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-1-[nextButton(159)]" options:0 metrics:nil views:viewDictionary];
+    
+    NSArray *constraint_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-509-[nextButton(60)]" options:0 metrics:nil views:viewDictionary];
+    
+    [scroller addConstraints:constraint_H];
+    [scroller addConstraints:constraint_V];
     
     
 }
@@ -256,6 +400,7 @@
     
     /*START AGAIN BUTTON*/
     _startButton = [[UIButton alloc] initWithFrame:CGRectMake(5.0f, 444.0f, 310.0f, 60.0f)];
+    _startButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_startButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [_startButton setTitle:@"Try Again" forState:UIControlStateNormal];
     [_startButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -268,6 +413,14 @@
     _startButton.titleLabel.font = [UIFont boldQuizInterfaceFontOfSize:16.0f];
     [scroller addSubview:_startButton];
     [_startButton setHidden:YES];
+    
+    NSDictionary *viewDictionary = @{@"startButton": _startButton};
+    
+    NSArray *constraint_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[startButton(310)]" options:0 metrics:nil views:viewDictionary];
+    NSArray *constraint_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-444-[startButton(60)]" options:0 metrics:nil views:viewDictionary];
+    
+    [scroller addConstraints:constraint_H];
+    [scroller addConstraints:constraint_V];
     
     
 }
@@ -288,6 +441,7 @@
     
     /*RESULT BUTTON*/
     _resultButton = [[UIButton alloc] initWithFrame:CGRectMake(163.0f, 509.0f, 159.0f, 60.0f)];
+    _resultButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_resultButton setBackgroundImage:stretchBtn forState:UIControlStateNormal];
     [_resultButton setTitle:@"Result" forState:UIControlStateNormal];
     [_resultButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -299,6 +453,13 @@
     [scroller addSubview:_resultButton];
     [_resultButton setHidden:NO];
     [_resultButton setEnabled:NO];
+    
+    NSDictionary *viewDictionary = @{@"resultButton": _resultButton};
+    NSArray *constraint_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[resultButton(159)]-1-|" options:0 metrics:nil views:viewDictionary];
+    NSArray *constraint_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-509-[resultButton(60)]" options:0 metrics:nil views:viewDictionary];
+    
+    [scroller addConstraints:constraint_H];
+    [scroller addConstraints:constraint_V];
     
     
 }

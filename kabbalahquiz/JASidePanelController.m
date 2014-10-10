@@ -97,14 +97,14 @@ static char ja_kvoContext;
 }
 
 //Support creating from Storyboard
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         [self _baseInit];
     }
     return self;
 }
 
-- (id)init {
+- (instancetype)init {
     if (self = [super init]) {
         [self _baseInit];
     }
@@ -418,7 +418,7 @@ static char ja_kvoContext;
         if ([buttonController isKindOfClass:[UINavigationController class]]) {
             UINavigationController *nav = (UINavigationController *)buttonController;
             if ([nav.viewControllers count] > 0) {
-                buttonController = [nav.viewControllers objectAtIndex:0];
+                buttonController = (nav.viewControllers)[0];
             }
         }
         if (!buttonController.navigationItem.leftBarButtonItem) {   

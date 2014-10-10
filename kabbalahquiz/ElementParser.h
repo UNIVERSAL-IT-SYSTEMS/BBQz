@@ -26,16 +26,16 @@
 #import "Element.h"
 #import "DocumentRoot.h"
 
-typedef enum{
+typedef NS_ENUM(NSInteger, ElementParserMode){
 	ElementParserModeHTML,
 	ElementParserModeXML
-} ElementParserMode;
+} ;
 
 #define ElementParserErrorDomain 1022
-typedef enum{
+typedef NS_ENUM(NSInteger, ElementParserErrors){
 	ElementParserTagNotClosedError = -1,
 	ElementParserGeneralError = -2
-}ElementParserErrors;
+};
 
 @interface ElementParser : NSObject {
 	NSMutableArray* tagStack;
@@ -87,7 +87,7 @@ typedef enum{
  *	followed by multiple calls to continueParsing as text arrives and finaly a single
  *	call to finishParsing
  */
--(DocumentRoot*)beginParsing;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) DocumentRoot *beginParsing;
 -(void)continueParsingString:(NSString*)string;
 -(void)finishParsing;
 

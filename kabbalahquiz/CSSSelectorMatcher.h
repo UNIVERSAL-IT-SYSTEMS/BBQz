@@ -42,7 +42,7 @@
 @property (nonatomic, retain) CSSSelector* selector;
 @property (nonatomic, retain) NSMutableArray* matches;
 
--(id)initWithSelector:(CSSSelector*)selector;
+-(instancetype)initWithSelector:(CSSSelector*)selector NS_DESIGNATED_INITIALIZER;
 -(BOOL)matchElement:(Element*) element;
--(Element*)firstMatch;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) Element *firstMatch;
 @end

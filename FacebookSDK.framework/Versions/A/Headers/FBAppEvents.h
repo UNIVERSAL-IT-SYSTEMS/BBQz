@@ -28,7 +28,7 @@
  @discussion
 
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, FBAppEventsFlushBehavior) {
 
     /*! Flush automatically: periodically (once a minute or every 100 logged events) and always at app reactivation. */
     FBAppEventsFlushBehaviorAuto,
@@ -38,7 +38,7 @@ typedef enum {
      explicit call to `flush`. */
     FBAppEventsFlushBehaviorExplicitOnly,
 
-} FBAppEventsFlushBehavior;
+} ;
 
 /*
  * Constant used by NSNotificationCenter for results of flushing AppEvents event logs

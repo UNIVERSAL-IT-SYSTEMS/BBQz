@@ -131,7 +131,7 @@ typedef enum _JASidePanelState {
 + (UIImage *)defaultImage;
 
 // Default button to place in gestureViewControllers top viewController. Override in sublcass to change look of default button
-- (UIBarButtonItem *)leftButtonForCenterPanel;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UIBarButtonItem *leftButtonForCenterPanel;
 
 #pragma mark - Nuts & Bolts
 

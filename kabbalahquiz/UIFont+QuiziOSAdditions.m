@@ -29,19 +29,17 @@ NSString *const kCDIFontSemiboldItalicKey = @"SemiboldItalic";
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		fontDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
-						  [[NSDictionary alloc] initWithObjectsAndKeys:
-						   kCDIRegularFontName, kCDIFontRegularKey,
-						   kCDIItalicFontName, kCDIFontItalicKey,
-						   kCDIBoldFontName, kCDIFontBoldKey,
-						   kCDIBoldItalicFontName, kCDIFontBoldItalicKey,
-						   nil], nil];
+						  @{kCDIFontRegularKey: kCDIRegularFontName,
+						   kCDIFontItalicKey: kCDIItalicFontName,
+						   kCDIFontBoldKey: kCDIBoldFontName,
+						   kCDIFontBoldItalicKey: kCDIBoldItalicFontName}, nil];
                           
 	});
-	return [fontDictionary objectForKey:key];
+	return fontDictionary[key];
 }
 
 + (NSString *)quizFontNameForFontKey:(NSString *)key style:(NSString *)style {
-	return [[self quizFontMapForFontKey:key] objectForKey:style];
+	return [self quizFontMapForFontKey:key][style];
 }
 
 

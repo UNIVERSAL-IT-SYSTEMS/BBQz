@@ -64,10 +64,10 @@ static UIStatusBarStyle _statusBarStyle;
 static BOOL _modalOpen = false;
 
 @interface Appirater ()
-- (BOOL)connectedToNetwork;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL connectedToNetwork;
 + (Appirater*)sharedInstance;
 - (void)showRatingAlert;
-- (BOOL)ratingConditionsHaveBeenMet;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL ratingConditionsHaveBeenMet;
 - (void)incrementUseCount;
 - (void)hideRatingAlert;
 @end
@@ -215,7 +215,7 @@ static BOOL _modalOpen = false;
 
 - (void)incrementUseCount {
 	// get the app's version
-	NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey];
+	NSString *version = [[NSBundle mainBundle] infoDictionary][(NSString*)kCFBundleVersionKey];
 	
 	// get the version number that we've been tracking
 	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -263,7 +263,7 @@ static BOOL _modalOpen = false;
 
 - (void)incrementSignificantEventCount {
 	// get the app's version
-	NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey];
+	NSString *version = [[NSBundle mainBundle] infoDictionary][(NSString*)kCFBundleVersionKey];
 	
 	// get the version number that we've been tracking
 	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -408,7 +408,7 @@ static BOOL _modalOpen = false;
 	if (NSStringFromClass([SKStoreProductViewController class]) != nil) {
 		
 		SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
-		NSNumber *appId = [NSNumber numberWithInteger:_appId.integerValue];
+		NSNumber *appId = @(_appId.integerValue);
 		[storeViewController loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier:appId} completionBlock:nil];
 		storeViewController.delegate = self.sharedInstance;
 		if ([self.sharedInstance.delegate respondsToSelector:@selector(appiraterWillPresentModalView:animated:)]) {

@@ -31,12 +31,12 @@
 
  @discussion
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, FBFriendSortOrdering) {
     /*! Sort friends by first, middle, last names. */
     FBFriendSortByFirstName,
     /*! Sort friends by last, first, middle names. */
     FBFriendSortByLastName
-} FBFriendSortOrdering;
+} ;
 
 /*!
  @typedef FBFriendDisplayOrdering enum
@@ -45,12 +45,12 @@ typedef enum {
 
  @discussion
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, FBFriendDisplayOrdering) {
     /*! Display friends as First Middle Last. */
     FBFriendDisplayByFirstName,
     /*! Display friends as Last First Middle. */
     FBFriendDisplayByLastName,
-} FBFriendDisplayOrdering;
+} ;
 
 
 /*!

@@ -35,11 +35,11 @@
 
 @synthesize tagName, compareOptions;
 
--(id)initWithString: (NSString*)aSource range:(NSRange)aRange{
+-(instancetype)initWithString: (NSString*)aSource range:(NSRange)aRange{
 	assert(NO);
 }
 
--(id)initWithString: (NSString*)aSource range:(NSRange)aRange tagName:(NSString*)aTagName{
+-(instancetype)initWithString: (NSString*)aSource range:(NSRange)aRange tagName:(NSString*)aTagName{
 	source = [aSource retain];
 	range = aRange;
 	tagName = [aTagName retain];

@@ -50,18 +50,18 @@
 /** 
 	Use this initializer when the tagname has already been created as a string to reduce object allocations
  */
--(id)initWithString: (NSString*)aSource range:(NSRange)aRange tagName:(NSString*)aTagName;
+-(instancetype)initWithString: (NSString*)aSource range:(NSRange)aRange tagName:(NSString*)aTagName;
 
 /** 
 	A tag that ends with '/>'
  */
--(BOOL)isEmptyTag;
+@property (NS_NONATOMIC_IOSONLY, getter=isEmptyTag, readonly) BOOL emptyTag;
 
 
 /** 
 	A tag that starts with '</'
  */
--(BOOL)isCloseTag;
+@property (NS_NONATOMIC_IOSONLY, getter=isCloseTag, readonly) BOOL closeTag;
 
 
 /** 
@@ -86,6 +86,6 @@
 	When reducing to plain text, is this one of the tags that should emit a new line?
 	True for <br> and <p> tags.
  */
--(BOOL)emitsNewLineInContents;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL emitsNewLineInContents;
 
 @end

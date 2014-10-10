@@ -57,10 +57,10 @@
 @interface CSSSelector : NSObject {
 	NSMutableArray* chain;
 }
--(id)initWithString:(NSString*)string;
--(NSString*)description;
+-(instancetype)initWithString:(NSString*)string;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *description;
 
--(int)countOfParts;
+@property (NS_NONATOMIC_IOSONLY, readonly) int countOfParts;
 -(CSSSelectorPart*)partAtIndex:(int)index;
 -(CSSVerb)verbAtIndex:(int)index;
 -(CSSVerb)verbAfterIndex:(int)index;

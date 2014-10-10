@@ -660,20 +660,16 @@
     CATransform3D scale3 = CATransform3DMakeScale(0.9, 0.9, 1);
     CATransform3D scale4 = CATransform3DMakeScale(1.0, 1.0, 1);
     
-    NSArray *frameValues = [NSArray arrayWithObjects:
-                            [NSValue valueWithCATransform3D:scale1],
+    NSArray *frameValues = @[[NSValue valueWithCATransform3D:scale1],
                             [NSValue valueWithCATransform3D:scale2],
                             [NSValue valueWithCATransform3D:scale3],
-                            [NSValue valueWithCATransform3D:scale4],
-                            nil];
+                            [NSValue valueWithCATransform3D:scale4]];
     [animation setValues:frameValues];
     
-    NSArray *frameTimes = [NSArray arrayWithObjects:
-                           [NSNumber numberWithFloat:0.0],
-                           [NSNumber numberWithFloat:0.5],
-                           [NSNumber numberWithFloat:0.9],
-                           [NSNumber numberWithFloat:1.0],
-                           nil];
+    NSArray *frameTimes = @[@0.0f,
+                           @0.5f,
+                           @0.9f,
+                           @1.0f];
     [animation setKeyTimes:frameTimes];
     
     animation.fillMode = kCAFillModeForwards;
@@ -752,7 +748,7 @@
         [composer setMailComposeDelegate:self];
         
         if ([MFMailComposeViewController canSendMail]) {
-            [composer setToRecipients:[NSArray arrayWithObjects:@"", nil]];
+            [composer setToRecipients:@[@""]];
             [composer setSubject:@"Found this and thought of sharing it with you! @kabbalahinfo"];
             [composer setMessageBody:@"Check out this app! Kabbalah Quiz." isHTML:YES];
             NSMutableString *body = [NSMutableString string];

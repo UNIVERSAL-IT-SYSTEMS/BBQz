@@ -59,9 +59,9 @@
 @property (nonatomic, retain) NSString* attrName;
 @property (nonatomic, retain) NSString* attrValue;
 
--(id)initWithIndex:(int*) index inString:(NSString*)string;
--(id)initWithIndex:(CFIndex*) index inBuffer:(CFStringInlineBuffer*)buffer;
--(NSString*)description;
+-(instancetype)initWithIndex:(int*) index inString:(NSString*)string;
+-(instancetype)initWithIndex:(CFIndex*) index inBuffer:(CFStringInlineBuffer*)buffer;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *description;
 -(BOOL)matchesElement:(Element*)element;
 
 @end

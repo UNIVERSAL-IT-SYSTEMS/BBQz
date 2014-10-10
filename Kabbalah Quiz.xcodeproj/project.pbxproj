@@ -25,11 +25,6 @@
 		6D36CF80188A22780016A628 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D36CF7F188A22780016A628 /* main.m */; };
 		6D36CF84188A22780016A628 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D36CF83188A22780016A628 /* AppDelegate.m */; };
 		6D36CF8F188A22780016A628 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D36CF8E188A22780016A628 /* Images.xcassets */; };
-		6D36CF96188A22780016A628 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36CF95188A22780016A628 /* XCTest.framework */; };
-		6D36CF97188A22780016A628 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36CF73188A22780016A628 /* Foundation.framework */; };
-		6D36CF98188A22780016A628 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D36CF77188A22780016A628 /* UIKit.framework */; };
-		6D36CFA0188A22780016A628 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D36CF9E188A22780016A628 /* InfoPlist.strings */; };
-		6D36CFA2188A22780016A628 /* kabbalahquizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D36CFA1188A22780016A628 /* kabbalahquizTests.m */; };
 		6D36CFBE188A22D90016A628 /* PagedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D36CFB6188A22D90016A628 /* PagedScrollView.m */; };
 		6D36CFBF188A22D90016A628 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D36CFB8188A22D90016A628 /* WelcomeViewController.m */; };
 		6D36CFC0188A22D90016A628 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D36CFB9188A22D90016A628 /* WelcomeViewController.xib */; };
@@ -132,16 +127,6 @@
 		6DF7FF0D18E115AA009D987C /* intention.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7FF0C18E115AA009D987C /* intention.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6D36CF99188A22780016A628 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6D36CF68188A22780016A628 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6D36CF6F188A22780016A628;
-			remoteInfo = kabbalahquiz;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		6D26830918F4E0F800269E8B /* InnerWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnerWorkViewController.h; sourceTree = "<group>"; };
 		6D26830A18F4E0F800269E8B /* InnerWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InnerWorkViewController.m; sourceTree = "<group>"; };
@@ -174,7 +159,6 @@
 		6D36CF86188A22780016A628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		6D36CF89188A22780016A628 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		6D36CF8E188A22780016A628 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6D36CF94188A22780016A628 /* Kabbalah QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kabbalah QuizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D36CF95188A22780016A628 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6D36CF9D188A22780016A628 /* kabbalahquizTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kabbalahquizTests-Info.plist"; sourceTree = "<group>"; };
 		6D36CF9F188A22780016A628 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -361,16 +345,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D36CF91188A22780016A628 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D36CF96188A22780016A628 /* XCTest.framework in Frameworks */,
-				6D36CF98188A22780016A628 /* UIKit.framework in Frameworks */,
-				6D36CF97188A22780016A628 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -415,7 +389,6 @@
 			isa = PBXGroup;
 			children = (
 				6D36CF70188A22780016A628 /* Kabbalah Quiz.app */,
-				6D36CF94188A22780016A628 /* Kabbalah QuizTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -829,24 +802,6 @@
 			productReference = 6D36CF70188A22780016A628 /* Kabbalah Quiz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6D36CF93188A22780016A628 /* Kabbalah QuizTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6D36CFA8188A22780016A628 /* Build configuration list for PBXNativeTarget "Kabbalah QuizTests" */;
-			buildPhases = (
-				6D36CF90188A22780016A628 /* Sources */,
-				6D36CF91188A22780016A628 /* Frameworks */,
-				6D36CF92188A22780016A628 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6D36CF9A188A22780016A628 /* PBXTargetDependency */,
-			);
-			name = "Kabbalah QuizTests";
-			productName = kabbalahquizTests;
-			productReference = 6D36CF94188A22780016A628 /* Kabbalah QuizTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -870,9 +825,6 @@
 							};
 						};
 					};
-					6D36CF93188A22780016A628 = {
-						TestTargetID = 6D36CF6F188A22780016A628;
-					};
 				};
 			};
 			buildConfigurationList = 6D36CF6B188A22780016A628 /* Build configuration list for PBXProject "Kabbalah Quiz" */;
@@ -889,7 +841,6 @@
 			projectRoot = "";
 			targets = (
 				6D36CF6F188A22780016A628 /* Kabbalah Quiz */,
-				6D36CF93188A22780016A628 /* Kabbalah QuizTests */,
 			);
 		};
 /* End PBXProject section */
@@ -938,14 +889,6 @@
 				6DF7FEF418E09CBD009D987C /* icon-7-70x70.png in Resources */,
 				6DF7FF0D18E115AA009D987C /* intention.plist in Resources */,
 				6D735D6F18F3971500C065B5 /* OpenSans-BoldItalic.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6D36CF92188A22780016A628 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D36CFA0188A22780016A628 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,23 +976,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D36CF90188A22780016A628 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D36CFA2188A22780016A628 /* kabbalahquizTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6D36CF9A188A22780016A628 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6D36CF6F188A22780016A628 /* Kabbalah Quiz */;
-			targetProxy = 6D36CF99188A22780016A628 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6D26832A18F4F8F000269E8B /* AppiraterLocalizable.strings */ = {
@@ -1168,13 +1095,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "kabbalahquiz/Kabbalah Quiz-Prefix.pch";
 				INFOPLIST_FILE = "kabbalahquiz/Kabbalah Quiz-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -1188,7 +1115,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Kabbalah Quiz";
-				PROVISIONING_PROFILE = "7F22A0CA-BF0A-440A-94AC-251AC36E4615";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1199,13 +1126,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-3";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-3";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "kabbalahquiz/Kabbalah Quiz-Prefix.pch";
 				INFOPLIST_FILE = "kabbalahquiz/Kabbalah Quiz-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -1219,49 +1146,9 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "Kabbalah Quiz";
-				PROVISIONING_PROFILE = "7F22A0CA-BF0A-440A-94AC-251AC36E4615";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		6D36CFA9188A22780016A628 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kabbalahquiz.app/kabbalahquiz";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "kabbalahquiz/kabbalahquiz-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "kabbalahquizTests/kabbalahquizTests-Info.plist";
-				PRODUCT_NAME = "Kabbalah QuizTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		6D36CFAA188A22780016A628 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kabbalahquiz.app/kabbalahquiz";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "kabbalahquiz/kabbalahquiz-Prefix.pch";
-				INFOPLIST_FILE = "kabbalahquizTests/kabbalahquizTests-Info.plist";
-				PRODUCT_NAME = "Kabbalah QuizTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -1282,15 +1169,6 @@
 			buildConfigurations = (
 				6D36CFA6188A22780016A628 /* Debug */,
 				6D36CFA7188A22780016A628 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6D36CFA8188A22780016A628 /* Build configuration list for PBXNativeTarget "Kabbalah QuizTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6D36CFA9188A22780016A628 /* Debug */,
-				6D36CFAA188A22780016A628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

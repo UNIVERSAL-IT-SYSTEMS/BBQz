@@ -52,11 +52,11 @@
 	return root;
 }
 
--(id)initWithString:(NSString*)string{
+-(instancetype)initWithString:(NSString*)string{
 	return [self initWithString: string range: NSMakeRange(0, [string length])];
 }
 
--(id)initWithTag:(TagChunk*)tag caseSensative:(BOOL)aCaseSensative{
+-(instancetype)initWithTag:(TagChunk*)tag caseSensative:(BOOL)aCaseSensative{
 	self = [self initWithString: tag.source range: tag.range tagName: tag.tagName];
 	[self setCaseSensative: aCaseSensative];
 	return self;
@@ -98,13 +98,13 @@
 }
 
 -(NSString*)attribute:(NSString*)attr{
-	return [[self attributes] objectForKey: attr];
+	return [self attributes][attr];
 }
 
 // warning, may contain empty classnames
 -(NSArray*)classNames{
 	NSString* classNames = [self attribute: @"class"];
-	if (!classNames) return [NSArray array];
+	if (!classNames) return @[];
 	return [classNames componentsSeparatedByCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];	
 }
 
@@ -164,7 +164,7 @@
 }
 
 - (NSNumber*)contentsNumber {
-	return [NSNumber numberWithInt:[[self contentsText] intValue]];
+	return @([[self contentsText] intValue]);
 }
 
 - (NSNumber*)contentsNumberOfChildElement:(NSString*)selector {
@@ -178,7 +178,7 @@
 }
 
 -(NSArray*)selectElements:(NSString*)cssSelectorString{
-	if (!cssSelectorString) return [NSArray array];
+	if (!cssSelectorString) return @[];
 	CSSSelector* selector = [[CSSSelector alloc] initWithString: cssSelectorString];
 	NSArray* result = [self elementsWithCSSSelector: selector];
 	[selector release];
@@ -243,7 +243,7 @@
 	NSMutableDictionary* result = [NSMutableDictionary dictionary];
 	Element* e = [self firstChild];
 	while (e){
-		[result setObject: [e contentsText] forKey: [e key]];
+		result[[e key]] = [e contentsText];
 		e = e.nextSybling;
 	}
 	return result;
@@ -267,7 +267,7 @@
 	[result appendString: @"<"];
 	[result appendString: [self tagName]];
 	for (NSString* att in [[self attributes] allKeys]){
-		[result appendFormat: @" %@='%@'", att, [attributes objectForKey: att]];
+		[result appendFormat: @" %@='%@'", att, attributes[att]];
 	}
 	if ([self isEmptyTag])
 		[result appendString: @" />"];

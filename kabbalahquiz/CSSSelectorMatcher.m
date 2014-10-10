@@ -29,7 +29,7 @@
 
 @synthesize selector, matches;
 
--(id)initWithSelector:(CSSSelector*)aSelector{
+-(instancetype)initWithSelector:(CSSSelector*)aSelector{
 	self = [super init];
 	selector = [aSelector retain];
 	rootMatch = [[CSSPartMatcher alloc] initWithElement: nil selectorMatcher: self];
@@ -45,7 +45,7 @@
 }
 
 -(Element*)firstMatch{
-	return ([matches count] > 0) ? [matches objectAtIndex: 0] : nil;
+	return ([matches count] > 0) ? matches[0] : nil;
 }
 
 -(BOOL)matchElement:(Element*) element{

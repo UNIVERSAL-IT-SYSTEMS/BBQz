@@ -30,7 +30,7 @@
 
 @synthesize matchedElement, matchedPartIndex;
 
--(id)initWithElement:(Element*) anElement selectorMatcher:(CSSSelectorMatcher*)aSelectorMatcher{
+-(instancetype)initWithElement:(Element*) anElement selectorMatcher:(CSSSelectorMatcher*)aSelectorMatcher{
 	self = [super init];
 	matchedElement = [anElement retain];
 	selectorMatcher = aSelectorMatcher;

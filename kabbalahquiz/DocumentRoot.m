@@ -27,7 +27,7 @@
 @implementation DocumentRoot
 
 
--(id)initWithString: (NSString*)aSource range:(NSRange)aRange{
+-(instancetype)initWithString: (NSString*)aSource range:(NSRange)aRange{
 	self = [super initWithString: aSource range:aRange tagName: @"DOCUMENT ROOT"];
 	self.contentsLength = [aSource length];
 	return self;

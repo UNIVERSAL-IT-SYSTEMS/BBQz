@@ -37,8 +37,7 @@
     [self.feedbackTableView setDelegate:self];
     [self.feedbackTableView setDataSource:self];
     
-    NSArray *title = [[NSArray alloc] initWithObjects:
-                      @"Intro to Kabbalah",
+    NSArray *title = @[@"Intro to Kabbalah",
                       @"Purpose of Creation",
                       @"Perception of Reality",
                       @"The Intention",
@@ -47,11 +46,10 @@
                       @"Free Will - Part 1",
                       @"Free Will - Part 2",
                       @"Inner Work",
-                      @"Creation & Evolution",nil];
+                      @"Creation & Evolution"];
     
     
-    [self setCellImage:[NSArray arrayWithObjects:
-                        @"icon-1-70x70.png",
+    [self setCellImage:@[@"icon-1-70x70.png",
                         @"icon-2-70x70.png",
                         @"icon-3-70x70.png",
                         @"icon-4-70x70.png",
@@ -60,9 +58,9 @@
                         @"icon-7-70x70.png",
                         @"icon-8-70x70.png",
                         @"icon-9-70x70.png",
-                        @"icon-10-70x70.png",nil]];
+                        @"icon-10-70x70.png"]];
     
-    NSDictionary *temp = [[NSDictionary alloc]initWithObjectsAndKeys:title, @"Menu", nil];
+    NSDictionary *temp = @{@"Menu": title};
     self.feedbackItems = temp;
     self.list = [self.feedbackItems allKeys];
 
@@ -134,7 +132,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSArray *listData =[self.feedbackItems objectForKey:[self.list objectAtIndex:section]];
+    NSArray *listData =(self.feedbackItems)[(self.list)[section]];
 	return [listData count];
 }
 
@@ -142,8 +140,7 @@
 {
     static NSString *CellIdentifier = @"JTCell";
     
-    NSArray *listData =[self.feedbackItems objectForKey:
-                        [self.list objectAtIndex:[indexPath section]]];
+    NSArray *listData =(self.feedbackItems)[(self.list)[[indexPath section]]];
     
     JTCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell == nil) {
@@ -159,10 +156,10 @@
 	}
     
     NSUInteger row = [indexPath row];
-	cell.blogTitle.text = [listData objectAtIndex:row];
+	cell.blogTitle.text = listData[row];
     cell.blogTitle.textColor = [UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0];
     
-    NSString *cellImagePic = [[self cellImage] objectAtIndex:[indexPath row]];
+    NSString *cellImagePic = [self cellImage][[indexPath row]];
     UIImage *cellIcon = [UIImage imageNamed:cellImagePic];
     [[cell blogImageView] setImage:cellIcon];
     
@@ -183,10 +180,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *listData =[self.feedbackItems objectForKey:
-                        [self.list objectAtIndex:[indexPath section]]];
+    NSArray *listData =(self.feedbackItems)[(self.list)[[indexPath section]]];
     NSUInteger row = [indexPath row];
-	NSString *rowValue = [listData objectAtIndex:row];
+	NSString *rowValue = listData[row];
 	NSString *str = rowValue;
     
     if ([str isEqual:@"Intro to Kabbalah"]) {

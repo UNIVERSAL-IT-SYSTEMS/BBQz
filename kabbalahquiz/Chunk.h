@@ -87,25 +87,25 @@
 /** 
 	Creates a new chunk from the range aRange in aSource string
  */
--(id)initWithString: (NSString*)aSource range:(NSRange)aRange;
+-(instancetype)initWithString: (NSString*)aSource range:(NSRange)aRange;
 
 
 /**
 	The interior of a chunk ususally excludes the delimiters of the chunk. 
  */
--(NSRange)interiorRange;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSRange interiorRange;
 
 
 /**
 	Convenience method that returns a string corresponding to the interior of the chunk.
  */
--(NSString*)interiorString;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *interiorString;
 
 
 /**
 	Each chunk has a kind denotes what type of chunk it is.
  */
--(NSString*)kind;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *kind;
 
 
 /**

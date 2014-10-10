@@ -165,7 +165,7 @@ typedef enum FBNativeApplicationErrorCode {
 
  @discussion
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, FBErrorCategory) {
     /*! Indicates that the error category is invalid and likely represents an error that
      is unrelated to Facebook or the Facebook SDK */
     FBErrorCategoryInvalid                      = 0,
@@ -188,7 +188,7 @@ typedef enum {
     FBErrorCategoryFacebookOther                = -1,
     /*! Indicates that the error is an application error resulting in a bad or malformed request to the server. */
     FBErrorCategoryBadRequest                   = -2,
-} FBErrorCategory;
+} ;
 
 /*!
  The key in the userInfo NSDictionary of NSError where you can find

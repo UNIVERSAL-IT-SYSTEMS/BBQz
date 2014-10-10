@@ -203,7 +203,7 @@ unichar parseEntity(CFStringInlineBuffer* buffer, CFIndex index, CFIndex* len){
 				ENTITIES_MAP = [[NSDictionary alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"HTML Entities" ofType: @"plist"]];
 			if (!ENTITIES_MAP) return 0;
 			NSString* key = [(NSString*)buffer->theString substringWithRange: NSMakeRange(index + 1, (*len) - 2)];
-			NSString* result = [ENTITIES_MAP objectForKey: key];
+			NSString* result = ENTITIES_MAP[key];
 			return (result) ? [result characterAtIndex: 0] : 0;
 		}
 	}
@@ -346,11 +346,11 @@ NSString* createStringFromBuffer(CFStringInlineBuffer* buffer, CFIndex index, CF
 				valueRange = NSMakeRange(index + localBuffer.rangeToBuffer.location, tokenLen);
 			}
 			attrValue = [self stringByReplacingEntitiesInRange: valueRange];
-			[attributes setObject: attrValue forKey: caseSensative ? attrName : [attrName lowercaseString]];
+			attributes[caseSensative ? attrName : [attrName lowercaseString]] = attrValue;
 			index += valueRange.length;
 		}
 		else{
-			[attributes setObject: [NSNull null] forKey: caseSensative ? attrName : [attrName lowercaseString]];
+			attributes[caseSensative ? attrName : [attrName lowercaseString]] = [NSNull null];
 		}
 	}
 	return attributes;

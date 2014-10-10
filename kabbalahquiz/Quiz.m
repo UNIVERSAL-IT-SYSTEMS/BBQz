@@ -20,7 +20,7 @@
 
 @implementation Quiz
 
--(id)initWithQuiz:(NSString *)plistName {
+-(instancetype)initWithQuiz:(NSString *)plistName {
 
     if ((self = [super init])) {
         NSString *plistCatPath = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];

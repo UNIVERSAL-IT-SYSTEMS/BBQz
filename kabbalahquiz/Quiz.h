@@ -23,7 +23,7 @@
 @property (nonatomic, assign) NSInteger total;
 @property (nonatomic, strong) NSString *tip;
 
--(id) initWithQuiz:(NSString *) plistName;
+-(instancetype) initWithQuiz:(NSString *) plistName NS_DESIGNATED_INITIALIZER;
 -(void) nextQuestion: (NSUInteger) idx;
 -(BOOL) checkQuestion: (NSUInteger) question forAnswer: (NSUInteger) answer;
 

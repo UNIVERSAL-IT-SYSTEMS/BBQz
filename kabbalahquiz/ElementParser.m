@@ -53,7 +53,7 @@ static NSSet* HTML_TAGS_THAT_SHOULD_BE_EMPTY;
 	HTML_TAGS_THAT_SHOULD_BE_EMPTY = [[NSSet alloc] initWithObjects: @"img", @"meta", @"br", @"hr", @"area", @"base", @"basefont", @"col", @"frame", @"input", @"isindex", @"link", @"param", nil];
 }
 
--(id)init{
+-(instancetype)init{
 	self = [super init];
 	tagStack = [[NSMutableArray alloc] initWithCapacity: 24];
 	mode = ElementParserModeHTML;
@@ -126,12 +126,12 @@ static NSSet* HTML_TAGS_THAT_SHOULD_BE_EMPTY;
 
 
 -(Element*)parentElement{
-	return [tagStack objectAtIndex: [tagStack count] - 1];
+	return tagStack[[tagStack count] - 1];
 }
 
 -(void)matchElement:(Element*)element{
 	for (int i = 0; i < [callbackMatchers count]; i++){
-		CSSSelectorMatcher* matcher = [callbackMatchers objectAtIndex: i];
+		CSSSelectorMatcher* matcher = callbackMatchers[i];
 		BOOL matchComplete = [matcher matchElement: element];
 		if (matchComplete){
 			SEL selector = (SEL)CFArrayGetValueAtIndex(callbackMethods, i);
@@ -147,7 +147,7 @@ static NSSet* HTML_TAGS_THAT_SHOULD_BE_EMPTY;
 	int depthIndex;
 	for (depthIndex = [tagStack count] - 1; depthIndex > 0; depthIndex--){
 		// crawl up stack to find matching element
-		Element* stackElement = [tagStack objectAtIndex: depthIndex];
+		Element* stackElement = tagStack[depthIndex];
 		if (!tag || [tag closesTag: stackElement])
 			break;
 	}
@@ -188,7 +188,7 @@ static NSSet* HTML_TAGS_THAT_SHOULD_BE_EMPTY;
 
 -(void)closeAllTags{
 	for (int i = [tagStack count] - 1; i >= 0; i--){
-		Element* stackElement = [tagStack objectAtIndex: i];
+		Element* stackElement = tagStack[i];
 		if (i > 0)
 			[self warning: ElementParserTagNotClosedError description:@"document left tag open" chunk: stackElement];
 		[self closeElementWithTag: nil];

@@ -29,7 +29,7 @@
 
 @synthesize parser, connection, lastError, contentType, encoding, connectionDelegate, partialStringData;
 
-- (id)initWithCallbackDelegate:(id)delegate{
+- (instancetype)initWithCallbackDelegate:(id)delegate{
 	parser = [[ElementParser alloc] init];
 	parser.delegate = delegate;
 	encoding = NSISOLatin1StringEncoding;

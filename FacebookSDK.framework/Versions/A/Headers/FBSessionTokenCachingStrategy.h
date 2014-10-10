@@ -90,7 +90,7 @@
  to cache additional data not captured by the FBAccessTokenData type.
 
  */
-- (NSDictionary *)fetchTokenInformation;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *fetchTokenInformation;
 
 /*!
  @abstract
@@ -104,7 +104,7 @@
  the token must be not be expired (see `+isValidTokenInformation:`) and
  must also contain all permissions in the initialized session instance.
  */
-- (FBAccessTokenData *)fetchFBAccessTokenData;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) FBAccessTokenData *fetchFBAccessTokenData;
 
 /*!
  @abstract

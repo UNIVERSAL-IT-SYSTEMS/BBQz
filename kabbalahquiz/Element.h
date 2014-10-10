@@ -120,7 +120,7 @@
 /** 
  *	Initializer used by ElementParser. See TagChunk for other intializers
  */
--(id)initWithTag:(TagChunk*)tag caseSensative:(BOOL)aCaseSensative;
+-(instancetype)initWithTag:(TagChunk*)tag caseSensative:(BOOL)aCaseSensative;
 
 
 /** 
@@ -149,7 +149,7 @@
  */
 - (NSString*)contentsTextOfChildElement:(NSString*)selector;
 
-- (NSNumber*)contentsNumber;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSNumber *contentsNumber;
 
 - (NSNumber*)contentsNumberOfChildElement:(NSString*)selector;
 
@@ -157,18 +157,18 @@
 /**	
  *	An array of child Elements in document order
  */
--(NSArray*)childElements;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSArray *childElements;
 
 /**	
  *	An array of child Elements in document order
  */
--(NSArray*)syblingElements;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSArray *syblingElements;
 
 
 /** 
  *	The first child Element for this element (or nil if none).
  */
--(Element*)firstChild;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) Element *firstChild;
 
 
 /** 
@@ -177,7 +177,7 @@
  *	If duplicate children tag names are encountered, only the last will
  *	appear in the dictionary.
  */
--(NSDictionary*)contentsOfChildren;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSDictionary *contentsOfChildren;
 
 /**	
  *	Returns true if the supplied Element is a parent of receiver or one of its parents
@@ -206,13 +206,13 @@
 /**	
  *	Debugging method
  */
--(NSString*)dumpTree;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *dumpTree;
 
 
 /**	
  *	The source between the end of the open tag and the beginning of the close tag
  */
--(NSString*)contentsSource;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *contentsSource;
 
 
 /**

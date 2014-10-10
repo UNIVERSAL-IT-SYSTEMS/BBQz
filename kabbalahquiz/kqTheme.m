@@ -30,6 +30,7 @@
     
     [UINavigationBar appearance].tintColor = [self foregroundColor];
     [UINavigationBar appearance].barTintColor = navigationColor;
+    
     NSMutableDictionary* navbarAttributes = [NSMutableDictionary dictionary];
     navbarAttributes[NSFontAttributeName] = [UIFont boldSystemFontOfSize:19.0f];
     navbarAttributes[NSForegroundColorAttributeName] = [self foregroundColor];

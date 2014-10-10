@@ -37,7 +37,7 @@
 
  See FBError.h and FBErrorUtility.h for error category and user message details.
  */
-typedef enum {
+typedef NS_OPTIONS(NSUInteger, FBRequestConnectionErrorBehavior) {
     /*! The default behavior of none */
     FBRequestConnectionErrorBehaviorNone                   = 0,
 
@@ -69,7 +69,7 @@ typedef enum {
      that will be subject to race conditions.
      */
     FBRequestConnectionErrorBehaviorReconnectSession     = 4,
-} FBRequestConnectionErrorBehavior;
+} ;
 
 /*!
  Normally requests return JSON data that is parsed into a set of `NSDictionary`

@@ -29,7 +29,7 @@
 
 @synthesize identifier, tag, classNames, attrName, attrValue;
 
--(id)initWithIndex:(int*) index inString:(NSString*)string{
+-(instancetype)initWithIndex:(int*) index inString:(NSString*)string{
 	CFStringInlineBuffer buffer;
 	CFRange range = CFRangeMake(0, [string length]);
 	CFStringInitInlineBuffer((CFStringRef)string, &buffer, range);
@@ -40,7 +40,7 @@
 	
 }
 
--(id)initWithIndex:(CFIndex*) index inBuffer:(CFStringInlineBuffer*)buffer{
+-(instancetype)initWithIndex:(CFIndex*) index inBuffer:(CFStringInlineBuffer*)buffer{
 	unichar c;
 	CFIndex len;
 	c = skipWhitespace(buffer, index);

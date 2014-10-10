@@ -40,7 +40,7 @@
 @property (nonatomic, retain) Element* matchedElement;
 @property int matchedPartIndex;
 
--(id)initWithElement:(Element*) anElement selectorMatcher:(CSSSelectorMatcher*)aSelectorMatcher;
+-(instancetype)initWithElement:(Element*) anElement selectorMatcher:(CSSSelectorMatcher*)aSelectorMatcher NS_DESIGNATED_INITIALIZER;
 //-(void)pruneMatchesForElement:(Element*)anElement;
 -(BOOL)matchNextElement:(Element*) nextElement forIndex: (int) index;
 

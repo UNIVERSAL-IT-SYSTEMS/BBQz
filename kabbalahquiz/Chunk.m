@@ -29,7 +29,7 @@
 
 @synthesize source, range, buffer;
 
--(id)initWithString: (NSString*)aSource range:(NSRange)aRange{
+-(instancetype)initWithString: (NSString*)aSource range:(NSRange)aRange{
 	source = [aSource retain];
 	range = aRange;
 	return self;

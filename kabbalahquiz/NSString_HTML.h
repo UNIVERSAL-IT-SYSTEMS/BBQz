@@ -109,7 +109,7 @@ NSString* createStringFromBuffer(CFStringInlineBuffer* buffer, CFIndex index, CF
 /**
  *	converts the string assuming it is a hex number 
  */
--(int)hexValue;
+@property (NS_NONATOMIC_IOSONLY, readonly) int hexValue;
 
 
 /**
@@ -120,25 +120,25 @@ NSString* createStringFromBuffer(CFStringInlineBuffer* buffer, CFIndex index, CF
  *		d) whitespace is compressed
  *		e) html markup like <br> and <p> are used to provide minimal formatting
  */
--(NSString*)stripTags;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *stripTags;
 
 
 /**
  *	Convenience method to url encode a string
  */
--(NSString*)stringByAddingPercentEscaping;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *stringByAddingPercentEscaping;
 
 
 /**
  *	Convenience method to url decode a string
  */
--(NSString*)stringByRemovingPercentEscaping;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *stringByRemovingPercentEscaping;
 
 
 /**
  *	Resolves entities in string
  */
--(NSString*)stringByReplacingEntities;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *stringByReplacingEntities;
 
 
 /**
@@ -150,7 +150,7 @@ NSString* createStringFromBuffer(CFStringInlineBuffer* buffer, CFIndex index, CF
 /**
  *	Convenienece method to create an element
  */
--(Element*)element;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) Element *element;
 
 
 /**

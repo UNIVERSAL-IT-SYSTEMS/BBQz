@@ -18,7 +18,7 @@
 
 @implementation JHTableViewCellView
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
 	if((self = [super initWithFrame:frame])) {
 		self.contentMode = UIViewContentModeRedraw;
 	}
@@ -34,7 +34,7 @@
 
 @implementation JHTableViewSelectedCellView
 
-- (id)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
 	if((self = [super initWithFrame:frame])) {
 		self.contentMode = UIViewContentModeRedraw;
 	}
@@ -52,7 +52,7 @@
 @implementation JHTableViewCell
 @synthesize title;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
 		contentView = [[JHTableViewCellView alloc] initWithFrame:CGRectZero];
 		contentView.opaque = YES;

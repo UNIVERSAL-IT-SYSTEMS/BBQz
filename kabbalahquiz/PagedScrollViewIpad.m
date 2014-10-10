@@ -17,7 +17,7 @@
 #define PAGECONTROL_DOT_WIDTH 20
 #define PAGECONTROL_HEIGHT 20
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {

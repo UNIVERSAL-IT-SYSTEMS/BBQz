@@ -45,7 +45,7 @@
 @property (retain, nonatomic) NSMutableData* partialStringData;
 
 
--(id)initWithCallbackDelegate:(id)delegate;
+-(instancetype)initWithCallbackDelegate:(id)delegate;
 -(void)performSelector:(SEL)method forElementsMatching:(NSString*)cssSelector;
 -(void)parseURL:(NSURL*) url;
 -(void)cancelLoading;

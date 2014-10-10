@@ -31,7 +31,7 @@
 @implementation CSSSelector
 
 
--(id)initWithString:(NSString*)string{
+-(instancetype)initWithString:(NSString*)string{
 	CFStringInlineBuffer buffer;
 	CFRange range = CFRangeMake(0, [string length]);
 	CFStringInitInlineBuffer((CFStringRef)string, &buffer, range);
@@ -80,11 +80,11 @@
 	return ([chain count] + 1) / 2;
 }
 -(CSSSelectorPart*)partAtIndex:(int)index{
-	return [chain objectAtIndex: index * 2];
+	return chain[index * 2];
 }
 
 -(CSSVerb)verbAtIndex:(int)index{
-	return (index > 0) ? [chain objectAtIndex: index * 2 - 1] : CSSVerbAny;
+	return (index > 0) ? chain[index * 2 - 1] : CSSVerbAny;
 }
 
 // sometime we need to access the next verb after an index... see scopingElement

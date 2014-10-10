@@ -27,7 +27,7 @@
 
 - (void)applicationDidChangeStatusBarOrientation:(NSNotification *)notification;
 {
-    int a = [[notification.userInfo objectForKey: UIApplicationStatusBarOrientationUserInfoKey] intValue];
+    int a = [(notification.userInfo)[UIApplicationStatusBarOrientationUserInfoKey] intValue];
     switch(a){
         case 4:
             self.window.frame =  CGRectMake(0,0,self.window.frame.size.width,self.window.frame.size.height+40);
@@ -56,6 +56,7 @@
     
     [[LocalyticsSession shared] resume];
     [[LocalyticsSession shared] upload];
+    [Appirater appLaunched:YES];
     
     [Crashlytics startWithAPIKey:@"62ce332ae1de018bdee39900e29eab6ab5d39419"];
     //[Flurry setCrashReportingEnabled:NO];
@@ -120,8 +121,21 @@
     }
     }
     
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7) {
+        [application registerForRemoteNotificationTypes:
+         UIRemoteNotificationTypeBadge |
+         UIRemoteNotificationTypeAlert |
+         UIRemoteNotificationTypeSound];
+        
+        NSDictionary* userInfo = [launchOptions valueForKey:@"UIApplicationLaunchOptionsRemoteNotificationKey"];
+        NSDictionary *apsInfo = userInfo[@"aps"];
+        NSInteger badge = [apsInfo[@"badge"] integerValue];
+        application.applicationIconBadgeNumber = badge;
+    }
+    
+    
     ///Push
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8) {
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(applicationDidChangeStatusBarOrientation:)
                                                      name:UIApplicationDidChangeStatusBarOrientationNotification
@@ -129,16 +143,6 @@
         
         self.window.clipsToBounds =YES;
     }
-    
-    [application registerForRemoteNotificationTypes:
-     UIRemoteNotificationTypeBadge |
-     UIRemoteNotificationTypeAlert |
-     UIRemoteNotificationTypeSound];
-    
-    NSDictionary* userInfo = [launchOptions valueForKey:@"UIApplicationLaunchOptionsRemoteNotificationKey"];
-    NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
-    NSInteger badge = [[apsInfo objectForKey:@"badge"] integerValue];
-    application.applicationIconBadgeNumber = badge;
     
     return YES;
 }
@@ -148,7 +152,7 @@
  */
 + (void)initialize {
     // Set user agent (the only problem is that we can't modify the User-Agent later in the program)
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3", @"UserAgent", nil];
+    NSDictionary *dictionary = @{@"UserAgent": @"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"};
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
 }
 
@@ -213,6 +217,7 @@
 {
     [[LocalyticsSession shared] resume];
     [[LocalyticsSession shared] upload];
+    [Appirater appEnteredForeground:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

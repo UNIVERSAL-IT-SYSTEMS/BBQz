@@ -50,6 +50,7 @@
     self.navigationItem.titleView = title;
     
     
+    
     self.quizIndex = 13;
     self.quiz = [[Quiz alloc] initWithQuiz:@"intro"];
     //self.questionLabel.backgroundColor = [UIColor colorWithRed:51/255.0 green:133/255.0 blue:238/255.0 alpha:1.0];
@@ -186,11 +187,17 @@
     [scroller addSubview:_background];
     [_background setHidden:YES];
     
-    NSDictionary *viewDictionary = @{@"arrow":_background};
-    NSArray *constraint_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-140-[arrow(35)]" options:0 metrics:nil views:viewDictionary];
-    NSArray *constraint_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-350-[arrow(86)]" options:0 metrics:nil views:viewDictionary];
     
-    [scroller addConstraints:constraint_H];
+    [scroller addConstraint:[NSLayoutConstraint constraintWithItem:_background
+                                                         attribute:NSLayoutAttributeCenterX
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:scroller
+                                                         attribute:NSLayoutAttributeCenterX
+                                                        multiplier:1.0
+                                                          constant:0.0]];
+    
+    NSDictionary *viewDictionary = @{@"arrow":_background};
+    NSArray *constraint_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-350-[arrow]" options:0 metrics:nil views:viewDictionary];
     [scroller addConstraints:constraint_V];
 }
 
@@ -266,7 +273,7 @@
                                                                       metrics:nil
                                                                         views:viewDictionary];
     
-    NSArray *constraint_V_1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-225-[answer1]-5-[answer2]-5-[answer3]-5-[answer4]"
+    NSArray *constraint_V_1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-225-[answer1(60)]-5-[answer2(60)]-5-[answer3(60)]-5-[answer4(60)]"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:viewDictionary];
@@ -348,7 +355,7 @@
                                                                       metrics:nil
                                                                         views:viewDictionary];
     
-    NSArray *constraint_V_l1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-210-[answer1(50)]-5-[answer2(50)]-5-[answer3(50)]-5-[answer4(50)]"
+    NSArray *constraint_V_l1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-225-[answer1(60)]-5-[answer2(60)]-5-[answer3(60)]-5-[answer4(60)]"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:viewDictionary];
@@ -433,7 +440,7 @@
     
     NSDictionary *viewDictionary = @{@"startButton": _startButton};
     
-    NSArray *constraint_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[startButton(310)]" options:0 metrics:nil views:viewDictionary];
+    NSArray *constraint_H = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[startButton]-5-|" options:0 metrics:nil views:viewDictionary];
     NSArray *constraint_V = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-444-[startButton(60)]" options:0 metrics:nil views:viewDictionary];
     
     [scroller addConstraints:constraint_H];
@@ -753,55 +760,37 @@
 }
 
 //Finish Quiz
--(IBAction)finishButtonTouched:(UIButton *)sender
-{
+- (void)finishButtonTouched:(UIButton *)sender {
     [self showResult];
 }
 
-- (IBAction)emailResult:(UIButton *)sender {
+
+- (void)emailResult:(UIButton *)sender {
     
     NSString *stringSubject = @"Kabbalah Quiz Score";
-    //NSString *stringMessage = @"";
+    if ([MFMailComposeViewController canSendMail] == NO) {
+        return;
+    }
+    [APP.globalMailComposer setToRecipients:[NSArray arrayWithObjects:@"", nil]];
+    [APP.globalMailComposer setSubject:stringSubject];
+    [APP.globalMailComposer setMessageBody:[NSString stringWithFormat:@"<div><p>%@</p></div>", self.grade] isHTML:YES];
+    APP.globalMailComposer.mailComposeDelegate = self;
+    [APP.globalMailComposer.navigationBar setTintColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0]];
+    [APP.globalMailComposer.navigationBar setBarTintColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0]];
     
-    [self sendMail:nil
-        andSubject:stringSubject
-           andBody:self.grade];
-
+    [self presentViewController:APP.globalMailComposer animated:YES completion:^{
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    }];
+    
 }
+
 
 - (IBAction)closeButtonTouched:(UIButton *)sender {
     
     [[self popupView] setHidden:YES];
 }
 
-- (void)sendMail:(NSArray*)mailIDs andSubject:(NSString*)subject andBody:(NSString*)body {
-    
-    if ([MFMailComposeViewController canSendMail])
-    {
-        // setup mail object
-        MFMailComposeViewController * mailView = [[MFMailComposeViewController alloc] init];
-        
-        // set delegate
-        [mailView setMailComposeDelegate:self];
-        
-        // set to arrays
-        [mailView setToRecipients:mailIDs];
-        
-        // set subject
-        [mailView setSubject:subject];
-        
-        // set body of mail
-        body=[NSString stringWithFormat:@"<div><p>%@</p></div>", body];
-        
-        [mailView setMessageBody:body isHTML:YES];
-        
-        
-        // show the default mail of iPhone on present view
-        [self presentViewController:mailView animated:YES completion:nil];
-//        [[self navigationController] presentViewController:mailView animated:YES completion:nil];
-        
-    }
-}
+
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller
           didFinishWithResult:(MFMailComposeResult)result
@@ -839,8 +828,11 @@
     }
     // remove model from current view
     //[self dismissModalViewControllerAnimated:YES];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [APP cycleTheGlobalMailComposer];
+    }];
 }
+
 
 #pragma mark -
 #pragma mark - Other Methods
@@ -943,27 +935,29 @@
     }
     
     if (buttonIndex == 1) {
-        MFMailComposeViewController * composer = [[MFMailComposeViewController alloc]init];
-        [composer setMailComposeDelegate:self];
-        
-        if ([MFMailComposeViewController canSendMail]) {
-            [composer setToRecipients:@[@""]];
-            [composer setSubject:@"Found this and thought of sharing it with you! @kabbalahinfo"];
-            [composer setMessageBody:@"Check out this app! Kabbalah Quiz." isHTML:YES];
-            NSMutableString *body = [NSMutableString string];
-            [composer setMessageBody:body isHTML:YES];
-            [body appendString:@"<h2>Kabbalah Quiz</h2>"];
-            [body appendString:@"<h3>Bnei Baruch Kabbalah Education & Research Institute</h3>"];
-            [body appendString:@"<p>WThe Kabbalah Quiz app is based on the first 10 lessons of the Free Kabbalah Course given at the Bnei Baruch Kabbalah Education Center. Each one of these quizzes are based on their individual lesson topic. To learn more about these topics, it is recommended to take the course.</p>"];
-            [body appendString:@"<a href =\"http://edu.kabbalah.info/lp/free?utm_source=kabbalah-quiz-app&utm_medium=link&utm_campaign=ec-general\"> Sign Up for the Free Kabbalah Course Here</a>"];
-            [body appendString:@"<p>"];
-            [body appendString:@"Follow us on <a href =\"http://www.twitter.com/kabbalahinfo\">Twitter</a>"];
-            [body appendString:@"</p>"];
-            [body appendString:@"<p>Via <a href =\"http://itunes.apple.com/us/app/kabbalah-app/id847571952\">Kabbalah Quiz</a></p>\n"];
-            [composer setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
-            [self presentViewController:composer animated:YES completion:nil];
+        if ([MFMailComposeViewController canSendMail] == NO) {
+            return;
         }
-        //[TestFlight passCheckpoint:@"Email Kab.TV"];
+        [APP.globalMailComposer setToRecipients:[NSArray arrayWithObjects:@"", nil]];
+        [APP.globalMailComposer setSubject:@"Found this and thought of sharing it with you!"];
+        [APP.globalMailComposer setMessageBody:[NSString stringWithFormat:@"Check out this app! Kabbalah Quiz"] isHTML:YES];
+        NSMutableString *body = [NSMutableString string];
+        [APP.globalMailComposer setMessageBody:body isHTML:YES];
+        [body appendString:@"<h2>Kabbalah Quiz</h2>"];
+        [body appendString:@"<h3>Bnei Baruch Kabbalah Education & Research Institute</h3>"];
+        [body appendString:@"<p>WThe Kabbalah Quiz app is based on the first 10 lessons of the Free Kabbalah Course given at the Bnei Baruch Kabbalah Education Center. Each one of these quizzes are based on their individual lesson topic. To learn more about these topics, it is recommended to take the course.</p>"];
+        [body appendString:@"<a href =\"http://edu.kabbalah.info/lp/free?utm_source=kabbalah-quiz-app&utm_medium=link&utm_campaign=ec-general\"> Sign Up for the Free Kabbalah Course Here</a>"];
+        [body appendString:@"<p>"];
+        [body appendString:@"Follow us on <a href =\"http://www.twitter.com/kabbalahinfo\">Twitter</a>"];
+        [body appendString:@"</p>"];
+        [body appendString:@"<p>Via <a href =\"http://itunes.apple.com/us/app/kabbalah-app/id847571952\">Kabbalah Quiz</a></p>\n"];
+        APP.globalMailComposer.mailComposeDelegate = self;
+        [APP.globalMailComposer.navigationBar setTintColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0]];
+        [APP.globalMailComposer.navigationBar setBarTintColor:[UIColor colorWithRed:27/255.0 green:135/255.0 blue:195/255.0 alpha:1.0]];
+        
+        [self presentViewController:APP.globalMailComposer animated:YES completion:^{
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+        }];
         
     }
     

@@ -54,6 +54,8 @@
     // Override point for customization after application launch.
     [NSThread sleepForTimeInterval:1.5];
     
+    [self cycleTheGlobalMailComposer];
+    
     [[LocalyticsSession shared] resume];
     [[LocalyticsSession shared] upload];
     [Appirater appLaunched:YES];
@@ -279,9 +281,13 @@
     [navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:20.0f],
                                                                                          NSShadowAttributeName : shadow,
                                                                                          NSForegroundColorAttributeName: [UIColor whiteColor]}];
-    
-	
+}
 
+-(void)cycleTheGlobalMailComposer
+{
+    // we are cycling the damned GlobalMailComposer... due to horrible iOS issue
+    self.globalMailComposer = nil;
+    self.globalMailComposer = [[MFMailComposeViewController alloc] init];
 }
 
 @end

@@ -21,4 +21,8 @@
 @property (strong, nonatomic) JASidePanelController *viewController;
 
 @property (nonatomic) UISplitViewController *splitViewController;
+
+@property (nonatomic, strong) MFMailComposeViewController *globalMailComposer;
+
+- (void)cycleTheGlobalMailComposer;
 @end

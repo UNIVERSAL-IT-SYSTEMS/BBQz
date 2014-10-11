@@ -12,6 +12,7 @@
 #import <MessageUI/MessageUI.h>
 #import <QuartzCore/QuartzCore.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "AppDelegate.h"
 
 @class Quiz;
 @class Reachability;
@@ -41,10 +42,6 @@
 -(IBAction)finishButtonTouched:(UIButton *)sender;
 - (IBAction)emailResult:(UIButton *)sender;
 - (IBAction)closeButtonTouched:(UIButton *)sender;
-
-
-
-
 
 @property (strong, nonatomic) IBOutlet UIButton *answer1Button;
 @property (strong, nonatomic) IBOutlet UIButton *answer2Button;

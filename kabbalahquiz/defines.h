@@ -17,9 +17,10 @@
 
 #define kCDKLocalyticsKey @"ae0561bbab7e3f324dd0f46-8800d350-a8db-11e3-1bef-004a77f8b47f"
 #define kCDMessageT @"I just tried Kabbalah Quiz!"
-#define kCDUrlT @"https://itunes.apple.com/us/app/kabbalah-quiz/id847571952?ls=1&mt=8"
+#define kCDUrlT @"https://www.itunes.apple.com/us/app/kabbalah-app/id847571952?ls=1&mt=8"
+
 #define kCDMessageF @"I just tried Kabbalah Quiz!"
-#define kCDUrlF @"https://itunes.apple.com/us/app/kabbalah-quiz/id847571952?ls=1&mt=8"
+#define kCDUrlF @"https://www.itunes.apple.com/us/app/kabbalah-app/id847571952?ls=1&mt=8"
 #define kCDCorrect @"That's Right!"
 #define kCDIncorrect @"Bummer! Incorrect Answer"
 

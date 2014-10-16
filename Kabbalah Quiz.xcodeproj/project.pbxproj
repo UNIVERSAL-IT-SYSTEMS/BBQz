@@ -1104,6 +1104,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "kabbalahquiz/Kabbalah Quiz-Prefix.pch";
 				INFOPLIST_FILE = "kabbalahquiz/Kabbalah Quiz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/gabrielmorales/BBProjects/kabbalahquiz/kabbalahquiz,
@@ -1135,6 +1136,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "kabbalahquiz/Kabbalah Quiz-Prefix.pch";
 				INFOPLIST_FILE = "kabbalahquiz/Kabbalah Quiz-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/gabrielmorales/BBProjects/kabbalahquiz/kabbalahquiz,

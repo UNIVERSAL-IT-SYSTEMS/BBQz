@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZjR-Fe-94Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZjR-Fe-94Q">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Kabbalah Quiz-->
@@ -104,20 +103,22 @@
                                     <constraint firstItem="zNp-VG-kdN" firstAttribute="top" secondItem="5Z1-1g-70S" secondAttribute="top" constant="139" id="kLa-Jh-baS"/>
                                     <constraint firstItem="JWD-hw-V2c" firstAttribute="top" secondItem="5Z1-1g-70S" secondAttribute="top" constant="131" id="mh1-ae-V2Q"/>
                                     <constraint firstItem="ltr-hS-dYe" firstAttribute="leading" secondItem="kxx-gp-AKI" secondAttribute="leading" id="mwd-pS-o03"/>
+                                    <constraint firstAttribute="centerX" secondItem="zNp-VG-kdN" secondAttribute="centerX" constant="-6.5" id="pRy-UJ-R1Z"/>
                                     <constraint firstItem="ltr-hS-dYe" firstAttribute="top" secondItem="kxx-gp-AKI" secondAttribute="bottom" constant="8" symbolic="YES" id="qOj-IA-pOI"/>
+                                    <constraint firstAttribute="trailing" secondItem="zNp-VG-kdN" secondAttribute="trailing" constant="33" id="xmz-f0-0JD"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5Z1-1g-70S" firstAttribute="leading" secondItem="aGw-eN-QGN" secondAttribute="leading" id="DKH-7i-UTo"/>
-                            <constraint firstItem="Dqe-K4-bqH" firstAttribute="top" secondItem="fve-vj-7Gk" secondAttribute="topMargin" id="Inz-yT-kW5"/>
+                            <constraint firstItem="Dqe-K4-bqH" firstAttribute="top" secondItem="fve-vj-7Gk" secondAttribute="top" id="Inz-yT-kW5"/>
                             <constraint firstItem="5Z1-1g-70S" firstAttribute="trailing" secondItem="6ci-dJ-4ba" secondAttribute="trailing" id="NQ9-2s-N7n"/>
                             <constraint firstItem="5Z1-1g-70S" firstAttribute="bottom" secondItem="aGw-eN-QGN" secondAttribute="top" id="Rhe-I8-2CV"/>
-                            <constraint firstItem="5Z1-1g-70S" firstAttribute="top" secondItem="fve-vj-7Gk" secondAttribute="topMargin" constant="25" id="Vjr-mG-qm3"/>
+                            <constraint firstItem="5Z1-1g-70S" firstAttribute="top" secondItem="fve-vj-7Gk" secondAttribute="top" constant="25" id="Vjr-mG-qm3"/>
                             <constraint firstItem="aGw-eN-QGN" firstAttribute="top" secondItem="Dqe-K4-bqH" secondAttribute="bottom" id="ev6-8q-8te"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dqe-K4-bqH" secondAttribute="trailing" constant="-16" id="pjy-ly-uOQ"/>
-                            <constraint firstItem="Dqe-K4-bqH" firstAttribute="leading" secondItem="fve-vj-7Gk" secondAttribute="leadingMargin" constant="-16" id="rTS-hw-LT6"/>
+                            <constraint firstAttribute="trailing" secondItem="Dqe-K4-bqH" secondAttribute="trailing" id="pjy-ly-uOQ"/>
+                            <constraint firstItem="Dqe-K4-bqH" firstAttribute="leading" secondItem="fve-vj-7Gk" secondAttribute="leading" id="rTS-hw-LT6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kabbalah Quiz" id="JZZ-2x-xbp">
@@ -596,13 +597,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7bu-6S-jy9" firstAttribute="leading" secondItem="pdn-GI-bo0" secondAttribute="leading" id="HaQ-QE-8IG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Kt-I4-xB7" secondAttribute="trailing" constant="-16" id="KMD-Zr-jzb"/>
+                            <constraint firstAttribute="trailing" secondItem="6Kt-I4-xB7" secondAttribute="trailing" id="KMD-Zr-jzb"/>
                             <constraint firstItem="pdn-GI-bo0" firstAttribute="top" secondItem="6Kt-I4-xB7" secondAttribute="bottom" id="SrK-Ke-kxB"/>
-                            <constraint firstItem="7bu-6S-jy9" firstAttribute="top" secondItem="ipa-S7-koZ" secondAttribute="topMargin" constant="25" id="Yxd-Za-q6D"/>
-                            <constraint firstItem="6Kt-I4-xB7" firstAttribute="top" secondItem="ipa-S7-koZ" secondAttribute="topMargin" id="bEs-64-u32"/>
+                            <constraint firstItem="7bu-6S-jy9" firstAttribute="top" secondItem="ipa-S7-koZ" secondAttribute="top" constant="25" id="Yxd-Za-q6D"/>
+                            <constraint firstItem="6Kt-I4-xB7" firstAttribute="top" secondItem="ipa-S7-koZ" secondAttribute="top" id="bEs-64-u32"/>
                             <constraint firstItem="7bu-6S-jy9" firstAttribute="bottom" secondItem="pdn-GI-bo0" secondAttribute="top" id="e8R-en-iCK"/>
                             <constraint firstItem="7bu-6S-jy9" firstAttribute="trailing" secondItem="Aom-PA-zVf" secondAttribute="trailing" id="eXI-TE-q04"/>
-                            <constraint firstItem="6Kt-I4-xB7" firstAttribute="leading" secondItem="ipa-S7-koZ" secondAttribute="leadingMargin" constant="-16" id="utp-v5-wXH"/>
+                            <constraint firstItem="6Kt-I4-xB7" firstAttribute="leading" secondItem="ipa-S7-koZ" secondAttribute="leading" id="utp-v5-wXH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kabbalah Quiz" id="EoO-9t-Abj">
@@ -723,14 +724,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Nej-Qw-nC0" secondAttribute="trailing" constant="-16" id="6E5-MU-klh"/>
+                            <constraint firstAttribute="trailing" secondItem="Nej-Qw-nC0" secondAttribute="trailing" id="6E5-MU-klh"/>
                             <constraint firstItem="0ci-2v-ym3" firstAttribute="leading" secondItem="32D-Mh-dwd" secondAttribute="leading" id="I5A-fg-dvL"/>
                             <constraint firstItem="0ci-2v-ym3" firstAttribute="trailing" secondItem="6Zc-Js-aic" secondAttribute="trailing" id="Ilh-if-XrL"/>
-                            <constraint firstItem="0ci-2v-ym3" firstAttribute="top" secondItem="Z2c-2J-ckk" secondAttribute="topMargin" constant="25" id="MAp-y3-43s"/>
-                            <constraint firstItem="Nej-Qw-nC0" firstAttribute="leading" secondItem="Z2c-2J-ckk" secondAttribute="leadingMargin" constant="-16" id="krp-Bb-N1H"/>
+                            <constraint firstItem="0ci-2v-ym3" firstAttribute="top" secondItem="Z2c-2J-ckk" secondAttribute="top" constant="25" id="MAp-y3-43s"/>
+                            <constraint firstItem="Nej-Qw-nC0" firstAttribute="leading" secondItem="Z2c-2J-ckk" secondAttribute="leading" id="krp-Bb-N1H"/>
                             <constraint firstItem="32D-Mh-dwd" firstAttribute="top" secondItem="Nej-Qw-nC0" secondAttribute="bottom" id="lod-2o-s34"/>
                             <constraint firstItem="0ci-2v-ym3" firstAttribute="bottom" secondItem="32D-Mh-dwd" secondAttribute="top" id="m5W-Tl-56i"/>
-                            <constraint firstItem="Nej-Qw-nC0" firstAttribute="top" secondItem="Z2c-2J-ckk" secondAttribute="topMargin" id="tIR-cW-UMu"/>
+                            <constraint firstItem="Nej-Qw-nC0" firstAttribute="top" secondItem="Z2c-2J-ckk" secondAttribute="top" id="tIR-cW-UMu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kabbalah Quiz" id="yDv-UF-k4L">
@@ -851,14 +852,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zfh-gG-gvB" firstAttribute="top" secondItem="ikf-9r-jUW" secondAttribute="topMargin" constant="25" id="6Om-Bh-S8n"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tVU-Uy-8YZ" secondAttribute="trailing" constant="-16" id="7s2-vg-9Ym"/>
+                            <constraint firstItem="Zfh-gG-gvB" firstAttribute="top" secondItem="ikf-9r-jUW" secondAttribute="top" constant="25" id="6Om-Bh-S8n"/>
+                            <constraint firstAttribute="trailing" secondItem="tVU-Uy-8YZ" secondAttribute="trailing" id="7s2-vg-9Ym"/>
                             <constraint firstItem="Zfh-gG-gvB" firstAttribute="bottom" secondItem="YyI-nr-Bt1" secondAttribute="top" id="Yfe-Jd-fKF"/>
                             <constraint firstItem="Zfh-gG-gvB" firstAttribute="trailing" secondItem="fdx-2F-V7h" secondAttribute="trailing" id="YhE-hm-Lj4"/>
-                            <constraint firstItem="tVU-Uy-8YZ" firstAttribute="leading" secondItem="ikf-9r-jUW" secondAttribute="leadingMargin" constant="-16" id="dXJ-4w-qcJ"/>
+                            <constraint firstItem="tVU-Uy-8YZ" firstAttribute="leading" secondItem="ikf-9r-jUW" secondAttribute="leading" id="dXJ-4w-qcJ"/>
                             <constraint firstItem="YyI-nr-Bt1" firstAttribute="top" secondItem="tVU-Uy-8YZ" secondAttribute="bottom" id="ec6-7O-gCQ"/>
                             <constraint firstItem="Zfh-gG-gvB" firstAttribute="leading" secondItem="YyI-nr-Bt1" secondAttribute="leading" id="kUU-hX-Wfw"/>
-                            <constraint firstItem="tVU-Uy-8YZ" firstAttribute="top" secondItem="ikf-9r-jUW" secondAttribute="topMargin" id="qvm-No-Rmu"/>
+                            <constraint firstItem="tVU-Uy-8YZ" firstAttribute="top" secondItem="ikf-9r-jUW" secondAttribute="top" id="qvm-No-Rmu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kabbalah Quiz" id="I2t-AC-2Qo">
@@ -979,12 +980,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yvf-gw-gBm" firstAttribute="top" secondItem="TFe-Zx-dK1" secondAttribute="topMargin" id="2pk-eP-SSb"/>
+                            <constraint firstItem="yvf-gw-gBm" firstAttribute="top" secondItem="TFe-Zx-dK1" secondAttribute="top" id="2pk-eP-SSb"/>
                             <constraint firstItem="x39-Qr-NZW" firstAttribute="leading" secondItem="Wjx-y8-TkV" secondAttribute="leading" id="6RA-9d-yd9"/>
                             <constraint firstItem="x39-Qr-NZW" firstAttribute="trailing" secondItem="Crx-HO-z8v" secondAttribute="trailing" id="8py-pr-HR7"/>
-                            <constraint firstItem="yvf-gw-gBm" firstAttribute="leading" secondItem="TFe-Zx-dK1" secondAttribute="leadingMargin" constant="-16" id="Fqb-tB-Dse"/>
-                            <constraint firstItem="x39-Qr-NZW" firstAttribute="top" secondItem="TFe-Zx-dK1" secondAttribute="topMargin" constant="25" id="U2J-9d-tsw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yvf-gw-gBm" secondAttribute="trailing" constant="-16" id="cbs-34-h0D"/>
+                            <constraint firstItem="yvf-gw-gBm" firstAttribute="leading" secondItem="TFe-Zx-dK1" secondAttribute="leading" id="Fqb-tB-Dse"/>
+                            <constraint firstItem="x39-Qr-NZW" firstAttribute="top" secondItem="TFe-Zx-dK1" secondAttribute="top" constant="25" id="U2J-9d-tsw"/>
+                            <constraint firstAttribute="trailing" secondItem="yvf-gw-gBm" secondAttribute="trailing" id="cbs-34-h0D"/>
                             <constraint firstItem="x39-Qr-NZW" firstAttribute="bottom" secondItem="Wjx-y8-TkV" secondAttribute="top" id="gFu-OT-pN9"/>
                             <constraint firstItem="Wjx-y8-TkV" firstAttribute="top" secondItem="yvf-gw-gBm" secondAttribute="bottom" id="vdD-uc-8vW"/>
                         </constraints>
@@ -1110,11 +1111,11 @@
                             <constraint firstItem="uDz-UN-0uy" firstAttribute="bottom" secondItem="O7T-XA-w7n" secondAttribute="top" id="0q2-ng-d0c"/>
                             <constraint firstItem="uDz-UN-0uy" firstAttribute="trailing" secondItem="wzG-FO-R5d" secondAttribute="trailing" id="9fd-YA-omV"/>
                             <constraint firstItem="uDz-UN-0uy" firstAttribute="leading" secondItem="O7T-XA-w7n" secondAttribute="leading" id="Mth-Z4-yab"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rrt-Vn-PCR" secondAttribute="trailing" constant="-16" id="NCQ-kw-DPP"/>
-                            <constraint firstItem="uDz-UN-0uy" firstAttribute="top" secondItem="DO4-eM-bhx" secondAttribute="topMargin" constant="25" id="QpV-Db-9uM"/>
-                            <constraint firstItem="rrt-Vn-PCR" firstAttribute="top" secondItem="DO4-eM-bhx" secondAttribute="topMargin" id="ejF-IQ-NXU"/>
+                            <constraint firstAttribute="trailing" secondItem="rrt-Vn-PCR" secondAttribute="trailing" id="NCQ-kw-DPP"/>
+                            <constraint firstItem="uDz-UN-0uy" firstAttribute="top" secondItem="DO4-eM-bhx" secondAttribute="top" constant="25" id="QpV-Db-9uM"/>
+                            <constraint firstItem="rrt-Vn-PCR" firstAttribute="top" secondItem="DO4-eM-bhx" secondAttribute="top" id="ejF-IQ-NXU"/>
                             <constraint firstItem="O7T-XA-w7n" firstAttribute="top" secondItem="rrt-Vn-PCR" secondAttribute="bottom" id="ghT-Oc-R62"/>
-                            <constraint firstItem="rrt-Vn-PCR" firstAttribute="leading" secondItem="DO4-eM-bhx" secondAttribute="leadingMargin" constant="-16" id="m0a-l5-fi5"/>
+                            <constraint firstItem="rrt-Vn-PCR" firstAttribute="leading" secondItem="DO4-eM-bhx" secondAttribute="leading" id="m0a-l5-fi5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kabbalah Quiz" id="l3i-TQ-Cg6">
@@ -1235,11 +1236,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TjJ-OG-dvb" firstAttribute="leading" secondItem="L5U-be-V6T" secondAttribute="leadingMargin" constant="-16" id="2Ya-21-b3P"/>
-                            <constraint firstItem="FaN-Uj-GSG" firstAttribute="top" secondItem="L5U-be-V6T" secondAttribute="topMargin" constant="25" id="EuG-lt-1cs"/>
-                            <constraint firstItem="TjJ-OG-dvb" firstAttribute="top" secondItem="L5U-be-V6T" secondAttribute="topMargin" id="LS6-qw-km2"/>
+                            <constraint firstItem="TjJ-OG-dvb" firstAttribute="leading" secondItem="L5U-be-V6T" secondAttribute="leading" id="2Ya-21-b3P"/>
+                            <constraint firstItem="FaN-Uj-GSG" firstAttribute="top" secondItem="L5U-be-V6T" secondAttribute="top" constant="25" id="EuG-lt-1cs"/>
+                            <constraint firstItem="TjJ-OG-dvb" firstAttribute="top" secondItem="L5U-be-V6T" secondAttribute="top" id="LS6-qw-km2"/>
                             <constraint firstItem="Yy6-XO-Nak" firstAttribute="top" secondItem="TjJ-OG-dvb" secondAttribute="bottom" id="LV9-FV-wbd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TjJ-OG-dvb" secondAttribute="trailing" constant="-16" id="P6c-5I-PM2"/>
+                            <constraint firstAttribute="trailing" secondItem="TjJ-OG-dvb" secondAttribute="trailing" id="P6c-5I-PM2"/>
                             <constraint firstItem="FaN-Uj-GSG" firstAttribute="bottom" secondItem="Yy6-XO-Nak" secondAttribute="top" id="ZVa-Vd-wBe"/>
                             <constraint firstItem="FaN-Uj-GSG" firstAttribute="leading" secondItem="Yy6-XO-Nak" secondAttribute="leading" id="g1s-9J-alV"/>
                             <constraint firstItem="FaN-Uj-GSG" firstAttribute="trailing" secondItem="Vka-x1-Cn4" secondAttribute="trailing" id="y5K-sI-Pdv"/>
@@ -1363,14 +1364,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i9R-Y2-vDN" firstAttribute="leading" secondItem="2P9-1n-pQ0" secondAttribute="leadingMargin" constant="-16" id="Byi-c2-Un6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i9R-Y2-vDN" secondAttribute="trailing" constant="-16" id="CLW-XU-Bo4"/>
+                            <constraint firstItem="i9R-Y2-vDN" firstAttribute="leading" secondItem="2P9-1n-pQ0" secondAttribute="leading" id="Byi-c2-Un6"/>
+                            <constraint firstAttribute="trailing" secondItem="i9R-Y2-vDN" secondAttribute="trailing" id="CLW-XU-Bo4"/>
                             <constraint firstItem="R9n-5J-pCQ" firstAttribute="bottom" secondItem="3Gs-0G-HFG" secondAttribute="top" id="GE8-JA-QdA"/>
                             <constraint firstItem="R9n-5J-pCQ" firstAttribute="leading" secondItem="3Gs-0G-HFG" secondAttribute="leading" id="PU0-YZ-Qhg"/>
                             <constraint firstItem="3Gs-0G-HFG" firstAttribute="top" secondItem="i9R-Y2-vDN" secondAttribute="bottom" id="Qab-pq-MnV"/>
-                            <constraint firstItem="i9R-Y2-vDN" firstAttribute="top" secondItem="2P9-1n-pQ0" secondAttribute="topMargin" id="qhL-Nf-fg7"/>
+                            <constraint firstItem="i9R-Y2-vDN" firstAttribute="top" secondItem="2P9-1n-pQ0" secondAttribute="top" id="qhL-Nf-fg7"/>
                             <constraint firstItem="R9n-5J-pCQ" firstAttribute="trailing" secondItem="2nW-aY-KMq" secondAttribute="trailing" id="sJe-yZ-16A"/>
-                            <constraint firstItem="R9n-5J-pCQ" firstAttribute="top" secondItem="2P9-1n-pQ0" secondAttribute="topMargin" constant="25" id="tH8-Xy-3di"/>
+                            <constraint firstItem="R9n-5J-pCQ" firstAttribute="top" secondItem="2P9-1n-pQ0" secondAttribute="top" constant="25" id="tH8-Xy-3di"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kabbalah Quiz" id="Rvo-hy-Iyh">
@@ -1494,11 +1495,11 @@
                             <constraint firstItem="Rp9-XS-OGK" firstAttribute="trailing" secondItem="5ll-gb-5cE" secondAttribute="trailing" id="9PF-Al-iBa"/>
                             <constraint firstItem="QcA-5c-GVQ" firstAttribute="top" secondItem="fCG-6y-3Yu" secondAttribute="bottom" id="Kl0-25-eqi"/>
                             <constraint firstItem="Rp9-XS-OGK" firstAttribute="leading" secondItem="QcA-5c-GVQ" secondAttribute="leading" id="nJf-5D-p9a"/>
-                            <constraint firstItem="fCG-6y-3Yu" firstAttribute="top" secondItem="f21-AH-Mq5" secondAttribute="topMargin" id="o6c-6K-679"/>
-                            <constraint firstItem="Rp9-XS-OGK" firstAttribute="top" secondItem="f21-AH-Mq5" secondAttribute="topMargin" constant="25" id="pa3-Q3-qU0"/>
+                            <constraint firstItem="fCG-6y-3Yu" firstAttribute="top" secondItem="f21-AH-Mq5" secondAttribute="top" id="o6c-6K-679"/>
+                            <constraint firstItem="Rp9-XS-OGK" firstAttribute="top" secondItem="f21-AH-Mq5" secondAttribute="top" constant="25" id="pa3-Q3-qU0"/>
                             <constraint firstItem="Rp9-XS-OGK" firstAttribute="bottom" secondItem="QcA-5c-GVQ" secondAttribute="top" id="w73-zW-uvt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fCG-6y-3Yu" secondAttribute="trailing" constant="-16" id="wZA-Ki-bCS"/>
-                            <constraint firstItem="fCG-6y-3Yu" firstAttribute="leading" secondItem="f21-AH-Mq5" secondAttribute="leadingMargin" constant="-16" id="wxP-NY-OWX"/>
+                            <constraint firstAttribute="trailing" secondItem="fCG-6y-3Yu" secondAttribute="trailing" id="wZA-Ki-bCS"/>
+                            <constraint firstItem="fCG-6y-3Yu" firstAttribute="leading" secondItem="f21-AH-Mq5" secondAttribute="leading" id="wxP-NY-OWX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kabbalah Quiz" id="2TX-D6-3JS">
@@ -1621,11 +1622,11 @@
                         <constraints>
                             <constraint firstItem="Pte-qD-kdT" firstAttribute="leading" secondItem="wpB-tv-5tP" secondAttribute="leading" id="HLW-Ke-QSf"/>
                             <constraint firstItem="wpB-tv-5tP" firstAttribute="top" secondItem="m4d-Db-E4P" secondAttribute="bottom" id="JMg-4J-bol"/>
-                            <constraint firstItem="m4d-Db-E4P" firstAttribute="leading" secondItem="fpk-2Q-yMU" secondAttribute="leadingMargin" constant="-16" id="KH9-bE-Q0S"/>
+                            <constraint firstItem="m4d-Db-E4P" firstAttribute="leading" secondItem="fpk-2Q-yMU" secondAttribute="leading" id="KH9-bE-Q0S"/>
                             <constraint firstItem="Pte-qD-kdT" firstAttribute="bottom" secondItem="wpB-tv-5tP" secondAttribute="top" id="RIs-PU-z2c"/>
-                            <constraint firstItem="m4d-Db-E4P" firstAttribute="top" secondItem="fpk-2Q-yMU" secondAttribute="topMargin" id="Xsc-Gw-NeL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m4d-Db-E4P" secondAttribute="trailing" constant="-16" id="dil-dg-QHm"/>
-                            <constraint firstItem="Pte-qD-kdT" firstAttribute="top" secondItem="fpk-2Q-yMU" secondAttribute="topMargin" constant="25" id="nea-DS-itN"/>
+                            <constraint firstItem="m4d-Db-E4P" firstAttribute="top" secondItem="fpk-2Q-yMU" secondAttribute="top" id="Xsc-Gw-NeL"/>
+                            <constraint firstAttribute="trailing" secondItem="m4d-Db-E4P" secondAttribute="trailing" id="dil-dg-QHm"/>
+                            <constraint firstItem="Pte-qD-kdT" firstAttribute="top" secondItem="fpk-2Q-yMU" secondAttribute="top" constant="25" id="nea-DS-itN"/>
                             <constraint firstItem="Pte-qD-kdT" firstAttribute="trailing" secondItem="LvL-KL-v3B" secondAttribute="trailing" id="u0S-5x-mQV"/>
                         </constraints>
                     </view>

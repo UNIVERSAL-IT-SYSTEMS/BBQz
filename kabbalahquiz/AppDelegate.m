@@ -123,7 +123,7 @@
     }
     }
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] <= 7.1) {
         [application registerForRemoteNotificationTypes:
          UIRemoteNotificationTypeBadge |
          UIRemoteNotificationTypeAlert |
@@ -143,9 +143,10 @@
                                                      name:UIApplicationDidChangeStatusBarOrientationNotification
                                                    object:nil];
         
-        self.window.clipsToBounds =YES;
+//        self.window.clipsToBounds =YES;
     }
     
+    self.window.clipsToBounds =YES;
     return YES;
 }
 
